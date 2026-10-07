@@ -8,4 +8,6 @@ Depends:
   emoji,
   knitr,
   testthat,
-  checkmate
+  checkmate,
+  covr,
+  rhub

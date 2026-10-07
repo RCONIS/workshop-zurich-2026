@@ -1,0 +1,210 @@
+---
+title: "8 Using AI"
+description: "AI assistants for R package development: workflow, context, skills, review, and MCP. Graphic credited to Pierre DeBois."
+image: resources/ai-graphic.webp
+author: Daniel Sabanés Bové
+---
+
+## AI makes packages easier to write
+
+![Illustration accompanying Pierre DeBois's article about AI and R package quality](resources/ai-graphic.webp){height="330"}
+
+More generated code makes design, documentation, and review even more valuable.
+
+[Graphic: Pierre DeBois, *AI Made R Packages Easy to Write. But Did It Make Packages in CRAN Better?*, DataDrivenInvestor, 23 September 2026](https://medium.datadriveninvestor.com/ai-made-r-packages-easy-to-write-but-did-it-make-packages-in-cran-better-2569bd217e13){.small}
+
+::: notes
+Use the graphic to open a discussion: what makes a package useful and trustworthy?
+The article raises concerns about documentation; do not infer a causal effect of AI from the illustration.
+The graphic is third-party content and is excluded from the course's CC BY-SA license.
+:::
+
+## Where I was disappointed by LLMs — in 2024 {.smaller}
+
+| My earlier disappointment | What we can now ask tools to do |
+| --- | --- |
+| Translate code, e.g. R → Julia | Translate, execute, and compare outputs |
+| Logic and mathematics, e.g. inverse functions | Propose derivations and check domains and identities |
+| Write tests for existing code | Draft tests, run them, and investigate failures |
+| Generate slides or posters | Create and revise artifacts with visual feedback |
+| Find literature references | Search sources and verify bibliographic details |
+
+**All of these are now possible with current AI tools.** Tool access and iterative feedback have changed the experience substantially; success still needs checking.
+
+::: notes
+This is a retrospective on my own experience, not a guarantee for every task or model.
+For R-to-Julia translation, check missing values, indexing, types, and numerical tolerances.
+For an inverse, substitute back into the original function and check the domain.
+For literature, open the paper and verify authors, DOI, and the claim it supports.
+:::
+
+## Keep the engineering workflow
+
+**Design → Plan → Implement in steps → Check → Review**
+
+1. Explain the user need, interface, constraints, and acceptance criteria
+2. Ask the assistant to inspect the project and propose a plan
+3. Implement one small, reviewable change at a time
+4. Run examples, tests, and package checks; inspect the results
+5. Review the diff and update documentation before committing
+
+::: notes
+Example prompt: “Read the design vignette and existing tests. Propose a plan for adding a missing-value option without changing existing defaults. Wait for my review of the plan before implementing.”
+Discuss where a human decision is needed: the API, statistical assumptions, acceptance criteria, and final review.
+:::
+
+## Choose an IDE that fits your work
+
+| IDE | Useful AI integration |
+| --- | --- |
+| [VS Code](https://code.visualstudio.com/docs/copilot/overview) | GitHub Copilot for inline/tab completion and chat; extensions for [Claude Code](https://code.claude.com/docs/en/vs-code) and [Codex](https://developers.openai.com/codex/ide/) |
+| [Positron](https://positron.posit.co/assistant.html) | Posit's AI integration, **Posit Assistant**, with context from your R session, objects, plots, and console history |
+
+- Tab completion helps with a local edit; an agent can work across files and run checks
+- Start with a small task and inspect the changes and tool output
+- Choose approved providers and share only data and code you are allowed to send
+
+::: notes
+Posit Assistant is the current name in the Positron documentation (October 2026).
+Participants can continue using RStudio for the package exercises; switching IDE is optional.
+Accounts, available models, and costs depend on the chosen provider and setup.
+:::
+
+## `AGENTS.md`: instructions for your project
+
+[AGENTS.md](https://agents.md/) gives compatible coding agents shared project context. Put it at the repository root; use scoped instructions where needed.
+
+```markdown
+# Working on this R package
+- Read DESCRIPTION, the design vignette, and CONTRIBUTING.md first.
+- Keep public function signatures and defaults stable unless requested.
+- Edit roxygen source; regenerate Rd and NAMESPACE with devtools::document().
+- Add tests for changed behavior; run devtools::test() and devtools::check().
+- Update vignettes and NEWS.md for user-visible changes.
+- Explain mathematical changes and benchmark performance claims.
+- Report the changed files, check results, and unresolved questions.
+```
+
+## Give the assistant skills
+
+- A `SKILL.md` packages instructions for a particular kind of task
+- Explore [posit-dev/skills](https://github.com/posit-dev/skills)
+    - Use [r-package-development](https://github.com/posit-dev/skills/blob/main/r-lib/r-package-development/SKILL.md) for R package conventions and development guidance
+    - Use [critical-code-reviewer](https://github.com/posit-dev/skills/tree/main/posit-dev/critical-code-reviewer) to request a critical review with concrete findings
+- Install using your assistant's supported mechanism, then check that the relevant skill is loaded
+
+Skills supply reusable guidance; project documentation supplies the facts about **your** package.
+
+::: notes
+Read a skill before installing it. Check its assumptions and commands against your project.
+Ask: “Use the R package development skill for this change, then use the critical code reviewer skill to review the diff. Report each finding with its location and a suggested fix.”
+Loading and activation differ between tools; linking a file in a prompt does not necessarily install a skill.
+:::
+
+## Keep documentation and code in sync
+
+**Example from our `mmrm` work:** use the mathematical description to identify a faster algorithm, then implement it in code.
+
+- Start with the current [mathematical documentation](https://openpharma.github.io/mmrm/main/articles/algorithm.html), assumptions, and notation
+- Ask for an optimization proposal and review the derivation
+- Implement in steps; compare with the existing implementation and benchmark
+- Update the math description, code, tests, and relevant release notes together
+
+A stale description can lead an assistant to implement the wrong algorithm.
+
+::: notes
+This is the instructor's experience supplied for the course, not a claim that the linked vignette documents a particular AI-assisted change or measured speedup.
+For a numerical algorithm, compare estimates, covariance matrices, likelihoods, convergence, and edge cases as appropriate. Report both correctness evidence and benchmark conditions.
+Do not treat the optimized implementation as the sole source of expected test values.
+:::
+
+Keep instructions short, accurate, and version controlled. Check how your assistant discovers them.
+
+::: notes
+AGENTS.md gives project-wide conventions; a skill gives task-specific guidance; a prompt gives the immediate task.
+Additional examples: tests/AGENTS.md can describe reference data and tolerances; src/AGENTS.md can explain compiled-code conventions.
+Support and discovery rules vary across assistants. Instructions do not replace permissions or sandbox controls.
+:::
+
+## Model Context Protocol
+
+[Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open protocol that gives AI applications a standard way to connect with external systems.
+
+- An MCP **server** advertises capabilities to an AI application's MCP **client**
+- Those capabilities can include **tools** (actions), **resources** (context or data), and reusable **prompts**
+- The model can request a capability; the client executes it and returns the result to the conversation
+- Servers may be local or remote, so access controls and the data exposed still matter
+
+::: notes
+MCP standardizes the connection, not the model's judgement. The client controls which servers are available and should show or enforce appropriate permissions before a tool has side effects.
+The next slide applies this pattern to an R session and package documentation.
+:::
+
+## Let AI use your R package through MCP
+
+[MCP](https://modelcontextprotocol.io/) connects an assistant to tools. [mcptools](https://posit-dev.github.io/mcptools/) lets an MCP client interact with R; [btw](https://posit-dev.github.io/btw/) supplies tools for documentation and session context.
+
+```r
+# In a disposable R session with example data:
+install.packages(c("mcptools", "btw"))
+library(yourpackage) # replace with your installed package
+mcptools::mcp_session()
+```
+
+Configure the client's local MCP server to run:
+
+```bash
+Rscript -e 'mcptools::mcp_server()'
+```
+
+Ask it to read your function's help, run a small example, and explain the result. Verify the actual tool calls and output.
+
+::: notes
+The package name is a placeholder. The mcptools documentation shows client-specific configuration; follow it for the assistant you use.
+Registering a session does not automatically turn each exported function into a dedicated MCP tool: the assistant can use R execution and documentation tools, or you can configure specific functions.
+Use synthetic data. R execution can read files and alter session state; keep tool permissions and the working directory appropriate to the demo.
+:::
+
+## Review the result, including the tests
+
+- Does the implementation meet the design and preserve the public API?
+- Do tests check independent expected results, boundaries, and failure cases?
+- Are examples runnable and documentation consistent with the code?
+- Are dependencies and external references real and necessary?
+- Have you read the diff and the actual check output?
+
+Use a fresh review pass; fix the findings and rerun affected checks.
+
+[Hadley Wickham's Tidy design principles](https://tidydesign.substack.com/) provide useful reading for designing APIs that humans and assistants can understand.
+
+::: notes
+An assistant can write code and tests that agree with the same misunderstanding. Use a hand-calculated example or a separately trusted implementation where possible.
+Ask the reviewer to identify risks and missing evidence, rather than simply asking “Is this good?”. A second AI review complements human review.
+:::
+
+## Guided practice: one small package change {.smaller}
+
+Work on a branch of your workshop package (or follow the instructor's demo).
+
+1. Describe one small improvement and its acceptance criteria
+2. Draft an `AGENTS.md` with conventions and check commands
+3. Ask an assistant to plan the change using the [R package skill](https://github.com/posit-dev/skills/blob/main/r-lib/r-package-development/SKILL.md)
+4. Implement it with documentation and tests; inspect the diff
+5. Request a [critical review](https://github.com/posit-dev/skills/tree/main/posit-dev/critical-code-reviewer), run checks, and discuss one finding
+
+**Discuss:** What helped? What did you need to correct? What evidence made you trust the result?
+
+::: notes
+Suggested timing for the hour: 30 minutes for the slides/demo, 20 minutes guided practice, 10 minutes discussion.
+Possible task: document and test an existing argument, or add an input assertion with a useful error message.
+No paid tool is required: participants without access can pair up or write and review the plan and instructions without running an agent.
+Optional demonstration: connect the example package session through mcptools and ask the assistant to execute a documented example.
+:::
+
+## Credits and license {.smaller}
+
+- Chapter author: [Daniel Sabanés Bové](https://github.com/danielinteractive/), Zurich 2026
+- Graphic: [Pierre DeBois, DataDrivenInvestor, 23 September 2026](https://medium.datadriveninvestor.com/ai-made-r-packages-easy-to-write-but-did-it-make-packages-in-cran-better-2569bd217e13). Supplied for this course; third-party content excluded from the course's CC BY-SA license. No additional reuse license is asserted.
+- Technical sources are linked on the relevant slides; further reading: [Tidy design principles](https://tidydesign.substack.com/)
+
+{{< include _license_footer.qmd >}}

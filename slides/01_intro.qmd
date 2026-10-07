@@ -1,31 +1,31 @@
 ---
 title: "1 Introduction"
-description: "Introduction and outline of program.</br>[Photo CC0 by Mabel Amber on pexels.com]{.copyright}"
+description: "Introduction and outline of program</br>[Photo CC0 by Mabel Amber on pexels.com]{.copyright}"
 image: thumbnails/hello.jpg
+author: Daniel Sabanés Bové
 ---
 
-## Disclaimer
+## Welcome to Zurich R Courses!
 
-</br></br></br>
+- Good Software Engineering Practice for R Packages
+- ETH Zurich, 8–9 October 2026, 09:00–16:30
+- Presentations and hands-on exercises, in English
+- Instructor: Daniel Sabanés Bové
+- [Course information](https://math.ethz.ch/sfs/education/zurich-r-courses/r-packages.html)
 
-*Any opinions expressed in this presentation and on the following slides are solely those of the presenter and not necessarily those of their employers.*
-
-## Daniel
+## Daniel Sabanés Bové
 
 ::: columns
 ::: {.column width="30%"}
-![](resources/daniel.jpg)
+![Feel free to connect [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/) [`r fontawesome::fa("github")`](https://github.com/danielinteractive) [`r fontawesome::fa("globe")`](https://rpact.com)](resources/daniel.jpg)
 :::
 
 ::: {.column width="70%"}
 -   Ph.D. in Statistics from University of Zurich, Bayesian Model Selection
--   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for the last 4 years
--   Co-founder of [inferential.bio](https://inferential.bio) and [RCONIS](https://rconis.com)
+-   Biostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for 4 years
+-   Happy Taipei expat since summer 2024, where I started roadbiking `r emoji::emoji("biking")`
+-   Co-founder of [inferential.bio](https://inferential.bio), [RCONIS](https://rconis.com) and partner at [RPACT](https://rpact.com)
 -   Multiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of `openstatsware`
--   Feel free to connect
-    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
-    [`r fontawesome::fa("github")`](https://github.com/danielinteractive)
-    [`r fontawesome::fa("globe")`](https://rconis.com)
 :::
 :::
 
@@ -34,10 +34,10 @@ image: thumbnails/hello.jpg
 ::: columns
 ::: {.column width="70%"}
 - [openstatsware.org](https://openstatsware.org)
-- Since: 19 August 2022 - almost 2 years now!
+- Since: 19 August 2022
 - Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)
-- Who: Currently more than 50 statisticians from more than 30 organizations
-- What: Engineer packages and spread best practices
+- Who: Statisticians and software engineers across organizations
+- What: Engineer packages and promote best practices
 :::
 
 ::: {.column width="30%"}
@@ -53,77 +53,37 @@ image: thumbnails/hello.jpg
 -   Learn & apply fundamentals of quality control for R `r fontawesome::fa("cube")`
 -   Get crash-course in version control and modern collaboration techniques on GitHub.com
 -   Learn how to make an R `r fontawesome::fa("cube")` available to others
--   Optimize your R code for correctness and speed
--   Learn how to approach the design and modularity of Shiny apps and how to test them
+-   Design modular Shiny apps and test their behavior
+-   Use AI assistants within a disciplined development workflow
 
-## Program outline: Day 1
+## Do we still need to learn this - AI can do it?
 
-```{r}
-#| echo: false
-#| style: font-size:0.8em!important;
-readr::read_csv("resources/program.csv", col_types = "cc") |>
-  dplyr::filter(day == "1") |> 
-  dplyr::select(- day) |> 
-  knitr::kable(col.names = c("", ""))
-```
-
-## Program outline: Day 2
-
-```{r}
-#| echo: false
-#| style: font-size:0.8em!important;
-readr::read_csv("resources/program.csv", col_types = "cc") |>
-  dplyr::filter(day == "2") |> 
-  dplyr::select(- day) |> 
-  knitr::kable(col.names = c("", ""))
-```
-
-## House-keeping
-
--   Course website at [RCONIS.github.io/workshop-r-swe-zrh](https://RCONIS.github.io/workshop-r-swe-zrh)
-    -   all slides
-    -   sources available at [github.com/RCONIS/workshop-r-swe-zrh](https://github.com/RCONIS/workshop-r-swe-zrh)
-    -   all materials CC-BY-SA 4.0
--   We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:gitter.im)
-    -   use to ask your peers questions
-
-## What you will need
-
--   [Github.com](https://github.com/) (free) account `r fontawesome::fa("github")`
--   Local R development environment with
-    -   git `r fontawesome::fa("git-alt")`
-    -   Rtools/R/Rstudio IDE `r fontawesome::fa("r-project")`
--   Install additional R packages using the [installation script](slides/download/install.R)
--   Curiosity `r emoji::emoji("curious")`
--   Positive attitude `r emoji::emoji("smile")`
-
-## Speed intros and what would you like to learn?
-
-- Name? `r emoji::emoji("face")`
-- Organization? `r emoji::emoji("office")`
-- Motivation for this workshop/ what would you like to learn `r emoji::emoji("brain")`
-- Favorite food? `r emoji::emoji("food")`
-- Favorite music? `r emoji::emoji("music")`
+-  In the past, carpenters exclusively used saw, hand drill, and hammer
+-  For a long time now, we have power tools, like electric saws and drills
+-  And we have had computer aided design (CAD) software for decades
+-  We have even 3D printers, which can produce furniture directly
+-  Nevertheless, carpenters still start their apprenticeship by learning how to use a saw and hammer, and build furniture by hand
+- In the same way, we still need to learn the basics of good software engineering, even though AI tools can help us later to execute the work faster and more efficiently
 
 ## What do we mean by GSWEP4R\*?
 
 ::: aside
-\* Good Software Engineering Practice for R
+\* Good Software Engineering Practice for R Packages
 :::
 
 -   Applying concept of "Good XYZ Practice" to SWE with R
--   Improve **quality** and **longevity** of R code/packages  
+-   Improve **quality** and **longevity** of R code/packages
 -   Not a universal standard; we share our perspectives
 -   Collection of best practices
 -   Do not reinvent the wheel: learn from the community
 
 ## Why care about GSWEP4R?
 
--   R is one of the most successfull statistical programming languages
+-   R is one of the most successful statistical programming languages
 -   R is a powerful yet complex *ecosystem*
     -   Core component: R packages
-    -   Mature analysts: users & contributors
-    -   Deep understanding crucial, even to just assess quality
+    -   Mature user & contributor community
+    -   Where deeper understanding is crucial, even to just assess quality
 -   Analyses increasingly require complex scripts/programs
 -   The concepts are applicable to other languages, too (Python, Julia, etc.)
 
@@ -140,85 +100,60 @@ readr::read_csv("resources/program.csv", col_types = "cc") |>
 
 $\leadsto$ R package
 
-## The R package ecosystem - huge success
+## Program outline: Day 1
 
-```{r cran-pkg-network, echo=FALSE}
-if (!file.exists("resources/pkg_graph.png")) { # primitive caching
-  library(tidyverse)
-  local({
-    r <- getOption("repos")
-    r["CRAN"] <- "https://cloud.r-project.org"
-    options(repos = r)
-  })
-  # get pkg cumulative downloads from last month
-  db <- tools::CRAN_package_db()
-  tbl_dl_ <- db %>%
-      group_by(chunk = row_number() %/% 100) %>% # chunk to comply with API limit
-      nest() %>%
-      mutate(
-          res = purrr::map2(
-              data, chunk,
-              function(data, id) {
-                  cranlogs::cran_downloads(data$Package, when = "last-month") %>%
-                      group_by(package) %>%
-                      summarize(count = sum(count))
-              }
-          )
-      ) %>%
-      ungroup() %>%
-      select(res) %>%
-      unnest(res) %>%
-      distinct()
-  tbl_dl <- filter(tbl_dl_, count >= 10000L, !is.na(count))
-  tbl_deps <- tools::package_dependencies(
-        tbl_dl$package,
-        which = c("Imports", "Depends", "LinkingTo")
-      ) %>%
-      enframe(name = "from", value = "to") %>%
-      unnest(to)
-  grph_deps <- tidygraph::as_tbl_graph(tbl_deps) %>%
-    left_join(
-      tbl_dl_,
-      by = c(name = "package")
-    ) %>%
-    filter(!is.na(count)) # remove base packages
-  plt <- ggraph::ggraph(grph_deps, layout = "linear", circular = TRUE) +
-      ggraph::geom_edge_link(alpha = .033) +
-      ggraph::geom_node_label(
-          aes(label = if_else(count > quantile(count, 0.975, na.rm = TRUE), name, NA_character_)),
-          repel = TRUE
-      ) +
-      ggraph::theme_graph()
-  ggsave("resources/pkg_graph.png", plot = plt, width = 8, height = 8/1.61, dpi = 300)
-}
-knitr::include_graphics("resources/pkg_graph.png")
+```{r}
+#| echo: false
+#| style: font-size:0.8em!important;
+readr::read_csv("resources/program.csv", col_types = "ccc") |>
+  dplyr::filter(day == "1") |>
+  dplyr::select(- day) |>
+  knitr::kable(col.names = c("", ""))
 ```
 
-##  {background-iframe="https://pharmaverse.org/" background-interactive="true"}
+## Program outline: Day 2
 
-## Pharma perspective: GxP + R `r fontawesome::fa("cube")` = `r fontawesome::fa("heart")`
+```{r}
+#| echo: false
+#| style: font-size:0.8em!important;
+readr::read_csv("resources/program.csv", col_types = "ccc") |>
+  dplyr::filter(day == "2") |>
+  dplyr::select(- day) |>
+  knitr::kable(col.names = c("", ""))
+```
 
--   Core infrastructure packages only through industry
--   Quality, burden sharing: open-source [pharmaverse](https://pharmaverse.org/) and [openstatsware](https://openstatsware.org)
--   Open methodological packages can de-risk innovative methods
--   R packages make (statistical/methodological) code
-    -   testable (with documented evidence thereof, [CFR Part 11](https://en.wikipedia.org/wiki/Title_21_CFR_Part_11))
-    -   reusable
-    -   shareable
-    -   easier to document
+## Materials
 
-# Question, Comments?
+-   Course website at [rconis.github.io/workshop-zurich-2026](https://rconis.github.io/workshop-zurich-2026)
+    -   all slides
+    -   sources available at [github.com/rconis/workshop-zurich-2026](https://github.com/rconis/workshop-zurich-2026)
+    -   course materials CC-BY-SA 4.0, except credited third-party content
 
-# License information
+## What you will need
 
-- Creators (initial authors): 
-  Daniel Sabanes Bove 
-  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) 
+-   [Github.com](https://github.com/) (free) account `r fontawesome::fa("github")`
+-   Local R development environment with
+    -   git `r fontawesome::fa("git-alt")`
+    -   Rtools/R/Rstudio IDE `r fontawesome::fa("r-project")`
+-   Install additional R packages using the [installation script](download/install.R)
+-   Curiosity `r emoji::emoji("curious")`
+
+## Speed intros and what would you like to learn?
+
+- Name? `r emoji::emoji("earth")`
+- Organization? `r emoji::emoji("office")`
+- Motivation for this workshop/ what would you like to learn `r emoji::emoji("brain")`
+
+# License information {.smaller}
+
+- Creators (initial authors):
+  Daniel Sabanés Bové
+  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
-  Friedrich Pahlke [`r fontawesome::fa("github")`](https://github.com/fpahlke/) 
+  Friedrich Pahlke [`r fontawesome::fa("github")`](https://github.com/fpahlke/)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/pahlke/),
-  Kevin Kunzmann 
-  [`r fontawesome::fa("github")`](https://github.com/kkmann/) 
+  Kevin Kunzmann
+  [`r fontawesome::fa("github")`](https://github.com/kkmann/)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/),
   Andrew Bean
   [`r fontawesome::fa("github")`](https://github.com/andrew-bean)
@@ -229,5 +164,16 @@ knitr::include_graphics("resources/pkg_graph.png")
   Philippe Boileau
   [`r fontawesome::fa("github")`](https://github.com/philboileau)
   [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/philippe-boileau-773270205/)
-  [`r fontawesome::fa("globe")`](https://pboileau.ca/)
+  [`r fontawesome::fa("globe")`](https://pboileau.ca/),
+  Audrey Yeo Te-ying
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/audreyyeo8000/)
+  [`r fontawesome::fa("github")`](https://github.com/audreyyeocH),
+  Alessandro Gasparini
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne)
+  [`r fontawesome::fa("github")`](https://www.github.com/ellessenne)
+- In the Munich 2026 and Zurich 2026 versions, changes were done by:
+  Daniel Sabanés Bové
+  [`r fontawesome::fa("github")`](https://github.com/danielinteractive/)
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
+
 {{< include _license_footer.qmd >}}

@@ -5,7 +5,7 @@ project:
 website:
   title: "GSWEP4R Workshop"
   description: "`openstatsware` Workshop: Good Software Engineering Practice with R"
-  site-url: https://RCONIS.github.io/workshop-r-swe-zrh/
+  site-url: https://RCONIS.github.io/workshop-zurich-2026/
   search: true
   navbar:
     left:
@@ -22,7 +22,7 @@ website:
       - text: "About RCONIS"
         href: https://rconis.com/
       - text: "Source Code on GitHub"
-        href: https://github.com/RCONIS/workshop-r-swe-zrh
+        href: https://github.com/RCONIS/workshop-zurich-2026
 
 format:
   html:

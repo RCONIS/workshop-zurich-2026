@@ -3,7 +3,7 @@ title: "Good Software Engineering Practice for R Packages"
 ---
 
 <!--
-Creators (initial authors): 
+Creators (initial authors):
 - Daniel Sabanes Bove, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
 - Friedrich Pahlke, https://github.com/fpahlke/ and www.linkedin.com/in/pahlke/
 - Kevin Kunzmann, https://github.com/kkmann/ and https://www.linkedin.com/in/kevin-kunzmann-6486a11bb/
@@ -19,46 +19,51 @@ Creators (initial authors):
 The current version was edited by
 - Daniel Sabanes Bove, https://github.com/danielinteractive/ and www.linkedin.com/in/danielsabanesbove/
 
-License: In general unless otherwise stated, his work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+License: In general unless otherwise stated, this work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
-The source files are hosted at https://github.com/RCONIS/workshop-r-swe-zrh, which is forked from
+The source files are hosted at https://github.com/RCONIS/workshop-zurich-2026, which is forked from
 the original version at https://github.com/openpharma/workshop-r-swe-mtl.
+The Zurich 2026 revision also adapts updated chapters from
+https://github.com/openstatsware/shortcourse-munich2026; author credits are preserved
+in the individual chapters. Changes include course details, scheduling, roxygen2 tags,
+SSH setup, and a new AI chapter.
 
 Important: To use this work you must provide the name of the creators (initial authors), a link to the material, a link to the license, and indicate if changes were made.
---> 
+-->
 
-Welcome to the homepage of the workshop *"Good Software Engineering Practice for R Packages"*, part of the Zurich R Course series. In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The workshop will be conducted in two days and will be a mix of presentations and exercises. Participants need to be comfortable with writing functions in R and use their own laptops as a prerequisite.
+Welcome to the homepage of the workshop *"Good Software Engineering Practice for R Packages"*, part of the Zurich R Course series. In this course you will learn hands-on skills and tools to engineer reliable R packages used in statistics. The workshop will be conducted in two days and will be a mix of presentations and exercises. Participants should have at least one year of experience using R, be fluent in writing R functions, and bring their own laptop and charger.
 
 ## Event Details
 
-The event will be held on Thursday 18th and Friday 19th April 2024 as an in-person workshop at the University of Zurich Zentrum for Weiterbildung (http://www.zwb.uzh.ch/anreise.html).
-Please register [here](https://www.zhrcourses.uzh.ch/de/programm2024/sweng.html).
+The workshop takes place on **Thursday 8 and Friday 9 October 2026, 09:00–16:30**, in person at **ETH Zurich**, and is taught in **English**.
+See the [official course information](https://math.ethz.ch/sfs/education/zurich-r-courses/r-packages.html) and [registration and venue page](https://sce.ethz.ch/en/programmes-and-courses/search-current-courses/wbk/software-eng-R-2026.html).
 
-This event is organized by [Zurich R Courses](https://www.zhrcourses.uzh.ch/en.html) and [RCONIS](https://rconis.com/). The presenter in this workshop will be Daniel Sabanés Bové.
+The instructor is **Daniel Sabanés Bové**, Director, inferential.biostatistics GmbH.
+The course is part of [Zurich R Courses](https://math.ethz.ch/sfs/education/zurich-r-courses.html), the joint continuing education programme of UZH and ETH Zurich. Course management: Dr Lukas Meier, Seminar for Statistics, ETH Zurich.
 
-## Communication
+The course fee is CHF 600 for members of UZH/ETH and associated institutes, and CHF 1,200 otherwise. Internet access is provided for software and package installation.
 
-We offer a [gitter chat channel](https://matrix.to/#/#workshop-r-swe_community:gitter.im) to communicate before, during, and after the course.
+Topics: R package syntax, software engineering workflow, package quality, collaboration via GitHub, publication, Shiny development, and using AI assistants.
 
 ## Workshop Program
 
-### Day 1: 18th April
+### Day 1: 8 October 2026
 
 ```{r}
 #| echo: false
-readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
-  dplyr::filter(day == "1") |> 
-  dplyr::select(- day) |> 
+readr::read_csv("slides/resources/program.csv", col_types = "ccc") |>
+  dplyr::filter(day == "1") |>
+  dplyr::select(- day) |>
   knitr::kable(col.names = c("", ""))
 ```
 
-### Day 2: 19th April
+### Day 2: 9 October 2026
 
 ```{r}
 #| echo: false
-readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
+readr::read_csv("slides/resources/program.csv", col_types = "ccc") |>
   dplyr::filter(day == "2") |>
-  dplyr::select(- day) |> 
+  dplyr::select(- day) |>
   knitr::kable(col.names = c("", ""))
 ```
 
@@ -66,11 +71,11 @@ readr::read_csv("slides/resources/program.csv", col_types = "cc") |>
 
 Prior to the course, participants should
 
--   Set up a (free) [GitHub.com account](https://github.com/join). 
+-   Set up a (free) [GitHub.com account](https://github.com/join).
     - Note: There are other git platforms like [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/), but we made the choice to go with GitHub.com for the course, since it is by far the most relevant git platform in the R community.
 -   Download and extract [simulatr.zip](slides/download/simulatr.zip)
 -   Install the latest [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) software.
--   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html) (only on Windows and optional if you want to try out Rcpp) 
+-   Install [Rtools](https://cran.r-project.org/bin/windows/Rtools/) (on Windows; choose the version matching your R installation). On macOS, install the [build tools](https://mac.r-project.org/tools/) if needed to compile packages from source.
 -   Install additional R packages using the [installation script](slides/download/install.R).
 
 For the course, participants are required to use their own laptop to be able to participate in the exercises.
@@ -84,11 +89,29 @@ For the course, participants are required to use their own laptop to be able to 
 -   Command line git mini intro [trygit](https://trygit.js.org/)
 -   [First steps with git & github by RStudio](https://www.youtube.com/watch?v=jN6tvgt3GK8)
 -   [RStudio cheatsheets/ Git & GitHub](https://github.com/rstudio/cheatsheets/blob/main/git-github.pdf)
+-   [Happy Git: SSH keys, including setup from RStudio](https://happygitwithr.com/ssh-keys.html#create-an-ssh-key-pair)
+-   [Tidy design principles by Hadley Wickham](https://tidydesign.substack.com/)
+-   [Posit skills for AI assistants](https://github.com/posit-dev/skills)
 
-## Past Events
+## Last events
 
-- [10th February 2023, Basel, CH](https://kkmann.github.io/workshop-r-swe/)
-- [24th March 2023, Shanghai, CN](https://openpharma.github.io/workshop-r-swe/)
-- [20th July 2023, San José, CA, US](https://openpharma.github.io/workshop-r-swe-sf/)
-- [26th September 2023, Rockville, MD, US](https://openpharma.github.io/workshop-r-swe-md/)
-- [16th and 17th October 2023, Montreal, QC, CA](https://openpharma.github.io/workshop-r-swe-mtl/)
+| Date | Location | Materials |
+| --- | --- | --- |
+| 13 August 2026 | Munich, DE | [Workshop](https://openstatsware.github.io/shortcourse-munich2026/) |
+| 17th July 2026 | Seoul, KR | [Workshop](https://openstatsware.github.io/shortcourse-seoul2026/) |
+| 10th October 2025 | Paris, FR | [Workshop](https://rconis.github.io/SnB2025-shortcourse/) |
+| 24th August 2025 | Basel, CH | [Workshop](https://openstatsware.github.io/shortcourse-iscb2025/) |
+| 8th April 2025 | Tokyo, JP | [Workshop](https://www.linkedin.com/posts/yuichi-nakajima-8984759a_r-package-development-workshop-by-daniel-activity-7305102975851511810-QPl_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAeLiYUB2lCTxf2k2-ROB6XktxT7lyQYIaQ) |
+| 8th July 2024 | Salzburg, AT | [Workshop](https://rconis.github.io/user2024-tutorial-gswep/) |
+| 18th and 19th April 2024 | Zurich, CH | [Workshop](https://rconis.github.io/workshop-r-swe-zrh/) |
+| 16th and 17th October 2023 | Montreal, QC, CA | [Workshop](https://openpharma.github.io/workshop-r-swe-mtl/) |
+| 26th September 2023 | Rockville, MD, US | [Workshop](https://openpharma.github.io/workshop-r-swe-md/) |
+| 20th July 2023 | San José, CA, US | [Workshop](https://openpharma.github.io/workshop-r-swe-sf/) |
+| 24th March 2023 | Shanghai, CN | [Workshop](https://openpharma.github.io/workshop-r-swe/) |
+| 10th February 2023 | Basel, CH | [Workshop](https://kkmann.github.io/workshop-r-swe/) |
+
+## Credits and license
+
+Unless otherwise credited, the course materials are licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Initial and subsequent authors are listed in each slide chapter.
+This Zurich 2026 revision by Daniel Sabanés Bové adapts the [Zurich 2024 course](https://github.com/RCONIS/workshop-r-swe-zrh) and the updated [Munich 2026 materials](https://github.com/openstatsware/shortcourse-munich2026), which followed the [Seoul 2026 course](https://github.com/openstatsware/shortcourse-seoul2026).
+Changes include course information, scheduling, documentation tags, SSH setup, and the Using AI chapter. See [attribution notes](ATTRIBUTION.md) for the full source history and third-party image credit.

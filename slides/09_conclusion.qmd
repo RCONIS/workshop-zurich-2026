@@ -1,27 +1,20 @@
 ---
 title: "9 Conclusion"
-description: "Discussion of learning experience, summary of workflow, conclusion and next steps.</br>[Photo by Ann H on pexels.com]{.copyright}"
+description: "Discussion of learning experience, summary of workflow, conclusion and next steps</br>[Photo by Ann H on pexels.com]{.copyright}"
 image: thumbnails/conclusion.jpg
+author: Daniel Sabanés Bové
 ---
-
-## Thank you Zurich R Courses team!
-
-- Lena Götz for the course organization
-- Lukas Graz for the course assistance
-- Carolin Strobl for the initial setup
-
-# Temperature check
 
 ```{r, echo = FALSE, results = 'hide'}
 # Workaround for the following Quarto issue (do not remove):
 # Quarto will not render embedded R code unless at least one R code chunk exists
 ```
 
-## Enter slido.com: 2189872
+## Thank you!
 
-![](resources/tempcheck.png)
-
-##  {background-iframe="https://app.sli.do/event/d7Eiw4hUxvMAeBgruDMGMw" background-interactive="true"}
+- To you for your engagement and participation
+- To the Zurich R Courses team at ETH Zurich and UZH
+- To our fellow `openstatsware` authors of the course materials
 
 # Take away messages
 
@@ -32,41 +25,30 @@ image: thumbnails/conclusion.jpg
 -   Packaging a set of functions is an ideal way to share with collaborators and the public
 -   Start small and simple and over time you can learn additional options
 
-## Engineering Workflow
+## Ensuring quality
 
--   Use a workable workflow:\
+-   Quality by Design: use a workable workflow:\
     Idea $\rightarrow$ Design docs $\rightarrow$ Programming $\rightarrow$ Quality check $\rightarrow$ Publication
-    -   Don't waste time on maintenance
-    -   Be faster with release on CRAN
-    -   Fulfill quality requirements of yourself and stakeholders
--   Refactor your one-off scripts that you want to use in a package
--   Use assertions for all arguments $\rightarrow$ better user experience
--   Implement common generics like `print` and `plot`
-
-## Ensuring Quality
-
--   Apply common clean code rules, e.g.,
+-   Apply common clean code rules:
+    -   Use clear names for functions and variables
+    -   Don't repeat yourself!
+    -   Use [styler](https://styler.r-lib.org) to optimize the code styling
+-   Write tests for your functions
     -   Use [testthat](https://cran.r-project.org/package=testthat) to test, test, and test
     -   Use [covr](https://cran.r-project.org/package=covr) to improve the test coverage
-    -   Use [styler](https://styler.r-lib.org) to optimize the code styling
-    -   Don't repeat yourself!
--   Your rewards are:
-    -   **Maintainability**,
-    -   **Extensibility**, and
-    -   **Performance**!
 
 ## Collaboration
 
-- **Version control is key**
+- Version control is key
     - Multiple people working on code without strong VC $\leadsto$ disaster!
     - There are different options, but git is the defacto standard for R packages
     - Git needs a friend - use platforms like GitHub or GitLab
-- **Automated CI/CD allows for much quicker iteration**
+- Automated CI/CD allows for much quicker iteration
     - Automate tests to avoid bugs slipping back in
-- **Technology does not solve everything - foster a positive culture**
+- Technology does not solve everything - foster a positive culture
     - Keep internal and external contributors engaged
     - Invest in documentation to make it easier to contribute
-    
+
 ## Publication
 
 -   `pkgdown` can help you easily create a nice website for your package
@@ -74,38 +56,28 @@ image: thumbnails/conclusion.jpg
 -   GitHub helps with tagging of release versions
 -   R-Hub helps with checking before CRAN submission
 
+## Engineering workflow
+
+- Keep design, implementation, documentation, and tests aligned
+- Use assertions and clear interfaces; develop in small steps
+- Review changes and run checks before publishing
+
 ## Shiny
 
--   Best practices are not just important for R packages, also for Shiny!
--   Design UI and package structure first, minimize actual Shiny code
--   Shiny modules help to make the reactivity manageable
--   Use normal tests for static code, server tests and `shinytest2` for Shiny code
+- Design the UI and package structure first
+- Use modules to make reactivity manageable
+- Test static code, servers, and the app with `shinytest2`
 
-## Optimization
+## Using AI
 
--   Optimization is an advanced task, which should usally only come last
--   Make sure to invest your development time where it matters by profiling the code first
--   Keep in mind: explore fast alternative packages, don't repeat or copy, vectorize where possible.
--   If necessary, consider using some C++, but keep in mind maintenance burden
-
-# Closing remarks
-
-## Thank you!
-
-::: columns
-::: {.column width="30%"}
-![](resources/thank-you.jpg)
-:::
-
-::: {.column width="70%"}
--   It was great to teach you today (and yesterday) on how to build R packages
--   Let's keep in touch e.g. via the [gitter chat channel](https://gitter.im/workshop-r-swe/community) for this course that you can connect to
--   We welcome feedback on topics/format/content - reach out!
-:::
-:::
+- Better tools expand what we can do; engineering judgment still matters
+- Give agents project instructions, skills, and current documentation
+- Verify mathematics, test outcomes, and references independently
+- Keep code, documentation, and tests together in each change
 
 ## Possible next steps
 
+-   Bookmark the [`openstatsguide`](https://www.openstatsware.org/guide.html) as a quick reference for good practices for R package development
 -   Bring the information back to your colleagues in your organization
 -   Start building your first own package and share internally first
 -   Later publish it open source on GitHub and submit it to CRAN
@@ -113,8 +85,10 @@ image: thumbnails/conclusion.jpg
 
 ![Photo by Pixabay on pexels.com](resources/stairs.jpg)
 
-# License information
+# License information {.smaller}
 
-- Creators (initial authors): 
-  Daniel Sabanes Bove [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
+- Creators (initial authors):
+  Daniel Sabanés Bové [`r fontawesome::fa("github")`](https://github.com/danielinteractive/) [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/),
+  Alessandro Gasparini [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ellessenne) [`r fontawesome::fa("github")`](https://www.github.com/ellessenne) [`r fontawesome::fa("globe")`](https://www.ellessenne.xyz/)
+
 {{< include _license_footer.qmd >}}
