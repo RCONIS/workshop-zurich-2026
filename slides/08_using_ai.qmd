@@ -165,6 +165,22 @@ Registering a session does not automatically turn each exported function into a 
 Use synthetic data. R execution can read files and alter session state; keep tool permissions and the working directory appropriate to the demo.
 :::
 
+## Example: an MCP server in an R package
+
+This [autoslider.core MCP server](https://github.com/pharmaverse/autoslider.core/blob/main/inst/mcp/autoslider_mcp_server.R) defines R functions, registers them as MCP tools, then starts the server. Scroll through the live source below.
+
+<iframe
+  class="mcp-source"
+  src="https://raw.githubusercontent.com/pharmaverse/autoslider.core/main/inst/mcp/autoslider_mcp_server.R"
+  title="autoslider.core MCP server source code"
+  loading="lazy">
+</iframe>
+
+::: notes
+Use this as a concrete example of an MCP server implemented in an R package. Notice the session state, the tool functions, their descriptions and arguments, and the call to mcp_server() at the end.
+The panel loads the current source from the autoslider.core repository; use the link above if embedded remote content is blocked.
+:::
+
 ## Review the result, including the tests
 
 - Does the implementation meet the design and preserve the public API?
@@ -182,7 +198,7 @@ An assistant can write code and tests that agree with the same misunderstanding.
 Ask the reviewer to identify risks and missing evidence, rather than simply asking “Is this good?”. A second AI review complements human review.
 :::
 
-## Guided practice: one small package change {.smaller}
+## Exercise: one small package change
 
 Work on a branch of your workshop package (or follow the instructor's demo).
 
