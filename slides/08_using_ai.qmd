@@ -19,23 +19,26 @@ The article raises concerns about documentation; do not infer a causal effect of
 The graphic is third-party content and is excluded from the course's CC BY-SA license.
 :::
 
-## Where I was disappointed by LLMs — in 2024 {.smaller}
+## 2024 vs. 2026
 
-| My earlier disappointment | What we can now ask tools to do |
+| Disappointment in 2024 | Productive use in 2026 |
 | --- | --- |
-| Translate code, e.g. R → Julia | Translate, execute, and compare outputs |
-| Logic and mathematics, e.g. inverse functions | Propose derivations and check domains and identities |
-| Write tests for existing code | Draft tests, run them, and investigate failures |
-| Generate slides or posters | Create and revise artifacts with visual feedback |
-| Find literature references | Search sources and verify bibliographic details |
+| Bad at translating code (e.g. R to Julia) | Translates code well between e.g. SAS and R |
+| Bad at mathematics, e.g. inverse functions | Can solve difficult math problems |
+| Bad at writing tests | Draft tests, run them, and investigate failures |
+| Bad at slide generation | Create and revise slides with visual feedback |
+| Made up literature references | Can reliably find literature references |
 
-**All of these are now possible with current AI tools.** Tool access and iterative feedback have changed the experience substantially; success still needs checking.
 
 ::: notes
 This is a retrospective on my own experience, not a guarantee for every task or model.
 For R-to-Julia translation, check missing values, indexing, types, and numerical tolerances.
 For an inverse, substitute back into the original function and check the domain.
 For literature, open the paper and verify authors, DOI, and the claim it supports.
+
+**All of these are now possible with current AI tools.** 
+Tool access and iterative feedback have changed the experience substantially
+But success still needs checking!
 :::
 
 ## Keep the engineering workflow
@@ -47,6 +50,8 @@ For literature, open the paper and verify authors, DOI, and the claim it support
 3. Implement one small, reviewable change at a time
 4. Run examples, tests, and package checks; inspect the results
 5. Review the diff and update documentation before committing
+
+[Hadley Wickham's Tidy design principles](https://tidydesign.substack.com/) provide useful reading for designing APIs that humans and assistants can understand.
 
 ::: notes
 Example prompt: “Read the design vignette and existing tests. Propose a plan for adding a missing-value option without changing existing defaults. Wait for my review of the plan before implementing.”
@@ -70,12 +75,17 @@ Participants can continue using RStudio for the package exercises; switching IDE
 Accounts, available models, and costs depend on the chosen provider and setup.
 :::
 
-## `AGENTS.md`: instructions for your project
+## Instructions for your project
 
 [AGENTS.md](https://agents.md/) gives compatible coding agents shared project context. Put it at the repository root; use scoped instructions where needed.
 
+Keep instructions short, accurate, and version controlled. Check how your assistant discovers them.
+
+Example:
+
 ```markdown
 # Working on this R package
+
 - Read DESCRIPTION, the design vignette, and CONTRIBUTING.md first.
 - Keep public function signatures and defaults stable unless requested.
 - Edit roxygen source; regenerate Rd and NAMESPACE with devtools::document().
@@ -84,6 +94,12 @@ Accounts, available models, and costs depend on the chosen provider and setup.
 - Explain mathematical changes and benchmark performance claims.
 - Report the changed files, check results, and unresolved questions.
 ```
+
+::: notes
+AGENTS.md gives project-wide conventions; a skill gives task-specific guidance; a prompt gives the immediate task.
+Additional examples: tests/AGENTS.md can describe reference data and tolerances; src/AGENTS.md can explain compiled-code conventions.
+Support and discovery rules vary across assistants. Instructions do not replace permissions or sandbox controls.
+:::
 
 ## Give the assistant skills
 
@@ -110,21 +126,12 @@ Loading and activation differ between tools; linking a file in a prompt does not
 - Implement in steps; compare with the existing implementation and benchmark
 - Update the math description, code, tests, and relevant release notes together
 
-A stale description can lead an assistant to implement the wrong algorithm.
-
 ::: notes
 This is the instructor's experience supplied for the course, not a claim that the linked vignette documents a particular AI-assisted change or measured speedup.
 For a numerical algorithm, compare estimates, covariance matrices, likelihoods, convergence, and edge cases as appropriate. Report both correctness evidence and benchmark conditions.
 Do not treat the optimized implementation as the sole source of expected test values.
 :::
 
-Keep instructions short, accurate, and version controlled. Check how your assistant discovers them.
-
-::: notes
-AGENTS.md gives project-wide conventions; a skill gives task-specific guidance; a prompt gives the immediate task.
-Additional examples: tests/AGENTS.md can describe reference data and tolerances; src/AGENTS.md can explain compiled-code conventions.
-Support and discovery rules vary across assistants. Instructions do not replace permissions or sandbox controls.
-:::
 
 ## Model Context Protocol
 
@@ -142,7 +149,8 @@ The next slide applies this pattern to an R session and package documentation.
 
 ## Let AI use your R package through MCP
 
-[MCP](https://modelcontextprotocol.io/) connects an assistant to tools. [mcptools](https://posit-dev.github.io/mcptools/) lets an MCP client interact with R; [btw](https://posit-dev.github.io/btw/) supplies tools for documentation and session context.
+- [mcptools](https://posit-dev.github.io/mcptools/) lets an MCP client interact with R
+- [btw](https://posit-dev.github.io/btw/) supplies tools for documentation and session context.
 
 ```r
 # In a disposable R session with example data:
@@ -167,21 +175,211 @@ Use synthetic data. R execution can read files and alter session state; keep too
 
 ## Example: an MCP server in an R package
 
-This [autoslider.core MCP server](https://github.com/pharmaverse/autoslider.core/blob/main/inst/mcp/autoslider_mcp_server.R) defines R functions, registers them as MCP tools, then starts the server. Scroll through the live source below.
+This [autoslider.core MCP server](https://github.com/pharmaverse/autoslider.core/blob/main/inst/mcp/autoslider_mcp_server.R) defines R functions, registers them as MCP tools, then starts the server. Scroll through the source below.
 
-<iframe
-  class="mcp-source"
-  src="https://raw.githubusercontent.com/pharmaverse/autoslider.core/main/inst/mcp/autoslider_mcp_server.R"
-  title="autoslider.core MCP server source code"
-  loading="lazy">
-</iframe>
+```r
+#!/usr/bin/env Rscript
+# Autoslider MCP Server
+#
+# Exposes the autoslider.core pipeline as MCP tools so any MCP-compatible
+# client (Claude Desktop, Claude Code, Cursor, Open WebUI, etc.) can
+# orchestrate slide generation conversationally.
+#
+# Usage:
+#   Rscript inst/mcp/autoslider_mcp_server.R
+#
+# Register in your MCP client — see inst/mcp/claude_desktop_config_snippet.json
+#
+# Requirements:
+#   install.packages("mcptools")        # on CRAN
+#   # ellmer and autoslider.core already in your renv/library
+
+suppressPackageStartupMessages({
+  library(mcptools)
+  library(ellmer)
+  library(autoslider.core)
+  library(filters)
+  library(dplyr)
+})
+
+# ---- session state ----------------------------------------------------------
+# Holds spec and outputs across tool calls within one Claude session.
+.state <- new.env(parent = emptyenv())
+.state$spec    <- NULL
+.state$outputs <- NULL
+
+# ---- helpers ----------------------------------------------------------------
+stop_if <- function(cond, msg) if (cond) stop(msg, call. = FALSE)
+require_spec    <- function() stop_if(is.null(.state$spec),    "No spec loaded. Call load_spec first.")
+require_outputs <- function() stop_if(is.null(.state$outputs), "No outputs generated. Call run_pipeline first.")
+
+# ---- tool functions ---------------------------------------------------------
+
+fn_list_programs <- function() {
+  spec_file <- system.file("spec.yml", package = "autoslider.core")
+  spec      <- read_spec(spec_file)
+  programs  <- sort(unique(vapply(spec, `[[`, character(1), "program")))
+  paste(programs, collapse = "\n")
+}
+
+fn_load_spec <- function(spec_path, filters_path, program_filter, suffix_filter) {
+  if (spec_path == "default") {
+    spec_path <- system.file("spec.yml", package = "autoslider.core")
+  }
+  if (filters_path == "default") {
+    filters_path <- system.file("filters.yml", package = "autoslider.core")
+  }
+
+  filters::load_filters(yaml_file = filters_path, overwrite = TRUE)
+  spec <- read_spec(spec_path)
+
+  if (nzchar(program_filter)) {
+    progs <- trimws(strsplit(program_filter, ",")[[1]])
+    spec  <- filter_spec(spec, program %in% progs, verbose = FALSE)
+  }
+
+  if (nzchar(suffix_filter)) {
+    suffs <- trimws(strsplit(suffix_filter, ",")[[1]])
+    spec  <- filter_spec(spec, suffix %in% suffs, verbose = FALSE)
+  }
+
+  .state$spec    <- spec
+  .state$outputs <- NULL
+
+  sprintf(
+    "Spec loaded: %d output(s).\n%s",
+    length(spec),
+    paste(names(spec), collapse = "\n")
+  )
+}
+
+      "Must call load_spec first.",
+      "Pass dataset_paths as comma-separated name=path pairs, e.g.",
+      '"adsl=/data/adsl.rds,adae=/data/adae.rds".',
+      'Use "example" to use the built-in example CDISC datasets.'
+    ),
+    arguments = list(
+      dataset_paths = type_string(
+        'Comma-separated name=path.rds pairs, or "example" for built-in data.'
+      )
+    )
+  ),
+
+  tool(
+    fun = fn_add_ai_notes,
+    name = "add_ai_notes",
+    description = paste(
+      "Generate AI speaker notes for each slide output using any supported LLM.",
+      "Reads prompts from prompt.yml and calls the chosen provider.",
+      "Must call run_pipeline first.",
+      "Supported providers: anthropic, ollama, openai, deepseek."
+    ),
+    arguments = list(
+      provider = type_string(
+        'LLM provider: "anthropic", "ollama", "openai", or "deepseek".'
+      ),
+      model = type_string(
+        'Model name for the provider, e.g. "claude-haiku-4-5", "llama3.2", "gpt-4o-mini", "deepseek-chat".'
+      ),
+      api_key = type_string(
+        paste(
+          'API key. Leave empty ("") to read from the provider\'s env var',
+          "(ANTHROPIC_API_KEY, OPENAI_API_KEY, DEEPSEEK_API_KEY). Not required for ollama."
+        )
+      ),
+      prompt_path = type_string(
+        'Path to prompt.yml. Use "default" for the built-in package prompts.'
+      ),
+      base_url = type_string(
+        paste(
+          'Optional custom base URL. Useful for local Ollama ("http://localhost:11434")',
+          'or self-hosted endpoints. Leave empty ("") for provider defaults.'
+        )
+      )
+    )
+  ),
+
+  tool(
+    fun = fn_add_ai_story,
+    name = "add_ai_story",
+    description = paste(
+      "Post-process a generated deck: read the .pptx, ask an LLM to tell the story",
+      "of the tables, and insert REAL content slides (title + bullets) -- a summary",
+      "section at the front and a conclusions section at the end. Unlike add_ai_notes",
+      "(which hides text in speaker notes), these slides show in presentation mode.",
+      "Must call run_pipeline and generate_slides first.",
+      "Supported providers: anthropic, ollama, openai, deepseek."
+    ),
+    arguments = list(
+      provider = type_string(
+        'LLM provider: "anthropic", "ollama", "openai", or "deepseek".'
+      ),
+      model = type_string(
+        'Model name for the provider, e.g. "claude-haiku-4-5", "llama3.2", "gpt-4o-mini", "deepseek-chat".'
+      ),
+      api_key = type_string(
+        paste(
+          'API key. Leave empty ("") to read from the provider\'s env var',
+          "(ANTHROPIC_API_KEY, OPENAI_API_KEY, DEEPSEEK_API_KEY). Not required for ollama."
+        )
+      ),
+      base_url = type_string(
+        paste(
+          'Optional custom base URL. Useful for local Ollama ("http://localhost:11434")',
+          'or self-hosted endpoints. Leave empty ("") for provider defaults.'
+        )
+      ),
+      infile = type_string(
+        "Path to the generated .pptx to read (the deck produced by generate_slides)."
+      ),
+      outfile = type_string(
+        'Path to write the augmented deck to. Leave empty ("") to overwrite infile in place.'
+      ),
+      max_slides = type_string(
+        "Maximum slides per section (summary and conclusions). Empty string defaults to 4."
+      )
+    )
+  ),
+
+  tool(
+    fun = fn_generate_slides,
+    name = "generate_slides",
+    description = paste(
+      "Assemble the generated outputs into a PowerPoint (.pptx) file.",
+      "Must call run_pipeline first.",
+      "Returns the absolute path to the written file."
+    ),
+    arguments = list(
+      outfile = type_string(
+        'Output file path for the .pptx, e.g. "/tmp/study_slides.pptx".'
+      ),
+      template = type_string(
+        'Path to a .pptx template file. Use "default" for the built-in basic.pptx theme.'
+      )
+    )
+  ),
+
+  tool(
+    fun = fn_reset,
+    name = "reset",
+    description = "Clear the session state (loaded spec and generated outputs). Useful to start a fresh run.",
+    arguments = list()
+  )
+
+)
+
+# ---- start server -----------------------------------------------------------
+
+mcp_server(tools = tools)
+```
+
 
 ::: notes
 Use this as a concrete example of an MCP server implemented in an R package. Notice the session state, the tool functions, their descriptions and arguments, and the call to mcp_server() at the end.
 The panel loads the current source from the autoslider.core repository; use the link above if embedded remote content is blocked.
 :::
 
-## Review the result, including the tests
+## Important: Review the result, including tests
 
 - Does the implementation meet the design and preserve the public API?
 - Do tests check independent expected results, boundaries, and failure cases?
@@ -190,8 +388,7 @@ The panel loads the current source from the autoslider.core repository; use the 
 - Have you read the diff and the actual check output?
 
 Use a fresh review pass; fix the findings and rerun affected checks.
-
-[Hadley Wickham's Tidy design principles](https://tidydesign.substack.com/) provide useful reading for designing APIs that humans and assistants can understand.
+AI review can be very helpful for larger diffs (but ideally you want small diffs).
 
 ::: notes
 An assistant can write code and tests that agree with the same misunderstanding. Use a hand-calculated example or a separately trusted implementation where possible.
