@@ -147,10 +147,15 @@ MCP standardizes the connection, not the model's judgement. The client controls 
 The next slide applies this pattern to an R session and package documentation.
 :::
 
+## R as an MCP server
+
+![From https://posit-dev.github.io/mcptools/](resources/r_as_a_server.png)
+
+
 ## Let AI use your R package through MCP
 
 - [mcptools](https://posit-dev.github.io/mcptools/) lets an MCP client interact with R
-- [btw](https://posit-dev.github.io/btw/) supplies tools for documentation and session context.
+- [btw](https://posit-dev.github.io/btw/) supplies standard tools for documentation and session context.
 
 ```r
 # In a disposable R session with example data:
@@ -378,6 +383,14 @@ mcp_server(tools = tools)
 Use this as a concrete example of an MCP server implemented in an R package. Notice the session state, the tool functions, their descriptions and arguments, and the call to mcp_server() at the end.
 The panel loads the current source from the autoslider.core repository; use the link above if embedded remote content is blocked.
 :::
+
+## R as an MCP client
+
+![From https://posit-dev.github.io/mcptools/](resources/r_as_a_client.png){fig-align="center"}
+
+## Very Important
+
+![From https://tidydesign.substack.com/p/y-code-when-ai by Hadley Wickham](resources/still-your-work.webp){fig-align="center"}
 
 ## Important: Review the result, including tests
 

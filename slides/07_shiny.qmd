@@ -2,6 +2,7 @@
 title: "7 Shiny Development"
 description: "Best Practices for Shiny App Development<br/>[Photo by Pixabay on pexels.com]{.copyright}"
 image: thumbnails/shiny.jpg
+author: Daniel Sabanés Bové
 ---
 
 ## Why are best practices important for Shiny?
