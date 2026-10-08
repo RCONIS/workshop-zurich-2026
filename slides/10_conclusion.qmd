@@ -1,5 +1,5 @@
 ---
-title: "9 Conclusion"
+title: "10 Conclusion"
 description: "Discussion of learning experience, summary of workflow, conclusion and next steps</br>[Photo by Ann H on pexels.com]{.copyright}"
 image: thumbnails/conclusion.jpg
 author: Daniel Sabanés Bové
@@ -13,7 +13,7 @@ author: Daniel Sabanés Bové
 ## Thank you!
 
 - To you for your engagement and participation
-- To the Zurich R Courses team at ETH Zurich and UZH
+- To the Zurich R Courses team at ETH Zurich: Lukas Meier, Laura Vogt, Markus Kalisch
 - To our fellow `openstatsware` authors of the course materials
 
 # Take away messages
@@ -24,6 +24,16 @@ author: Daniel Sabanés Bové
 -   With modern tools `usethis`, `roxygen2` it is easy to start a new package
 -   Packaging a set of functions is an ideal way to share with collaborators and the public
 -   Start small and simple and over time you can learn additional options
+
+## Engineering Workflow
+
+-   Use a workable workflow:\
+    Idea $\rightarrow$ Design docs $\rightarrow$ Programming $\rightarrow$ Quality check $\rightarrow$ Publication
+    -   Don't waste time on maintenance
+    -   Be faster with release on CRAN
+    -   Fulfill quality requirements of yourself and stakeholders
+-   Refactor your one-off scripts that you want to use in a package
+
 
 ## Ensuring quality
 
@@ -36,6 +46,7 @@ author: Daniel Sabanés Bové
 -   Write tests for your functions
     -   Use [testthat](https://cran.r-project.org/package=testthat) to test, test, and test
     -   Use [covr](https://cran.r-project.org/package=covr) to improve the test coverage
+-   Use assertions for all arguments $\rightarrow$ better user experience
 
 ## Collaboration
 
@@ -56,24 +67,27 @@ author: Daniel Sabanés Bové
 -   GitHub helps with tagging of release versions
 -   R-Hub helps with checking before CRAN submission
 
-## Engineering workflow
-
-- Keep design, implementation, documentation, and tests aligned
-- Use assertions and clear interfaces; develop in small steps
-- Review changes and run checks before publishing
-
 ## Shiny
 
-- Design the UI and package structure first
-- Use modules to make reactivity manageable
-- Test static code, servers, and the app with `shinytest2`
+-   Best practices are not just important for R packages, also for Shiny!
+-   Design UI and package structure first, minimize actual Shiny code
+-   Shiny modules help to make the reactivity manageable
+-   Use normal tests for static code, server tests and `shinytest2` for Shiny code
+
+## Optimization
+
+-   Optimization is an advanced task, which should usually only come last
+-   Make sure to invest your development time where it matters by profiling the code first
+-   Keep in mind: explore fast alternative packages, don't repeat or copy, vectorize where possible.
+-   If necessary, consider using some C++, but keep in mind maintenance burden
 
 ## Using AI
 
-- Better tools expand what we can do; engineering judgment still matters
+- Better tools amplify what we can do, but engineering judgment and responsibility still matters
 - Give agents project instructions, skills, and current documentation
-- Verify mathematics, test outcomes, and references independently
+- Review mathematics, test outcomes, and references independently
 - Keep code, documentation, and tests together in each change
+- You can also give agents access to an MCP server to use your R package, and vice versa you can use R to interact with other MCP servers
 
 ## Possible next steps
 

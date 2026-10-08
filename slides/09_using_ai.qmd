@@ -1,5 +1,5 @@
 ---
-title: "8 Using AI"
+title: "9 Using AI"
 description: "AI assistants for R package development: workflow, context, skills, review, and MCP. Graphic credited to Pierre DeBois."
 image: resources/ai-graphic.webp
 author: Daniel Sabanés Bové
@@ -133,6 +133,26 @@ Do not treat the optimized implementation as the sole source of expected test va
 :::
 
 
+## Very Important
+
+![From https://tidydesign.substack.com/p/y-code-when-ai by Hadley Wickham](resources/still-your-work.webp){fig-align="center"}
+
+## Important: Review the result, including tests
+
+- Does the implementation meet the design and preserve the public API?
+- Do tests check independent expected results, boundaries, and failure cases?
+- Are examples runnable and documentation consistent with the code?
+- Are dependencies and external references real and necessary?
+- Have you read the diff and the actual check output?
+
+Use a fresh review pass; fix the findings and rerun affected checks.
+AI review can be very helpful for larger diffs (but ideally you want small diffs).
+
+::: notes
+An assistant can write code and tests that agree with the same misunderstanding. Use a hand-calculated example or a separately trusted implementation where possible.
+Ask the reviewer to identify risks and missing evidence, rather than simply asking “Is this good?”. A second AI review complements human review.
+:::
+
 ## Model Context Protocol
 
 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open protocol that gives AI applications a standard way to connect with external systems.
@@ -154,31 +174,54 @@ The next slide applies this pattern to an R session and package documentation.
 
 ## Let AI use your R package through MCP
 
+Useful packages:
+
 - [mcptools](https://posit-dev.github.io/mcptools/) lets an MCP client interact with R
 - [btw](https://posit-dev.github.io/btw/) supplies standard tools for documentation and session context.
+- [mcpr](https://github.com/devOpifex/mcpr/) provides an alternative MCP server framework, with roxygen2 tag based tool registration.
+
+
+## Defining the tools for the MCP server
+
+First, you define the tools in a script file, together with the MCP server start up call.
+This file can go inside your package in the `inst` folder.
+
+Example `tools.R` file:
 
 ```r
-# In a disposable R session with example data:
-install.packages(c("mcptools", "btw"))
-library(yourpackage) # replace with your installed package
-mcptools::mcp_session()
+library(zurich2026)
+
+my_tools <- list(
+    tool_hello = ellmer::tool(
+        fun = hello, # function from the zurich2026 package
+        description = "Say hello to the user.",
+        arguments = list(
+            my_name = ellmer::type_string("The name of the person to greet.")
+        )
+    )
+)
+
+mcptools::mcp_server(tools = my_tools)
 ```
 
-Configure the client's local MCP server to run:
+## Registering the MCP server in your Agent
 
-```bash
-Rscript -e 'mcptools::mcp_server()'
+For example in Codex you then define the MCP server, e.g. in the `~/.codex/config.toml` file:
+
+```toml
+[mcp_servers.my_r_mcp_server]
+enabled = true
+command = "Rscript"
+args = ["-e", 'source(system.file("tools.R", package = "zurich2026"))']
 ```
 
-Ask it to read your function's help, run a small example, and explain the result. Verify the actual tool calls and output.
+So this is telling Codex how to start up R and in there just source the `tools.R` file from the `zurich2026` package.
 
-::: notes
-The package name is a placeholder. The mcptools documentation shows client-specific configuration; follow it for the assistant you use.
-Registering a session does not automatically turn each exported function into a dedicated MCP tool: the assistant can use R execution and documentation tools, or you can configure specific functions.
-Use synthetic data. R execution can read files and alter session state; keep tool permissions and the working directory appropriate to the demo.
-:::
+## Afterwards you can use it in your Agent!
 
-## Example: an MCP server in an R package
+![Screenshot from the Codex session showing the MCP server in action](resources/mcp-codex.png)
+
+## Real example: an MCP server in an R package
 
 This [autoslider.core MCP server](https://github.com/pharmaverse/autoslider.core/blob/main/inst/mcp/autoslider_mcp_server.R) defines R functions, registers them as MCP tools, then starts the server. Scroll through the source below.
 
@@ -386,31 +429,13 @@ The panel loads the current source from the autoslider.core repository; use the 
 
 ## R as an MCP client
 
+Vice versa, it is also possible to use R as an MCP client to interact with other MCP servers, e.g. from GitHub, Confluence or Google Drive, using `mcptools`:
+
 ![From https://posit-dev.github.io/mcptools/](resources/r_as_a_client.png){fig-align="center"}
 
-## Very Important
-
-![From https://tidydesign.substack.com/p/y-code-when-ai by Hadley Wickham](resources/still-your-work.webp){fig-align="center"}
-
-## Important: Review the result, including tests
-
-- Does the implementation meet the design and preserve the public API?
-- Do tests check independent expected results, boundaries, and failure cases?
-- Are examples runnable and documentation consistent with the code?
-- Are dependencies and external references real and necessary?
-- Have you read the diff and the actual check output?
-
-Use a fresh review pass; fix the findings and rerun affected checks.
-AI review can be very helpful for larger diffs (but ideally you want small diffs).
-
-::: notes
-An assistant can write code and tests that agree with the same misunderstanding. Use a hand-calculated example or a separately trusted implementation where possible.
-Ask the reviewer to identify risks and missing evidence, rather than simply asking “Is this good?”. A second AI review complements human review.
-:::
+This needs a corresponding configuration of the MCP servers in `~/.config/mcptools/config.json`. Different MCP servers need dedicated configuration entries there. 
 
 ## Exercise: one small package change
-
-Work on a branch of your workshop package (or follow the instructor's demo).
 
 1. Describe one small improvement and its acceptance criteria
 2. Draft an `AGENTS.md` with conventions and check commands
