@@ -4,7 +4,7 @@
     "href": "listing.html",
     "title": "Slides",
     "section": "",
-    "text": "1 Introduction\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n2 R packages\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n3 An R Package Engineering Workflow\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nWorkflow for creating R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n4 Ensuring Quality\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nPackage quality + practical\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n5 Version Control and Collaboration\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n6 Publication\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n7 Shiny Development\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nBest Practices for Shiny App DevelopmentPhoto by Pixabay on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n8 Using AI\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nAI assistants for R package development: workflow, context, skills, review, and MCP. Graphic credited to Pierre DeBois.\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n9 Conclusion\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\nNo matching items"
+    "text": "1 Introduction\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nIntroduction and outline of programPhoto CC0 by Mabel Amber on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n10 Conclusion\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nDiscussion of learning experience, summary of workflow, conclusion and next stepsPhoto by Ann H on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n2 R packages\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nR package syntax + practical\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n3 An R Package Engineering Workflow\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nWorkflow for creating R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n4 Ensuring Quality\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nPackage quality + practical\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n5 Version Control and Collaboration\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nCollaboration via GitHub + practicalPhoto CC0 by THIS IS ZUN on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n6 Publication\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nPublication of R packages + practicalPhoto CC0 by Andrea Piacquadio on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n7 Shiny Development\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nBest Practices for Shiny App DevelopmentPhoto by Pixabay on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n8 Code Optimization\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nBest Practices for Optimizing CodePhoto by Chris Peeters on pexels.com\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\n  \n\n\n\n\n9 Using AI\n\n\nopenstatsware Workshop: Good Software Engineering Practice for R Packages\n\n\nAI assistants for R package development: workflow, context, skills, review, and MCP. Graphic credited to Pierre DeBois.\n\n\n\n\n\n\nOct 8, 2026\n\n\nDaniel Sabanés Bové\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "LICENSE.html",
@@ -357,67 +357,592 @@
     "text": "Deployment Process\nYou’ll need few extra steps:\n\nInstruct the server how to run the app in the package. Simplest is app.R in package root folder containing:\n\npkgload::load_all(\".\")\nmyApp() # = function in your package calling shinyApp()\n\nIgnore the app.R for package build\nInclude shiny and pkgload to the Imports in the DESCRIPTION file\nRun rsconnect::deployApp() to share the updated app version!"
   },
   {
-    "objectID": "slides/09_conclusion.html#thank-you",
-    "href": "slides/09_conclusion.html#thank-you",
-    "title": "9 Conclusion",
-    "section": "Thank you!",
-    "text": "Thank you!\n\nTo you for your engagement and participation\nTo the Zurich R Courses team at ETH Zurich and UZH\nTo our fellow openstatsware authors of the course materials"
+    "objectID": "slides/02_r_packages.html#what-you-know-already",
+    "href": "slides/02_r_packages.html#what-you-know-already",
+    "title": "2 R packages",
+    "section": "What you know already",
+    "text": "What you know already\n\nPackages provide a mechanism for loading optional code, data, and documentation\nA library is a directory into which packages are installed\ninstall.packages() is used to install packages into the library\nlibrary() is used to load and attach packages from the library\n\n“Attach” means that the package is put in your search list — objects in the package can be used directly\n\nRemember that package \\(\\neq\\) library"
   },
   {
-    "objectID": "slides/09_conclusion.html#r-package-structure",
-    "href": "slides/09_conclusion.html#r-package-structure",
-    "title": "9 Conclusion",
-    "section": "R package structure",
-    "text": "R package structure\n\nR package = folder structure with (many) conventions\nWith modern tools usethis, roxygen2 it is easy to start a new package\nPackaging a set of functions is an ideal way to share with collaborators and the public\nStart small and simple and over time you can learn additional options"
+    "objectID": "slides/02_r_packages.html#what-we-want-to-talk-about-now",
+    "href": "slides/02_r_packages.html#what-we-want-to-talk-about-now",
+    "title": "2 R packages",
+    "section": "What we want to talk about now",
+    "text": "What we want to talk about now\n\nHow to write, build, test, and check your own package 😊\nHow to do this in a methodical and sustainable way\nGive tips and tricks based on practical experience"
   },
   {
-    "objectID": "slides/09_conclusion.html#ensuring-quality",
-    "href": "slides/09_conclusion.html#ensuring-quality",
-    "title": "9 Conclusion",
-    "section": "Ensuring quality",
-    "text": "Ensuring quality\n\nQuality by Design: use a workable workflow:\nIdea \\(\\rightarrow\\) Design docs \\(\\rightarrow\\) Programming \\(\\rightarrow\\) Quality check \\(\\rightarrow\\) Publication\nApply common clean code rules:\n\nUse clear names for functions and variables\nDon’t repeat yourself!\nUse styler to optimize the code styling\n\nWrite tests for your functions\n\nUse testthat to test, test, and test\nUse covr to improve the test coverage"
+    "objectID": "slides/02_r_packages.html#how-is-a-package-structured",
+    "href": "slides/02_r_packages.html#how-is-a-package-structured",
+    "title": "2 R packages",
+    "section": "How is a package structured?",
+    "text": "How is a package structured?\nPackage source = directory with files and subdirectories\n\n\n\nMandatory:\n\nDESCRIPTION\nNAMESPACE\nR\nman\n\n\n\n\nTypically also includes:\n\ndata\ninst\nsrc\ntests\nvignettes\nNEWS"
   },
   {
-    "objectID": "slides/09_conclusion.html#collaboration",
-    "href": "slides/09_conclusion.html#collaboration",
-    "title": "9 Conclusion",
-    "section": "Collaboration",
-    "text": "Collaboration\n\nVersion control is key\n\nMultiple people working on code without strong VC \\(\\leadsto\\) disaster!\nThere are different options, but git is the defacto standard for R packages\nGit needs a friend - use platforms like GitHub or GitLab\n\nAutomated CI/CD allows for much quicker iteration\n\nAutomate tests to avoid bugs slipping back in\n\nTechnology does not solve everything - foster a positive culture\n\nKeep internal and external contributors engaged\nInvest in documentation to make it easier to contribute"
+    "objectID": "slides/02_r_packages.html#how-to-get-started-quickly",
+    "href": "slides/02_r_packages.html#how-to-get-started-quickly",
+    "title": "2 R packages",
+    "section": "How to get started quickly",
+    "text": "How to get started quickly\nOnce upon a time, developers would set up this structure manually 🥱\nNowadays, it’s super fast with:\n\nusethis::create_package()\nRStudio &gt; File &gt; New Project &gt; New Directory &gt; R Package"
   },
   {
-    "objectID": "slides/09_conclusion.html#publication",
-    "href": "slides/09_conclusion.html#publication",
-    "title": "9 Conclusion",
-    "section": "Publication",
-    "text": "Publication\n\npkgdown can help you easily create a nice website for your package\nVersions and licenses along with NEWS updates are important\nGitHub helps with tagging of release versions\nR-Hub helps with checking before CRAN submission"
+    "objectID": "slides/02_r_packages.html#description-file",
+    "href": "slides/02_r_packages.html#description-file",
+    "title": "2 R packages",
+    "section": "DESCRIPTION file",
+    "text": "DESCRIPTION file\n\nPackage: Choose the name of your package\n\nNot unimportant!\nCheck CRAN to see if your name is available\n\nTitle: Add a Title for Your Package (Title Case)\nVersion: Start with a low package version\n\nMajor.Minor.Patch syntax (Semantic Versioning)\n\nAuthors@R: Add authors and maintainer\nDescription: Like an abstract, including references"
   },
   {
-    "objectID": "slides/09_conclusion.html#engineering-workflow",
-    "href": "slides/09_conclusion.html#engineering-workflow",
-    "title": "9 Conclusion",
-    "section": "Engineering workflow",
-    "text": "Engineering workflow\n\nKeep design, implementation, documentation, and tests aligned\nUse assertions and clear interfaces; develop in small steps\nReview changes and run checks before publishing"
+    "objectID": "slides/02_r_packages.html#description-file-contd",
+    "href": "slides/02_r_packages.html#description-file-contd",
+    "title": "2 R packages",
+    "section": "DESCRIPTION file (cont’d)",
+    "text": "DESCRIPTION file (cont’d)\n\nLicense: Important for open sourcing\n\nConsider permissive licenses such as Apache and MIT\n\nDepends:\n\nWhich R version users need to have at a minimum\nIdeally don’t put any package here\nPackages will be loaded and attached upon library your package\n\nImports: Packages which you import functions, methods, classes from\nSuggests: Packages for documentation processing (roxygen2), running examples, tests (testthat), vignettes"
   },
   {
-    "objectID": "slides/09_conclusion.html#shiny",
-    "href": "slides/09_conclusion.html#shiny",
-    "title": "9 Conclusion",
-    "section": "Shiny",
-    "text": "Shiny\n\nDesign the UI and package structure first\nUse modules to make reactivity manageable\nTest static code, servers, and the app with shinytest2"
+    "objectID": "slides/02_r_packages.html#r-folder",
+    "href": "slides/02_r_packages.html#r-folder",
+    "title": "2 R packages",
+    "section": "R folder",
+    "text": "R folder\n\nOnly contains R code files (recommended to use .R suffix)\n\nCan create a file with usethis::use_r(\"filename\")\n\nAssigns R objects, i.e. mostly functions, but could also be constant variables, data sets, etc.\nShould not have any side effects, i.e. avoid require(), options() etc.\nIf certain code needs to be sourced first, use on top of file (which will update the Collate field of DESCRIPTION automatically)\n\n\n#' @include dependency.R\nNULL"
   },
   {
-    "objectID": "slides/09_conclusion.html#using-ai",
-    "href": "slides/09_conclusion.html#using-ai",
-    "title": "9 Conclusion",
-    "section": "Using AI",
-    "text": "Using AI\n\nBetter tools expand what we can do; engineering judgment still matters\nGive agents project instructions, skills, and current documentation\nVerify mathematics, test outcomes, and references independently\nKeep code, documentation, and tests together in each change"
+    "objectID": "slides/02_r_packages.html#namespace-file",
+    "href": "slides/02_r_packages.html#namespace-file",
+    "title": "2 R packages",
+    "section": "NAMESPACE file",
+    "text": "NAMESPACE file\n\n# Generated by roxygen2: do not edit by hand\n\nexport(package_used_first)\nexport(package_used_second)\nexport(package_used_third)\n\n\nDefines the namespace of the package, to work with R’s namespace management system\nNamespace directives in this file allow to specify:\n\nWhich objects are exported to users and other packages\nWhich are imported from other packages"
   },
   {
-    "objectID": "slides/09_conclusion.html#possible-next-steps",
-    "href": "slides/09_conclusion.html#possible-next-steps",
-    "title": "9 Conclusion",
-    "section": "Possible next steps",
-    "text": "Possible next steps\n\nBookmark the openstatsguide as a quick reference for good practices for R package development\nBring the information back to your colleagues in your organization\nStart building your first own package and share internally first\nLater publish it open source on GitHub and submit it to CRAN\nLearn about more tips and tricks how to extend R\n\n\nPhoto by Pixabay on pexels.com"
+    "objectID": "slides/02_r_packages.html#namespace-file-contd",
+    "href": "slides/02_r_packages.html#namespace-file-contd",
+    "title": "2 R packages",
+    "section": "NAMESPACE file (cont’d)",
+    "text": "NAMESPACE file (cont’d)\n\nControls the search strategy for variables:\n\nLocal (in the function body etc.)\nPackage namespace\nImports\nBase namespace\nNormal search() path"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#man-folder",
+    "href": "slides/02_r_packages.html#man-folder",
+    "title": "2 R packages",
+    "section": "man folder",
+    "text": "man folder\n\nContains documentation files for the objects in the package in the .Rd format\n\nThe syntax is a bit similar to LaTeX\n\nAll user level objects should be documented\nInternal objects don’t need to be documented — but I recommend it!\nOnce upon a time, developers would set up these .Rd files and the NAMESPACE manually 🥱\nFortunately, nowadays we have roxygen2! 🚀"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#roxygen2-to-the-rescue",
+    "href": "slides/02_r_packages.html#roxygen2-to-the-rescue",
+    "title": "2 R packages",
+    "section": "roxygen2 to the rescue!",
+    "text": "roxygen2 to the rescue!\n\nWe can include the documentation source directly in the R script on top of the objects we are documenting\nSyntax is composed of special comments #' and special macros preceded with @\nIn RStudio, running Build &gt; More &gt; Document will render the .Rd files and the NAMESPACE file for you\nGet started with usethis::use_roxygen_md()\nPlacing your cursor inside a function in RStudio, create a roxygen2 skeleton with Code &gt; Insert Roxygen Skeleton"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#roxygen2-tags-function-help",
+    "href": "slides/02_r_packages.html#roxygen2-tags-function-help",
+    "title": "2 R packages",
+    "section": "roxygen2 tags: function help",
+    "text": "roxygen2 tags: function help\n\n\n\n\n\n\n\nTag\nPurpose\n\n\n\n\n@title, @description\nName and short explanation (also supplied by the opening text)\n\n\n@details\nLonger explanation, assumptions, and algorithm\n\n\n@param x\nMeaning, type, and constraints of an argument\n\n\n@returns / @return\nReturn value: type, shape, and meaning\n\n\n@examples\nRunnable examples\n\n\n@seealso, @family\nRelated help topics and groups of functions\n\n\n\nOfficial roxygen2 function documentation · Cross-references"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#roxygen2-tags-reuse-and-namespace",
+    "href": "slides/02_r_packages.html#roxygen2-tags-reuse-and-namespace",
+    "title": "2 R packages",
+    "section": "roxygen2 tags: reuse and namespace",
+    "text": "roxygen2 tags: reuse and namespace\n\n\n\n\n\n\n\nTag\nPurpose\n\n\n\n\n@export\nExport a function or register its method\n\n\n@importFrom pkg fun\nImport selected functions; also list the dependency in DESCRIPTION\n\n\n@inheritParams fun\nReuse argument documentation\n\n\n@inherit fun\nReuse documentation sections\n\n\n@rdname topic, @describeIn topic\nCombine related functions on one help page\n\n\n@noRd\nKeep source documentation without generating an .Rd file\n\n\n@keywords internal\nKeep a help topic out of the normal index\n\n\n\nPrefer pkg::fun() for a few external calls. Regenerate with devtools::document(); edit the roxygen source, not generated files.\nOfficial namespace guide · Reusing documentation"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#setting-up-roxygen2-in-your-project",
+    "href": "slides/02_r_packages.html#setting-up-roxygen2-in-your-project",
+    "title": "2 R packages",
+    "section": "Setting up roxygen2 in your project",
+    "text": "Setting up roxygen2 in your project"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#roxygen2-source",
+    "href": "slides/02_r_packages.html#roxygen2-source",
+    "title": "2 R packages",
+    "section": "roxygen2 source",
+    "text": "roxygen2 source\nR/my_sum.R:\n\n#' My Summation Function\n#'\n#' This is my first function and it sums two numbers.\n#'\n#' @param x first summand.\n#' @param y second summand.\n#'\n#' @return The sum of `x` and `y`.\n#' @export\n#'\n#' @note This function is a bit boring but that is ok.\n#' @seealso [Arithmetic] for an easier way.\n#'\n#' @examples\n#' my_sum(1, 2)\nmy_sum &lt;- function(x, y) {\n    x + y\n}"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#roxygen2-output",
+    "href": "slides/02_r_packages.html#roxygen2-output",
+    "title": "2 R packages",
+    "section": "roxygen2 output",
+    "text": "roxygen2 output\nman/my_sum.Rd:\n% Generated by roxygen2: do not edit by hand\n% Please edit documentation in R/my_sum.R\n\\name{my_sum}\n\\alias{my_sum}\n\\title{My Summation Function}\n\\usage{\nmy_sum(x, y)\n}\n\\arguments{\n\\item{x}{first summand.}\n\n\\item{y}{second summand.}\n}\n\\value{\nThe sum of \\code{x} and \\code{y}.\n}\n\\description{\nThis is my first function and it sums two numbers.\n}\n\\note{\nThis function is a bit boring but that is ok.\n}\n\\examples{\nmy_sum(1, 2)\n}\n\\seealso{\n\\link{Arithmetic} for an easier way.\n}"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#roxygen2-output-contd",
+    "href": "slides/02_r_packages.html#roxygen2-output-contd",
+    "title": "2 R packages",
+    "section": "roxygen2 output (cont’d)",
+    "text": "roxygen2 output (cont’d)\nNAMESPACE:\n# Generated by roxygen2: do not edit by hand\n\nexport(my_sum)"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#tests-folder",
+    "href": "slides/02_r_packages.html#tests-folder",
+    "title": "2 R packages",
+    "section": "tests folder",
+    "text": "tests folder\n\nWhere store the unit tests covering the functionality of the package\nGet started with usethis::use_testthat() and usethis::use_test() and populate tests/testthat folder with unit tests\nRarely, tests cannot be run within testthat framework, then these can go into R scripts directly in tests directory\nWe will look at unit tests in detail later"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#data-folder",
+    "href": "slides/02_r_packages.html#data-folder",
+    "title": "2 R packages",
+    "section": "data folder",
+    "text": "data folder\n\nFor (example) data that you ship in your package to the user\n\nGet started with usethis::use_data()\nNote: Usually we use lazy data loading, therefore no data() call needed before using the data\n\nIf you generate the example data, save the R script, too\n\nPut that into data-raw folder, start with usethis::use_data_raw()"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#inst-folder",
+    "href": "slides/02_r_packages.html#inst-folder",
+    "title": "2 R packages",
+    "section": "inst folder",
+    "text": "inst folder\n\nContents will be copied recursively to installation directory\n\nBe careful not to interfere with standard folder names\n\nFor data that is used by functions in the package itself\n\nThose would typically go into inst/extdata folder\nLoad with system.file(\"path/file\", package = \"mypackage\")\n\nCITATION: For custom citation() output\n\nCreate it with usethis::use_citation()\n\ninst/doc can contain documentation files (typically pdf)"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#src-folder",
+    "href": "slides/02_r_packages.html#src-folder",
+    "title": "2 R packages",
+    "section": "src folder",
+    "text": "src folder\n\nContains sources and headers for any code that needs compilation\nShould only contain a single language here\n\nBecause R uses it, mixing C, C++ and Fortran usually works with OS native compilers\n\nMuch more complex to write and maintain than an R only package\nTypically only makes sense for\n\nWrapping existing libraries for use in R\nSpeeding up complex or long computations"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#vignettes-folder",
+    "href": "slides/02_r_packages.html#vignettes-folder",
+    "title": "2 R packages",
+    "section": "vignettes folder",
+    "text": "vignettes folder\n\nSpecial case of documentation files (pdf or html) created by compiling source files\nPackage users don’t need to recompile the vignettes - they are delivered with the package\nStart a new vignette with usethis::use_vignette()\n\nStarts an Rmd vignette, compiled with knitr\n\nImportant for the user to understand the high-level ideas\nComplements function-level documentation from our roxygen2 chunks"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#news-file",
+    "href": "slides/02_r_packages.html#news-file",
+    "title": "2 R packages",
+    "section": "NEWS file",
+    "text": "NEWS file\n\nLists user-visible changes worth mentioning\nIn each new release, add items at the top under the version they refer to\nDon’t discard old items: leave them in the file after the newer items\nStart one with usethis::use_news_md()"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#licensing-1",
+    "href": "slides/02_r_packages.html#licensing-1",
+    "title": "2 R packages",
+    "section": "Licensing",
+    "text": "Licensing\n\nWe mentioned before that licensing information is usually included in the DESCRIPTION file\nIn fact, the License field (in standardized form) is mandatory\nLicensing for a package which might be distributed is an important but potentially complex subject\nIt is very important to include licensing information, as otherwise:\n\nIt may not be possible to use it\nIt may not be possible to distribute copies of it\n\nWe are going to talk more about licensing in Chapter 5 later today"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#license-options",
+    "href": "slides/02_r_packages.html#license-options",
+    "title": "2 R packages",
+    "section": "License options",
+    "text": "License options\n\nCommon licenses for R packages: GPL-2, GPL-3, AGPL-3, MIT, …\nDetails and description of most licenses are available online:\n\nhttps://www.r-project.org/Licenses\nhttps://choosealicense.com\nhttps://cran.r-project.org/doc/manuals/R-exts.html#Licensing\n\nExamples of standardized license specifications:\n\nLicense: GPL-2\nLicense: LGPL (&gt;= 2.0, &lt; 3) | Mozilla Public License\nLicense: GPL-2 | file LICENCE\nLicense: Artistic-2.0 | AGPL-3 + file LICENSE\n\nThe optional file LICENSE/LICENCE contains a copy of the license\n\nOnly include such a file if it is referred to in the License field"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#adding-a-license-to-your-package",
+    "href": "slides/02_r_packages.html#adding-a-license-to-your-package",
+    "title": "2 R packages",
+    "section": "Adding a license to your package",
+    "text": "Adding a license to your package\n\nOnce again, functions from the usethis package simplify this process:\n\nusethis::use_mit_license()\nusethis::use_gpl_license()\nusethis::use_agpl_license()\nusethis::use_lgpl_license()\nusethis::use_apache_license()\nusethis::use_cc0_license()\nusethis::use_ccby_license()\nusethis::use_proprietary_license()"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#documenting-the-package",
+    "href": "slides/02_r_packages.html#documenting-the-package",
+    "title": "2 R packages",
+    "section": "Documenting the package",
+    "text": "Documenting the package\n\nThe first step is to produce the documentation files and NAMESPACE\nIn RStudio: Build &gt; More &gt; Document\nIn the console: devtools::document()"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#checking-the-package",
+    "href": "slides/02_r_packages.html#checking-the-package",
+    "title": "2 R packages",
+    "section": "Checking the package",
+    "text": "Checking the package\n\nR comes with pre-defined check command for packages: “the R package checker” aka R CMD check\nAbout 22 checks are run (so quite a lot), including things like:\n\nCan the package be installed?\nIs the code syntax ok?\nIs the documentation complete?\nDo tests run successfully?\nDo examples run successfully?\n\nIn RStudio: Build &gt; Check\nIn the console: devtools::check()"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#building-the-package-1",
+    "href": "slides/02_r_packages.html#building-the-package-1",
+    "title": "2 R packages",
+    "section": "Building the package",
+    "text": "Building the package\n\nThe R package folder can be compressed into a single package file\nTypically we manually only build “source” package\n\nIn RStudio: Build &gt; More &gt; Build Source Package\nIn the console: devtools::build()\n\nMakes it easy to share the package with others and submit to CRAN"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#installing-the-package",
+    "href": "slides/02_r_packages.html#installing-the-package",
+    "title": "2 R packages",
+    "section": "Installing the package",
+    "text": "Installing the package\n\nR comes with pre-defined install command for packages: R CMD INSTALL\nIn RStudio: Build &gt; Install\nIn the console: devtools::install()\nNote: During development it’s usually sufficient to use Build &gt; More &gt; Load All\n\nRuns devtools::load_all()\nRoughly simulates what happens when package would be installed and loaded\nUnexported objects and helpers under tests will also be available\nKey: much faster!"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#keyboard-shortcuts",
+    "href": "slides/02_r_packages.html#keyboard-shortcuts",
+    "title": "2 R packages",
+    "section": "Keyboard shortcuts",
+    "text": "Keyboard shortcuts\n\nLearning some of the RStudio keyboard shortcuts can speed up many of the tasks we introduced in this lecture:\n\n\n\n\n\n\nDescription\nWindows & Linux\nMac\n\n\n\n\nInstall and Restart\nCtrl+Shift+B\nShift+Command+B\n\n\nLoad All\nCtrl+Shift+L\nShift+Command+L\n\n\nTest Package\nCtrl+Shift+T\nShift+Command+T\n\n\nCheck Package\nCtrl+Shift+E\nShift+Command+E\n\n\nDocument Package\nCtrl+Shift+D\nShift+Command+D\n\n\n\n\n\n\nThere are many more – check for instance the RStudio IDE Documentation"
+  },
+  {
+    "objectID": "slides/02_r_packages.html#lets-try-this-out-now",
+    "href": "slides/02_r_packages.html#lets-try-this-out-now",
+    "title": "2 R packages",
+    "section": "Let’s try this out now 😊",
+    "text": "Let’s try this out now 😊\n\nSet up a new R package with a fancy name\nFill out the DESCRIPTION file\nInclude a few functions\nAdd roxygen2 documentation\nPick and add a license to the package\nExport the function to the namespace\nProduce the package documentation\nRun checks\nBuild the package\n\n\\(\\leadsto\\) We will be using this package throughout the workshop!"
+  },
+  {
+    "objectID": "slides/09_using_ai.html#ai-makes-packages-easier-to-write",
+    "href": "slides/09_using_ai.html#ai-makes-packages-easier-to-write",
+    "title": "9 Using AI",
+    "section": "AI makes packages easier to write",
+    "text": "AI makes packages easier to write\n\n\n\nIllustration accompanying Pierre DeBois’s article about AI and R package quality\n\n\nMore generated code makes design, documentation, and review even more valuable.\nGraphic: Pierre DeBois, AI Made R Packages Easy to Write. But Did It Make Packages in CRAN Better?, DataDrivenInvestor, 23 September 2026\n\nUse the graphic to open a discussion: what makes a package useful and trustworthy? The article raises concerns about documentation; do not infer a causal effect of AI from the illustration. The graphic is third-party content and is excluded from the course’s CC BY-SA license."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#vs.-2026",
+    "href": "slides/09_using_ai.html#vs.-2026",
+    "title": "9 Using AI",
+    "section": "2024 vs. 2026",
+    "text": "2024 vs. 2026\n\n\n\n\n\n\n\nDisappointment in 2024\nProductive use in 2026\n\n\n\n\nBad at translating code (e.g. R to Julia)\nTranslates code well between e.g. SAS and R\n\n\nBad at mathematics, e.g. inverse functions\nCan solve difficult math problems\n\n\nBad at writing tests\nDraft tests, run them, and investigate failures\n\n\nBad at slide generation\nCreate and revise slides with visual feedback\n\n\nMade up literature references\nCan reliably find literature references\n\n\n\n\nThis is a retrospective on my own experience, not a guarantee for every task or model. For R-to-Julia translation, check missing values, indexing, types, and numerical tolerances. For an inverse, substitute back into the original function and check the domain. For literature, open the paper and verify authors, DOI, and the claim it supports.\nAll of these are now possible with current AI tools. Tool access and iterative feedback have changed the experience substantially But success still needs checking!"
+  },
+  {
+    "objectID": "slides/09_using_ai.html#keep-the-engineering-workflow",
+    "href": "slides/09_using_ai.html#keep-the-engineering-workflow",
+    "title": "9 Using AI",
+    "section": "Keep the engineering workflow",
+    "text": "Keep the engineering workflow\nDesign → Plan → Implement in steps → Check → Review\n\nExplain the user need, interface, constraints, and acceptance criteria\nAsk the assistant to inspect the project and propose a plan\nImplement one small, reviewable change at a time\nRun examples, tests, and package checks; inspect the results\nReview the diff and update documentation before committing\n\nHadley Wickham’s Tidy design principles provide useful reading for designing APIs that humans and assistants can understand.\n\nExample prompt: “Read the design vignette and existing tests. Propose a plan for adding a missing-value option without changing existing defaults. Wait for my review of the plan before implementing.” Discuss where a human decision is needed: the API, statistical assumptions, acceptance criteria, and final review."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#choose-an-ide-that-fits-your-work",
+    "href": "slides/09_using_ai.html#choose-an-ide-that-fits-your-work",
+    "title": "9 Using AI",
+    "section": "Choose an IDE that fits your work",
+    "text": "Choose an IDE that fits your work\n\n\n\nIDE\nUseful AI integration\n\n\n\n\nVS Code\nGitHub Copilot for inline/tab completion and chat; extensions for Claude Code and Codex\n\n\nPositron\nPosit’s AI integration, Posit Assistant, with context from your R session, objects, plots, and console history\n\n\n\n\nTab completion helps with a local edit; an agent can work across files and run checks\nStart with a small task and inspect the changes and tool output\nChoose approved providers and share only data and code you are allowed to send\n\n\nPosit Assistant is the current name in the Positron documentation (October 2026). Participants can continue using RStudio for the package exercises; switching IDE is optional. Accounts, available models, and costs depend on the chosen provider and setup."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#instructions-for-your-project",
+    "href": "slides/09_using_ai.html#instructions-for-your-project",
+    "title": "9 Using AI",
+    "section": "Instructions for your project",
+    "text": "Instructions for your project\nAGENTS.md gives compatible coding agents shared project context. Put it at the repository root; use scoped instructions where needed.\nKeep instructions short, accurate, and version controlled. Check how your assistant discovers them.\nExample:\n# Working on this R package\n\n- Read DESCRIPTION, the design vignette, and CONTRIBUTING.md first.\n- Keep public function signatures and defaults stable unless requested.\n- Edit roxygen source; regenerate Rd and NAMESPACE with devtools::document().\n- Add tests for changed behavior; run devtools::test() and devtools::check().\n- Update vignettes and NEWS.md for user-visible changes.\n- Explain mathematical changes and benchmark performance claims.\n- Report the changed files, check results, and unresolved questions.\n\nAGENTS.md gives project-wide conventions; a skill gives task-specific guidance; a prompt gives the immediate task. Additional examples: tests/AGENTS.md can describe reference data and tolerances; src/AGENTS.md can explain compiled-code conventions. Support and discovery rules vary across assistants. Instructions do not replace permissions or sandbox controls."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#give-the-assistant-skills",
+    "href": "slides/09_using_ai.html#give-the-assistant-skills",
+    "title": "9 Using AI",
+    "section": "Give the assistant skills",
+    "text": "Give the assistant skills\n\nA SKILL.md packages instructions for a particular kind of task\nExplore posit-dev/skills\n\nUse r-package-development for R package conventions and development guidance\nUse critical-code-reviewer to request a critical review with concrete findings\n\nInstall using your assistant’s supported mechanism, then check that the relevant skill is loaded\n\nSkills supply reusable guidance; project documentation supplies the facts about your package.\n\nRead a skill before installing it. Check its assumptions and commands against your project. Ask: “Use the R package development skill for this change, then use the critical code reviewer skill to review the diff. Report each finding with its location and a suggested fix.” Loading and activation differ between tools; linking a file in a prompt does not necessarily install a skill."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#keep-documentation-and-code-in-sync",
+    "href": "slides/09_using_ai.html#keep-documentation-and-code-in-sync",
+    "title": "9 Using AI",
+    "section": "Keep documentation and code in sync",
+    "text": "Keep documentation and code in sync\nExample from our mmrm work: use the mathematical description to identify a faster algorithm, then implement it in code.\n\nStart with the current mathematical documentation, assumptions, and notation\nAsk for an optimization proposal and review the derivation\nImplement in steps; compare with the existing implementation and benchmark\nUpdate the math description, code, tests, and relevant release notes together\n\n\nThis is the instructor’s experience supplied for the course, not a claim that the linked vignette documents a particular AI-assisted change or measured speedup. For a numerical algorithm, compare estimates, covariance matrices, likelihoods, convergence, and edge cases as appropriate. Report both correctness evidence and benchmark conditions. Do not treat the optimized implementation as the sole source of expected test values."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#very-important",
+    "href": "slides/09_using_ai.html#very-important",
+    "title": "9 Using AI",
+    "section": "Very Important",
+    "text": "Very Important\n\nFrom https://tidydesign.substack.com/p/y-code-when-ai by Hadley Wickham"
+  },
+  {
+    "objectID": "slides/09_using_ai.html#important-review-the-result-including-tests",
+    "href": "slides/09_using_ai.html#important-review-the-result-including-tests",
+    "title": "9 Using AI",
+    "section": "Important: Review the result, including tests",
+    "text": "Important: Review the result, including tests\n\nDoes the implementation meet the design and preserve the public API?\nDo tests check independent expected results, boundaries, and failure cases?\nAre examples runnable and documentation consistent with the code?\nAre dependencies and external references real and necessary?\nHave you read the diff and the actual check output?\n\nUse a fresh review pass; fix the findings and rerun affected checks. AI review can be very helpful for larger diffs (but ideally you want small diffs).\n\nAn assistant can write code and tests that agree with the same misunderstanding. Use a hand-calculated example or a separately trusted implementation where possible. Ask the reviewer to identify risks and missing evidence, rather than simply asking “Is this good?”. A second AI review complements human review."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#model-context-protocol",
+    "href": "slides/09_using_ai.html#model-context-protocol",
+    "title": "9 Using AI",
+    "section": "Model Context Protocol",
+    "text": "Model Context Protocol\nModel Context Protocol (MCP) is an open protocol that gives AI applications a standard way to connect with external systems.\n\nAn MCP server advertises capabilities to an AI application’s MCP client\nThose capabilities can include tools (actions), resources (context or data), and reusable prompts\nThe model can request a capability; the client executes it and returns the result to the conversation\nServers may be local or remote, so access controls and the data exposed still matter\n\n\nMCP standardizes the connection, not the model’s judgement. The client controls which servers are available and should show or enforce appropriate permissions before a tool has side effects. The next slide applies this pattern to an R session and package documentation."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#r-as-an-mcp-server",
+    "href": "slides/09_using_ai.html#r-as-an-mcp-server",
+    "title": "9 Using AI",
+    "section": "R as an MCP server",
+    "text": "R as an MCP server\n\nFrom https://posit-dev.github.io/mcptools/"
+  },
+  {
+    "objectID": "slides/09_using_ai.html#let-ai-use-your-r-package-through-mcp",
+    "href": "slides/09_using_ai.html#let-ai-use-your-r-package-through-mcp",
+    "title": "9 Using AI",
+    "section": "Let AI use your R package through MCP",
+    "text": "Let AI use your R package through MCP\nUseful packages:\n\nmcptools lets an MCP client interact with R\nbtw supplies standard tools for documentation and session context.\nmcpr provides an alternative MCP server framework, with roxygen2 tag based tool registration."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#defining-the-tools-for-the-mcp-server",
+    "href": "slides/09_using_ai.html#defining-the-tools-for-the-mcp-server",
+    "title": "9 Using AI",
+    "section": "Defining the tools for the MCP server",
+    "text": "Defining the tools for the MCP server\nFirst, you define the tools in a script file, together with the MCP server start up call. This file can go inside your package in the inst folder.\nExample tools.R file:\nlibrary(zurich2026)\n\nmy_tools &lt;- list(\n    tool_hello = ellmer::tool(\n        fun = hello, # function from the zurich2026 package\n        description = \"Say hello to the user.\",\n        arguments = list(\n            my_name = ellmer::type_string(\"The name of the person to greet.\")\n        )\n    )\n)\n\nmcptools::mcp_server(tools = my_tools)"
+  },
+  {
+    "objectID": "slides/09_using_ai.html#registering-the-mcp-server-in-your-agent",
+    "href": "slides/09_using_ai.html#registering-the-mcp-server-in-your-agent",
+    "title": "9 Using AI",
+    "section": "Registering the MCP server in your Agent",
+    "text": "Registering the MCP server in your Agent\nFor example in Codex you then define the MCP server, e.g. in the ~/.codex/config.toml file:\n[mcp_servers.my_r_mcp_server]\nenabled = true\ncommand = \"Rscript\"\nargs = [\"-e\", 'source(system.file(\"tools.R\", package = \"zurich2026\"))']\nSo this is telling Codex how to start up R and in there just source the tools.R file from the zurich2026 package."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#afterwards-you-can-use-it-in-your-agent",
+    "href": "slides/09_using_ai.html#afterwards-you-can-use-it-in-your-agent",
+    "title": "9 Using AI",
+    "section": "Afterwards you can use it in your Agent!",
+    "text": "Afterwards you can use it in your Agent!\n\nScreenshot from the Codex session showing the MCP server in action"
+  },
+  {
+    "objectID": "slides/09_using_ai.html#real-example-an-mcp-server-in-an-r-package",
+    "href": "slides/09_using_ai.html#real-example-an-mcp-server-in-an-r-package",
+    "title": "9 Using AI",
+    "section": "Real example: an MCP server in an R package",
+    "text": "Real example: an MCP server in an R package\nThis autoslider.core MCP server defines R functions, registers them as MCP tools, then starts the server. Scroll through the source below.\n#!/usr/bin/env Rscript\n# Autoslider MCP Server\n#\n# Exposes the autoslider.core pipeline as MCP tools so any MCP-compatible\n# client (Claude Desktop, Claude Code, Cursor, Open WebUI, etc.) can\n# orchestrate slide generation conversationally.\n#\n# Usage:\n#   Rscript inst/mcp/autoslider_mcp_server.R\n#\n# Register in your MCP client — see inst/mcp/claude_desktop_config_snippet.json\n#\n# Requirements:\n#   install.packages(\"mcptools\")        # on CRAN\n#   # ellmer and autoslider.core already in your renv/library\n\nsuppressPackageStartupMessages({\n  library(mcptools)\n  library(ellmer)\n  library(autoslider.core)\n  library(filters)\n  library(dplyr)\n})\n\n# ---- session state ----------------------------------------------------------\n# Holds spec and outputs across tool calls within one Claude session.\n.state &lt;- new.env(parent = emptyenv())\n.state$spec    &lt;- NULL\n.state$outputs &lt;- NULL\n\n# ---- helpers ----------------------------------------------------------------\nstop_if &lt;- function(cond, msg) if (cond) stop(msg, call. = FALSE)\nrequire_spec    &lt;- function() stop_if(is.null(.state$spec),    \"No spec loaded. Call load_spec first.\")\nrequire_outputs &lt;- function() stop_if(is.null(.state$outputs), \"No outputs generated. Call run_pipeline first.\")\n\n# ---- tool functions ---------------------------------------------------------\n\nfn_list_programs &lt;- function() {\n  spec_file &lt;- system.file(\"spec.yml\", package = \"autoslider.core\")\n  spec      &lt;- read_spec(spec_file)\n  programs  &lt;- sort(unique(vapply(spec, `[[`, character(1), \"program\")))\n  paste(programs, collapse = \"\\n\")\n}\n\nfn_load_spec &lt;- function(spec_path, filters_path, program_filter, suffix_filter) {\n  if (spec_path == \"default\") {\n    spec_path &lt;- system.file(\"spec.yml\", package = \"autoslider.core\")\n  }\n  if (filters_path == \"default\") {\n    filters_path &lt;- system.file(\"filters.yml\", package = \"autoslider.core\")\n  }\n\n  filters::load_filters(yaml_file = filters_path, overwrite = TRUE)\n  spec &lt;- read_spec(spec_path)\n\n  if (nzchar(program_filter)) {\n    progs &lt;- trimws(strsplit(program_filter, \",\")[[1]])\n    spec  &lt;- filter_spec(spec, program %in% progs, verbose = FALSE)\n  }\n\n  if (nzchar(suffix_filter)) {\n    suffs &lt;- trimws(strsplit(suffix_filter, \",\")[[1]])\n    spec  &lt;- filter_spec(spec, suffix %in% suffs, verbose = FALSE)\n  }\n\n  .state$spec    &lt;- spec\n  .state$outputs &lt;- NULL\n\n  sprintf(\n    \"Spec loaded: %d output(s).\\n%s\",\n    length(spec),\n    paste(names(spec), collapse = \"\\n\")\n  )\n}\n\n      \"Must call load_spec first.\",\n      \"Pass dataset_paths as comma-separated name=path pairs, e.g.\",\n      '\"adsl=/data/adsl.rds,adae=/data/adae.rds\".',\n      'Use \"example\" to use the built-in example CDISC datasets.'\n    ),\n    arguments = list(\n      dataset_paths = type_string(\n        'Comma-separated name=path.rds pairs, or \"example\" for built-in data.'\n      )\n    )\n  ),\n\n  tool(\n    fun = fn_add_ai_notes,\n    name = \"add_ai_notes\",\n    description = paste(\n      \"Generate AI speaker notes for each slide output using any supported LLM.\",\n      \"Reads prompts from prompt.yml and calls the chosen provider.\",\n      \"Must call run_pipeline first.\",\n      \"Supported providers: anthropic, ollama, openai, deepseek.\"\n    ),\n    arguments = list(\n      provider = type_string(\n        'LLM provider: \"anthropic\", \"ollama\", \"openai\", or \"deepseek\".'\n      ),\n      model = type_string(\n        'Model name for the provider, e.g. \"claude-haiku-4-5\", \"llama3.2\", \"gpt-4o-mini\", \"deepseek-chat\".'\n      ),\n      api_key = type_string(\n        paste(\n          'API key. Leave empty (\"\") to read from the provider\\'s env var',\n          \"(ANTHROPIC_API_KEY, OPENAI_API_KEY, DEEPSEEK_API_KEY). Not required for ollama.\"\n        )\n      ),\n      prompt_path = type_string(\n        'Path to prompt.yml. Use \"default\" for the built-in package prompts.'\n      ),\n      base_url = type_string(\n        paste(\n          'Optional custom base URL. Useful for local Ollama (\"http://localhost:11434\")',\n          'or self-hosted endpoints. Leave empty (\"\") for provider defaults.'\n        )\n      )\n    )\n  ),\n\n  tool(\n    fun = fn_add_ai_story,\n    name = \"add_ai_story\",\n    description = paste(\n      \"Post-process a generated deck: read the .pptx, ask an LLM to tell the story\",\n      \"of the tables, and insert REAL content slides (title + bullets) -- a summary\",\n      \"section at the front and a conclusions section at the end. Unlike add_ai_notes\",\n      \"(which hides text in speaker notes), these slides show in presentation mode.\",\n      \"Must call run_pipeline and generate_slides first.\",\n      \"Supported providers: anthropic, ollama, openai, deepseek.\"\n    ),\n    arguments = list(\n      provider = type_string(\n        'LLM provider: \"anthropic\", \"ollama\", \"openai\", or \"deepseek\".'\n      ),\n      model = type_string(\n        'Model name for the provider, e.g. \"claude-haiku-4-5\", \"llama3.2\", \"gpt-4o-mini\", \"deepseek-chat\".'\n      ),\n      api_key = type_string(\n        paste(\n          'API key. Leave empty (\"\") to read from the provider\\'s env var',\n          \"(ANTHROPIC_API_KEY, OPENAI_API_KEY, DEEPSEEK_API_KEY). Not required for ollama.\"\n        )\n      ),\n      base_url = type_string(\n        paste(\n          'Optional custom base URL. Useful for local Ollama (\"http://localhost:11434\")',\n          'or self-hosted endpoints. Leave empty (\"\") for provider defaults.'\n        )\n      ),\n      infile = type_string(\n        \"Path to the generated .pptx to read (the deck produced by generate_slides).\"\n      ),\n      outfile = type_string(\n        'Path to write the augmented deck to. Leave empty (\"\") to overwrite infile in place.'\n      ),\n      max_slides = type_string(\n        \"Maximum slides per section (summary and conclusions). Empty string defaults to 4.\"\n      )\n    )\n  ),\n\n  tool(\n    fun = fn_generate_slides,\n    name = \"generate_slides\",\n    description = paste(\n      \"Assemble the generated outputs into a PowerPoint (.pptx) file.\",\n      \"Must call run_pipeline first.\",\n      \"Returns the absolute path to the written file.\"\n    ),\n    arguments = list(\n      outfile = type_string(\n        'Output file path for the .pptx, e.g. \"/tmp/study_slides.pptx\".'\n      ),\n      template = type_string(\n        'Path to a .pptx template file. Use \"default\" for the built-in basic.pptx theme.'\n      )\n    )\n  ),\n\n  tool(\n    fun = fn_reset,\n    name = \"reset\",\n    description = \"Clear the session state (loaded spec and generated outputs). Useful to start a fresh run.\",\n    arguments = list()\n  )\n\n)\n\n# ---- start server -----------------------------------------------------------\n\nmcp_server(tools = tools)\n\nUse this as a concrete example of an MCP server implemented in an R package. Notice the session state, the tool functions, their descriptions and arguments, and the call to mcp_server() at the end. The panel loads the current source from the autoslider.core repository; use the link above if embedded remote content is blocked."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#r-as-an-mcp-client",
+    "href": "slides/09_using_ai.html#r-as-an-mcp-client",
+    "title": "9 Using AI",
+    "section": "R as an MCP client",
+    "text": "R as an MCP client\nVice versa, it is also possible to use R as an MCP client to interact with other MCP servers, e.g. from GitHub, Confluence or Google Drive, using mcptools:\n\nFrom https://posit-dev.github.io/mcptools/This needs a corresponding configuration of the MCP servers in ~/.config/mcptools/config.json. Different MCP servers need dedicated configuration entries there."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#exercise-one-small-package-change",
+    "href": "slides/09_using_ai.html#exercise-one-small-package-change",
+    "title": "9 Using AI",
+    "section": "Exercise: one small package change",
+    "text": "Exercise: one small package change\n\nDescribe one small improvement and its acceptance criteria\nDraft an AGENTS.md with conventions and check commands\nAsk an assistant to plan the change using the R package skill\nImplement it with documentation and tests; inspect the diff\nRequest a critical review, run checks, and discuss one finding\n\nDiscuss: What helped? What did you need to correct? What evidence made you trust the result?\n\nSuggested timing for the hour: 30 minutes for the slides/demo, 20 minutes guided practice, 10 minutes discussion. Possible task: document and test an existing argument, or add an input assertion with a useful error message. No paid tool is required: participants without access can pair up or write and review the plan and instructions without running an agent. Optional demonstration: connect the example package session through mcptools and ask the assistant to execute a documented example."
+  },
+  {
+    "objectID": "slides/09_using_ai.html#credits-and-license",
+    "href": "slides/09_using_ai.html#credits-and-license",
+    "title": "9 Using AI",
+    "section": "Credits and license",
+    "text": "Credits and license\n\nChapter author: Daniel Sabanés Bové, Zurich 2026\nGraphic: Pierre DeBois, DataDrivenInvestor, 23 September 2026. Supplied for this course; third-party content excluded from the course’s CC BY-SA license. No additional reuse license is asserted.\nTechnical sources are linked on the relevant slides; further reading: Tidy design principles\nUnless separately credited, this work is licensed under CC BY-SA 4.0.\nZurich 2026 sources adapt Zurich 2024 and Munich 2026, following Seoul 2026. Author credits are retained above.\nZurich adaptations by Daniel Sabanés Bové: course details, program, workflow, roxygen2 tags, SSH setup, optimization and AI chapters. Full attribution and exceptions.\nReuse requires creator attribution, source and license links, and an indication of changes.\n\n\n\nGood Software Engineering Practice for R Packages - Home | Slides | License"
+  },
+  {
+    "objectID": "slides/06_publication.html#setup-of-pkgdown",
+    "href": "slides/06_publication.html#setup-of-pkgdown",
+    "title": "6 Publication",
+    "section": "Setup of pkgdown",
+    "text": "Setup of pkgdown\n\npkgdown makes it quick and easy to build a website for your package\nAfter installing pkgdown, run usethis::use_pkgdown() to get started\nAlternatively, run usethis::use_pkgdown_github_pages()\n\nAdds (and writes) pkgdown.yml, docs folder, and “pkgdown” to .Rbuildignore and docs to gitignore. Also initialises empty branch gh-pages in chosen repo and activates GitHub Pages for repo\n\nMain configuration happens in _pkgdown.yml file\nMany customizations can be applied, but bulk of work during development is updating the reference section with names of .Rd files"
+  },
+  {
+    "objectID": "slides/06_publication.html#example-_pkgdown.yml-file",
+    "href": "slides/06_publication.html#example-_pkgdown.yml-file",
+    "title": "6 Publication",
+    "section": "Example _pkgdown.yml File",
+    "text": "Example _pkgdown.yml File\n---\nurl: https://openpharma.github.io/mmrm\n\ntemplate:\n  bootstrap: 5\n  params:\n    ganalytics: UA-125641273-1\n  math-rendering: \"mathjax\"\n\nnavbar:\n  structure:\n    left: [intro, reference, articles, tutorials, news, reports]\n    right: [search, github]\n  components:\n    reports:\n      text: Reports\n      menu:\n        - text: Coverage report\n          href: coverage-report/\n        - text: Unit test report\n          href: unit-test-report/\n    github:\n      icon: fa-github\n      href: https://github.com/openpharma/mmrm\n\narticles:\n  - title: Introduction\n    navbar: Introduction\n    contents:\n      - introduction\n      - methodological_introduction\n      - mmrm_review_methods\n  - title: Covariance Structures\n    navbar: Covariance Structures\n    contents:\n      - covariance\n  - title: Degrees of Freedom and Testing\n    navbar: Degrees of Freedom and Testing\n    contents:\n      - hypothesis_testing\n      - between_within\n      - kenward\n      - satterthwaite\n  - title: Coefficient Covariance\n    navbar: Coefficient Covariance\n    contents:\n      - coef_vcov\n      - empirical_wls\n      - model_robust_estimator\n  - title: Algorithm Details\n    navbar: Algorithm Details\n    contents:\n      - algorithm\n      - predict\n  - title: Developers\n    navbar: Developers\n    contents:\n      - package_structure\nreference:\n  - title: Package\n    contents:\n      - mmrm-package\n  - title: Functions\n    contents:\n      - mmrm\n      - fit_mmrm\n      - mmrm_control\n      - fit_single_optimizer\n      - refit_multiple_optimizers\n      - df_1d\n      - df_md\n      - component\n  - title: Start Values\n    contents:\n      - std_start\n      - emp_start\n  - title: Methods\n    contents:\n      - mmrm_methods\n      - mmrm_tidiers\n      - mmrm_tmb_methods\n      - stats_anova\n  - title: Covariance Structures\n    contents:\n      - cov_struct\n      - as.cov_struct\n      - format.cov_struct\n      - print.cov_struct\n      - covariance_types\n  - title: Estimate Marginal Means\n    contents:\n      - emmeans_support\n  - title: Datasets\n    contents:\n      - fev_data\n      - bcva_data\n\n---\nSource: the mmrm package documentation"
+  },
+  {
+    "objectID": "slides/06_publication.html#publication-as-github-page",
+    "href": "slides/06_publication.html#publication-as-github-page",
+    "title": "6 Publication",
+    "section": "Publication as GitHub page",
+    "text": "Publication as GitHub page\n\nIt’s helpful for users to read the website online\nGitHub is very helpful here because:\n\nA separate branch, gh-pages, stores the rendered website\nGitHub actions automatically render the website when the main branch is updated\n\nTo get started, use usethis::use_pkgdown_github_pages()\n\nOr, manually deploy site with pkgdown::deploy_to_branch()"
+  },
+  {
+    "objectID": "slides/06_publication.html#licensing",
+    "href": "slides/06_publication.html#licensing",
+    "title": "6 Publication",
+    "section": "Licensing",
+    "text": "Licensing\n\nHigh level categorization of licenses:\n\n“Permissive”: Relaxed. Can be freely copied, modified, published (under the same license).\n“Copyleft”: Stricter. Same rights need to be preserved in derivative works.\nHelpful tool: https://choosealicense.com/\n\nR itself is licensed under GPL, but packages can choose, e.g.:\n\nusethis::use_mit_license() for permissive MIT\nusethis::use_gpl_license() for copyleft GPL\n\nInclude minimum version, e.g. GPL (&gt;= 3)"
+  },
+  {
+    "objectID": "slides/06_publication.html#licensing-contd",
+    "href": "slides/06_publication.html#licensing-contd",
+    "title": "6 Publication",
+    "section": "Licensing (cont’d)",
+    "text": "Licensing (cont’d)\n\nNeed to be careful here when you bundle any code from other software\n\nCare must be taken that any copyright/license statements from copied or modified code are preserved and authorship is not misrepresented\n\nAre the licenses of your package and the source compatible?\n\ne.g. cannot copy/paste code from a GPL package and publish in an MIT package\n\nLICENSE file optionally can contain further restrictions of the license"
+  },
+  {
+    "objectID": "slides/06_publication.html#licensing-contd-1",
+    "href": "slides/06_publication.html#licensing-contd-1",
+    "title": "6 Publication",
+    "section": "Licensing (cont’d)",
+    "text": "Licensing (cont’d)\n\nYou don’t have to include a license with your code\nBut: if no license is included, your work is under your exclusive copyright by default\n\nThis means that nobody else can copy, distribute, modify it\nOnce the work has other contributors (each being a copyright holder for their contributions), that nobody starts including you\nThe consequence is that you cannot copy, distribute, modify other people’s contributions to your project\n\nEven if unlicensed code is published in a public repository, as a user, you generally don’t have the permission from the creators of the software to use, modify, or share the software"
+  },
+  {
+    "objectID": "slides/06_publication.html#open-sourcing",
+    "href": "slides/06_publication.html#open-sourcing",
+    "title": "6 Publication",
+    "section": "Open sourcing",
+    "text": "Open sourcing\n\nThe easiest way to “open source” your R package is to make the GitHub/code repository public\nThis allows for easy open source contributions from other developers via pull requests\nPlease check with your organization first:\n\nAre they ok to publish the software?\nWhat is the appropriate copyright holder?\n\nAlso allows bugs to be filed and to have the GitHub issues page in the package description"
+  },
+  {
+    "objectID": "slides/06_publication.html#versioning",
+    "href": "slides/06_publication.html#versioning",
+    "title": "6 Publication",
+    "section": "Versioning",
+    "text": "Versioning\n\nThe Version field defines the package version\nSyntax: Three integers separated by . or -\n\nCanonical form is: x.y-z, equivalent to x.y.z\n\nUseful conventions of “semantic versioning”:\n\nx is major: Increment this for breaking changes\ny is minor: Increment this for new features\nz is patch: Increment this for bug fixes only\nx.y.z.9000 and count up during development\nusethis::use_version() can help with this\n\nKeep in mind to update the NEWS file for relevant changes"
+  },
+  {
+    "objectID": "slides/06_publication.html#cran-the-comprehensive-r-archive-network",
+    "href": "slides/06_publication.html#cran-the-comprehensive-r-archive-network",
+    "title": "6 Publication",
+    "section": "CRAN (The Comprehensive R Archive Network)",
+    "text": "CRAN (The Comprehensive R Archive Network)\n\nCRAN is the central repository for R packages\nIt has additional requirements beyond the standard package ones, which are described in the Repository Policy\nSubmitting a package indicates agreement with the policy\nIn particular: “The time of the volunteers is CRAN’s most precious resource, and they reserve the right to remove or modify packages on CRAN without notice or explanation (although notification will usually be given).”"
+  },
+  {
+    "objectID": "slides/06_publication.html#cran-contd",
+    "href": "slides/06_publication.html#cran-contd",
+    "title": "6 Publication",
+    "section": "CRAN (cont’d)",
+    "text": "CRAN (cont’d)\n\nOnly source packages can be submitted \n\nBut .rda data files are allowed\n\nNeed single designated maintainer (person, not mailing list)\n\nAdditional Contact field could be used\n\nCitations in author-year style, followed by &lt;doi:...&gt;\nReducing run time of tests, checks, examples, vignettes is important\nNeed to provide cross-platform portable code: CRAN runs checks on Windows, Mac, and several Linux distributions"
+  },
+  {
+    "objectID": "slides/06_publication.html#cran-contd-1",
+    "href": "slides/06_publication.html#cran-contd-1",
+    "title": "6 Publication",
+    "section": "CRAN (cont’d)",
+    "text": "CRAN (cont’d)\n❗ A CRAN submission can be punishing, painful, and nerve-racking:\nThe first release of the rpact package took 5 weeks and 6 submission attempts. Painful experiences:\n\nSome Linux machines may generate different random numbers than expected (despite setting a seed)\nNot only errors and warnings lead to the rejection of a submitted package, but also notes\nYour local Windows test system may be much faster than the CRAN system (e.g., 5 times)\nDon’t use “R Package for” in your package title\nThe description of the package must be provided with a DOI reference"
+  },
+  {
+    "objectID": "slides/06_publication.html#cran-contd-2",
+    "href": "slides/06_publication.html#cran-contd-2",
+    "title": "6 Publication",
+    "section": "CRAN (cont’d)",
+    "text": "CRAN (cont’d)\nExample message informing about the rejection of the last rpact submission:\n\nDear maintainer,\npackage rpact_3.3.2.tar.gz does not pass the incoming checks automatically, please see the following pre-tests:\nWindows: 00check.log Status: OK, Debian: 00check.log Status: OK\nPlease fix all problems and resubmit a fixed version via the webform.\nBest regards,\nCRAN teams’ auto-check service\nr-devel-windows-x86_64 Check: Result: NA, Maintainer: ‘Friedrich Pahlke’\nr-devel-windows-x86_64 Check: Overall checktime, Result: NOTE, Overall checktime 12 min &gt; 10 min\nr-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintainer: ‘Friedrich Pahlke’"
+  },
+  {
+    "objectID": "slides/06_publication.html#r-hub-to-the-rescue",
+    "href": "slides/06_publication.html#r-hub-to-the-rescue",
+    "title": "6 Publication",
+    "section": "R-Hub to the rescue",
+    "text": "R-Hub to the rescue\n\n\n\n\n\nFree R CMD check runs on different operating systems before submitting to CRAN\nSupported by the R consortium\nNew v2 API relies on GitHub actions for checks\nBlog post announcing the transition to the new API: https://blog.r-hub.io/2024/04/11/rhub2/"
+  },
+  {
+    "objectID": "slides/06_publication.html#r-hub-platforms",
+    "href": "slides/06_publication.html#r-hub-platforms",
+    "title": "6 Publication",
+    "section": "R-Hub platforms",
+    "text": "R-Hub platforms\n\nlibrary(rhub)\nrhub::rhub_platforms()"
+  },
+  {
+    "objectID": "slides/06_publication.html#github-actions",
+    "href": "slides/06_publication.html#github-actions",
+    "title": "6 Publication",
+    "section": "GitHub actions",
+    "text": "GitHub actions\n\nIt is also possible to use GitHub Actions to run R CMD check\nFree for public repositories, paid service for private repositories\nChecks will be run every time someone pushes a commit to a repository hosted on GitHub\nEasy setup from your R console: usethis::use_github_action(\"check-standard\")\n\nThis runs a standard R CMD check on three major operating systems\n\nScript and documentation are developed and maintained by the r-lib organization here"
+  },
+  {
+    "objectID": "slides/06_publication.html#tags",
+    "href": "slides/06_publication.html#tags",
+    "title": "6 Publication",
+    "section": "Tags",
+    "text": "Tags\n\nTags are a feature of Git, i.e., not specific to GitHub\nGit can tag (or “bookmark”) specific points in the code history as being important\nTypically, for each release, create a tag vx.y.z (MAJOR.Minor.patch format)\nThe value here is that users can later check out the package in the state of this release version\n\nDownload in R: remotes::install_github(\"org/package\", ref = \"vx.y.z\")\nComparison of versions are also possible, etc."
+  },
+  {
+    "objectID": "slides/06_publication.html#tags-example",
+    "href": "slides/06_publication.html#tags-example",
+    "title": "6 Publication",
+    "section": "Tags: example",
+    "text": "Tags: example"
+  },
+  {
+    "objectID": "slides/06_publication.html#releases",
+    "href": "slides/06_publication.html#releases",
+    "title": "6 Publication",
+    "section": "Releases",
+    "text": "Releases\n\nReleases are based on Git tags, and a feature of GitHub\nAre “deployable software packages to make them available for a wider audience to download and use”\nContain release notes and links to the binary package files for download\n\nHowever, for R packages these tar.gz package files are rarely used directly"
+  },
+  {
+    "objectID": "slides/06_publication.html#releases-example",
+    "href": "slides/06_publication.html#releases-example",
+    "title": "6 Publication",
+    "section": "Releases: example",
+    "text": "Releases: example"
+  },
+  {
+    "objectID": "slides/06_publication.html#a-note-on-bioconductor",
+    "href": "slides/06_publication.html#a-note-on-bioconductor",
+    "title": "6 Publication",
+    "section": "A Note on Bioconductor",
+    "text": "A Note on Bioconductor\n\nThe Bioconductor project develops, supports, and disseminates open source software for the analysis of biological assays\nLike CRAN, Bioconductor has additional package requirements: one can only submit either to CRAN or Bioconductor\nPackages are peer reviewed by community members\nNew packages and updates to existing packages are released semi-annually\nSoftware is expected to be interoperable with other Bioconductor packages through the re-use of common data structures and infrastructure"
+  },
+  {
+    "objectID": "slides/01_intro.html#welcome-to-zurich-r-courses",
+    "href": "slides/01_intro.html#welcome-to-zurich-r-courses",
+    "title": "1 Introduction",
+    "section": "Welcome to Zurich R Courses!",
+    "text": "Welcome to Zurich R Courses!\n\nGood Software Engineering Practice for R Packages\nETH Zurich, 8–9 October 2026, 09:00–16:30\nPresentations and hands-on exercises, in English\nInstructor: Daniel Sabanés Bové\nCourse information"
+  },
+  {
+    "objectID": "slides/01_intro.html#daniel-sabanés-bové",
+    "href": "slides/01_intro.html#daniel-sabanés-bové",
+    "title": "1 Introduction",
+    "section": "Daniel Sabanés Bové",
+    "text": "Daniel Sabanés Bové\n\n\n\n\n\nFeel free to connect   \n\n\n\n\nPh.D. in Statistics from University of Zurich, Bayesian Model Selection\nBiostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for 4 years\nHappy Taipei expat since summer 2024, where I started roadbiking 🚴‍♂️\nCo-founder of inferential.bio, RCONIS and partner at RPACT\nMultiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of openstatsware"
+  },
+  {
+    "objectID": "slides/01_intro.html#openstatsware",
+    "href": "slides/01_intro.html#openstatsware",
+    "title": "1 Introduction",
+    "section": "openstatsware",
+    "text": "openstatsware\n\n\n\nopenstatsware.org\nSince: 19 August 2022\nWhere: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)\nWho: Statisticians and software engineers across organizations\nWhat: Engineer packages and promote best practices"
+  },
+  {
+    "objectID": "slides/01_intro.html#what-you-will-learn-here",
+    "href": "slides/01_intro.html#what-you-will-learn-here",
+    "title": "1 Introduction",
+    "section": "What you will learn here",
+    "text": "What you will learn here\n\nUnderstand the basic structure of an R package\nCreate your own R \nLearn about & apply professional  development workflow\nLearn & apply fundamentals of quality control for R \nGet crash-course in version control and modern collaboration techniques on GitHub.com\nLearn how to make an R  available to others\nDesign modular Shiny apps and test their behavior\nUse AI assistants within a disciplined development workflow"
+  },
+  {
+    "objectID": "slides/01_intro.html#do-we-still-need-to-learn-this---ai-can-do-it",
+    "href": "slides/01_intro.html#do-we-still-need-to-learn-this---ai-can-do-it",
+    "title": "1 Introduction",
+    "section": "Do we still need to learn this - AI can do it?",
+    "text": "Do we still need to learn this - AI can do it?\n\nIn the past, carpenters exclusively used saw, hand drill, and hammer\nFor a long time now, we have power tools, like electric saws and drills\nAnd we have had computer aided design (CAD) software for decades\nWe have even 3D printers, which can produce furniture directly\nNevertheless, carpenters still start their apprenticeship by learning how to use a saw and hammer, and build furniture by hand\nIn the same way, we still need to learn the basics of good software engineering, even though AI tools can help us later to execute the work faster and more efficiently"
+  },
+  {
+    "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
+    "href": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
+    "title": "1 Introduction",
+    "section": "What do we mean by GSWEP4R*?",
+    "text": "What do we mean by GSWEP4R*?\n\n\nApplying concept of “Good XYZ Practice” to SWE with R\nImprove quality and longevity of R code/packages\nNot a universal standard; we share our perspectives\nCollection of best practices\nDo not reinvent the wheel: learn from the community\n\n\n* Good Software Engineering Practice for R Packages"
+  },
+  {
+    "objectID": "slides/01_intro.html#why-care-about-gswep4r",
+    "href": "slides/01_intro.html#why-care-about-gswep4r",
+    "title": "1 Introduction",
+    "section": "Why care about GSWEP4R?",
+    "text": "Why care about GSWEP4R?\n\nR is one of the most successful statistical programming languages\nR is a powerful yet complex ecosystem\n\nCore component: R packages\nMature user & contributor community\nWhere deeper understanding is crucial, even to just assess quality\n\nAnalyses increasingly require complex scripts/programs\nThe concepts are applicable to other languages, too (Python, Julia, etc.)"
+  },
+  {
+    "objectID": "slides/01_intro.html#start-small---from-script-to-package",
+    "href": "slides/01_intro.html#start-small---from-script-to-package",
+    "title": "1 Introduction",
+    "section": "Start small - from script to package",
+    "text": "Start small - from script to package\n\nEncapsulate behavior (functions)\nAvoid global state/variables\nAdopt consistent coding style\nDocument well\nAdd test cases\nRefactor and optimize code\nVersion your code\nShare as ‘bundle’\n\n\\(\\leadsto\\) R package"
+  },
+  {
+    "objectID": "slides/01_intro.html#program-outline-day-1",
+    "href": "slides/01_intro.html#program-outline-day-1",
+    "title": "1 Introduction",
+    "section": "Program outline: Day 1",
+    "text": "Program outline: Day 1\n\n\n\n\n\n9.00 - 9.30\nIntroduction and outline\n\n\n9.30 - 9.45\nCoffee break\n\n\n9.45 - 10.30\nR Package Syntax\n\n\n10.30 - 11.15\nExercise: R packages\n\n\n11.15 - 12.00\nSoftware Engineering Workflow\n\n\n12.00 - 13.00\nLunch break\n\n\n13.00 - 14.00\nPackage Quality\n\n\n14.00 - 14.45\nExercise: package quality\n\n\n14.45 - 15.00\nCoffee break\n\n\n15.00 - 15.45\nCollaboration via GitHub\n\n\n15.45 - 16.30\nExercise: collaboration via GitHub"
+  },
+  {
+    "objectID": "slides/01_intro.html#program-outline-day-2",
+    "href": "slides/01_intro.html#program-outline-day-2",
+    "title": "1 Introduction",
+    "section": "Program outline: Day 2",
+    "text": "Program outline: Day 2\n\n\n\n\n\n9.00 - 9.30\nPublication of R Packages\n\n\n9.30 - 9.45\nCoffee break\n\n\n9.45 - 10.15\nExercise: publication\n\n\n10.15 - 11.00\nShiny Design and Modules\n\n\n11.00 - 11.30\nExercise: Shiny design\n\n\n11.30 - 12.00\nShiny Tests\n\n\n12.00 - 13.00\nLunch break\n\n\n13.00 - 13.30\nExercise: Shiny Tests\n\n\n13.30 - 14.15\nCode Optimization\n\n\n14.15 - 14.30\nCoffee break\n\n\n14.30 - 15.00\nExercise: Code Optimization\n\n\n15.00 - 16.00\nUsing AI\n\n\n16.00 - 16.30\nSummary and Q&A"
+  },
+  {
+    "objectID": "slides/01_intro.html#materials",
+    "href": "slides/01_intro.html#materials",
+    "title": "1 Introduction",
+    "section": "Materials",
+    "text": "Materials\n\nCourse website at rconis.github.io/workshop-zurich-2026\n\nall slides\nsources available at github.com/rconis/workshop-zurich-2026\ncourse materials CC-BY-SA 4.0, except credited third-party content"
+  },
+  {
+    "objectID": "slides/01_intro.html#what-you-will-need",
+    "href": "slides/01_intro.html#what-you-will-need",
+    "title": "1 Introduction",
+    "section": "What you will need",
+    "text": "What you will need\n\nGithub.com (free) account \nLocal R development environment with\n\ngit \nRtools/R/Rstudio IDE \n\nInstall additional R packages using the installation script\nCuriosity 🦝"
+  },
+  {
+    "objectID": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
+    "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
+    "title": "1 Introduction",
+    "section": "Speed intros and what would you like to learn?",
+    "text": "Speed intros and what would you like to learn?\n\nName? 🌎\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠"
   },
   {
     "objectID": "slides/04_quality.html#why-is-clean-code-important",
@@ -658,459 +1183,137 @@
     "text": "Tasks\n\nTask 1Task 2Task 3Task 4\n\n\nApply CCR#8 to your package project:\n\nAdd unit tests\nOptimize your test coverage with help of the covr functions package_coverage and report\n\n\n\nCheck if your package is ready for release with the devtools function check()\n\n\nTake your package project and refactor it, i.e., apply the linked clean code rules:\n\nOptimize naming manually (CCR#1)\nUse the styler package to optimize the formatting (CCR#2)\nCheck and correct where appropriate:\n\nSimplicity (CCR#3)\nSingle Responsibility Principle (CCR#4)\nDon’t Repeat Yourself (CCR#5)\n\n\n\n\n\nAdd comments to explain the purpose of code blocks (CCR#6)\n\nIf it concerns exported functions use Roxygen2 notation\n\nCheck correct spelling with the devtools function spell_check()"
   },
   {
-    "objectID": "slides/01_intro.html#welcome-to-zurich-r-courses",
-    "href": "slides/01_intro.html#welcome-to-zurich-r-courses",
-    "title": "1 Introduction",
-    "section": "Welcome to Zurich R Courses!",
-    "text": "Welcome to Zurich R Courses!\n\nGood Software Engineering Practice for R Packages\nETH Zurich, 8–9 October 2026, 09:00–16:30\nPresentations and hands-on exercises, in English\nInstructor: Daniel Sabanés Bové\nCourse information"
+    "objectID": "slides/08_optimization.html#acknowledgments",
+    "href": "slides/08_optimization.html#acknowledgments",
+    "title": "8 Code Optimization",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThis section is adapted from slides by Lukas A. Widmer and Michael Mayer, which they prepared and released under the CC BY 4.0 license, see their course Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters.\nThanks a lot Lukas and Michael!"
   },
   {
-    "objectID": "slides/01_intro.html#daniel-sabanés-bové",
-    "href": "slides/01_intro.html#daniel-sabanés-bové",
-    "title": "1 Introduction",
-    "section": "Daniel Sabanés Bové",
-    "text": "Daniel Sabanés Bové\n\n\n\n\n\nFeel free to connect   \n\n\n\n\nPh.D. in Statistics from University of Zurich, Bayesian Model Selection\nBiostatistician at Roche for 5 years, Data Scientist at Google for 2 years, Statistical Software Engineer at Roche for 4 years\nHappy Taipei expat since summer 2024, where I started roadbiking 🚴‍♀️\nCo-founder of inferential.bio, RCONIS and partner at RPACT\nMultiple R packages on CRAN and Bioconductor, co-wrote book on Likelihood and Bayesian Inference, chair of openstatsware"
+    "objectID": "slides/08_optimization.html#a-word-of-wisdom",
+    "href": "slides/08_optimization.html#a-word-of-wisdom",
+    "title": "8 Code Optimization",
+    "section": "A Word of Wisdom",
+    "text": "A Word of Wisdom\n\n(Knuth 1974, 268)"
   },
   {
-    "objectID": "slides/01_intro.html#openstatsware",
-    "href": "slides/01_intro.html#openstatsware",
-    "title": "1 Introduction",
-    "section": "openstatsware",
-    "text": "openstatsware\n\n\n\nopenstatsware.org\nSince: 19 August 2022\nWhere: American Statistical Association (ASA) Biopharmaceutical Section (BIOP), European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)\nWho: Statisticians and software engineers across organizations\nWhat: Engineer packages and promote best practices"
+    "objectID": "slides/08_optimization.html#setting-the-right-priorities",
+    "href": "slides/08_optimization.html#setting-the-right-priorities",
+    "title": "8 Code Optimization",
+    "section": "Setting the right priorities",
+    "text": "Setting the right priorities\n\nThe code needs to be correct, i.e. calculate correct results as expected. → Tests, Debugging\nIf it is correct, but too slow, then find out which calculations and why they are too slow. → Profiling\nOnce you identified the slow parts, optimize those. → Code optimization\nIf executing the code on your laptop is still too slow → consider running it instead on a high performance cluster (HPC), see slides from Lukas and Michael"
   },
   {
-    "objectID": "slides/01_intro.html#what-you-will-learn-here",
-    "href": "slides/01_intro.html#what-you-will-learn-here",
-    "title": "1 Introduction",
-    "section": "What you will learn here",
-    "text": "What you will learn here\n\nUnderstand the basic structure of an R package\nCreate your own R \nLearn about & apply professional  development workflow\nLearn & apply fundamentals of quality control for R \nGet crash-course in version control and modern collaboration techniques on GitHub.com\nLearn how to make an R  available to others\nDesign modular Shiny apps and test their behavior\nUse AI assistants within a disciplined development workflow"
+    "objectID": "slides/08_optimization.html#tests-see-previous-section",
+    "href": "slides/08_optimization.html#tests-see-previous-section",
+    "title": "8 Code Optimization",
+    "section": "Tests: see previous section",
+    "text": "Tests: see previous section\n\n(modified from Munroe (2007), No. 303)"
   },
   {
-    "objectID": "slides/01_intro.html#do-we-still-need-to-learn-this---ai-can-do-it",
-    "href": "slides/01_intro.html#do-we-still-need-to-learn-this---ai-can-do-it",
-    "title": "1 Introduction",
-    "section": "Do we still need to learn this - AI can do it?",
-    "text": "Do we still need to learn this - AI can do it?\n\nIn the past, carpenters exclusively used saw, hand drill, and hammer\nFor a long time now, we have power tools, like electric saws and drills\nAnd we have had computer aided design (CAD) software for decades\nWe have even 3D printers, which can produce furniture directly\nNevertheless, carpenters still start their apprenticeship by learning how to use a saw and hammer, and build furniture by hand\nIn the same way, we still need to learn the basics of good software engineering, even though AI tools can help us later to execute the work faster and more efficiently"
+    "objectID": "slides/08_optimization.html#debugging-a-few-pointers",
+    "href": "slides/08_optimization.html#debugging-a-few-pointers",
+    "title": "8 Code Optimization",
+    "section": "Debugging: A few pointers",
+    "text": "Debugging: A few pointers\n\nPost-hoc traceback() after code fails, to show the call stack and see how the error came about.\nSetting debug(myfun) for the problematic function myfun and then run the code to step through its execution.\nInject browser() calls into problematic code to add “breakpoints” for interactive execution and inspection.\nSetting options(error = recover) and then running the problematic code allows you to jump into the call stack and inspect. (Undo with options(error = NULL))"
   },
   {
-    "objectID": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
-    "href": "slides/01_intro.html#what-do-we-mean-by-gswep4r",
-    "title": "1 Introduction",
-    "section": "What do we mean by GSWEP4R*?",
-    "text": "What do we mean by GSWEP4R*?\n\n\nApplying concept of “Good XYZ Practice” to SWE with R\nImprove quality and longevity of R code/packages\nNot a universal standard; we share our perspectives\nCollection of best practices\nDo not reinvent the wheel: learn from the community\n\n\n* Good Software Engineering Practice for R Packages"
+    "objectID": "slides/08_optimization.html#debugging-some-rstudio-specifics",
+    "href": "slides/08_optimization.html#debugging-some-rstudio-specifics",
+    "title": "8 Code Optimization",
+    "section": "Debugging: Some RStudio specifics",
+    "text": "Debugging: Some RStudio specifics\nLet’s have a look at RStudio IDE specific details.\n\nThe “Debug” menu can be useful to explore the options.\nEditor breakpoints: Can add with click to the left of line number and gives “red dot”.\nClick on “Source” to run the script and enter debug mode.\n“Debug” &gt; “On Error” &gt; “Break in Code” again lets you jump into the code on error.\nDebugging in Rmarkdown documents can be tricky, either proceed chunk by chunk, or try sink()\n\nSee Posit website for details."
   },
   {
-    "objectID": "slides/01_intro.html#why-care-about-gswep4r",
-    "href": "slides/01_intro.html#why-care-about-gswep4r",
-    "title": "1 Introduction",
-    "section": "Why care about GSWEP4R?",
-    "text": "Why care about GSWEP4R?\n\nR is one of the most successful statistical programming languages\nR is a powerful yet complex ecosystem\n\nCore component: R packages\nMature user & contributor community\nWhere deeper understanding is crucial, even to just assess quality\n\nAnalyses increasingly require complex scripts/programs\nThe concepts are applicable to other languages, too (Python, Julia, etc.)"
+    "objectID": "slides/08_optimization.html#profiling-definition",
+    "href": "slides/08_optimization.html#profiling-definition",
+    "title": "8 Code Optimization",
+    "section": "Profiling: Definition",
+    "text": "Profiling: Definition\n\nIn software engineering, profiling (“program profiling”, “software profiling”) is a form of dynamic program analysis that measures, for example, the space (memory) or time complexity of a program, the usage of particular instructions, or the frequency and duration of function calls. Most commonly, profiling information serves to aid program optimization, and more specifically, performance engineering.\n\n(Wikipedia)"
   },
   {
-    "objectID": "slides/01_intro.html#start-small---from-script-to-package",
-    "href": "slides/01_intro.html#start-small---from-script-to-package",
-    "title": "1 Introduction",
-    "section": "Start small - from script to package",
-    "text": "Start small - from script to package\n\nEncapsulate behavior (functions)\nAvoid global state/variables\nAdopt consistent coding style\nDocument well\nAdd test cases\nRefactor and optimize code\nVersion your code\nShare as ‘bundle’\n\n\\(\\leadsto\\) R package"
+    "objectID": "slides/08_optimization.html#profiling-example-code",
+    "href": "slides/08_optimization.html#profiling-example-code",
+    "title": "8 Code Optimization",
+    "section": "Profiling: Example code",
+    "text": "Profiling: Example code\n\nf &lt;- function() {\n    profvis::pause(0.1)\n    for (i in seq_len(3)) {\n        g()\n    }\n}\ng &lt;- function() {\n    profvis::pause(0.1)\n}"
   },
   {
-    "objectID": "slides/01_intro.html#program-outline-day-1",
-    "href": "slides/01_intro.html#program-outline-day-1",
-    "title": "1 Introduction",
-    "section": "Program outline: Day 1",
-    "text": "Program outline: Day 1\n\n\n\n\n\n9.00 - 9.30\nIntroduction and outline\n\n\n9.30 - 9.45\nCoffee break\n\n\n9.45 - 10.30\nR Package Syntax\n\n\n10.30 - 11.15\nExercise: R packages\n\n\n11.15 - 12.00\nSoftware Engineering Workflow\n\n\n12.00 - 13.00\nLunch break\n\n\n13.00 - 14.00\nPackage Quality\n\n\n14.00 - 14.45\nExercise: package quality\n\n\n14.45 - 15.00\nCoffee break\n\n\n15.00 - 15.45\nCollaboration via GitHub\n\n\n15.45 - 16.30\nExercise: collaboration via GitHub"
+    "objectID": "slides/08_optimization.html#profiling-lets-identify-the-bottlenecks",
+    "href": "slides/08_optimization.html#profiling-lets-identify-the-bottlenecks",
+    "title": "8 Code Optimization",
+    "section": "Profiling: Let’s identify the bottlenecks!",
+    "text": "Profiling: Let’s identify the bottlenecks!\nIn R there are a couple of basic functions for profiling:\n\nsystem.time()\nRprof:\n\nstart with Rprof()\nexecute the code\nstop with Rprof(NULL)\nsummarize with summaryRprof()\n\n\nSee e.g. Peng (2016), chapter 19, for details."
   },
   {
-    "objectID": "slides/01_intro.html#program-outline-day-2",
-    "href": "slides/01_intro.html#program-outline-day-2",
-    "title": "1 Introduction",
-    "section": "Program outline: Day 2",
-    "text": "Program outline: Day 2\n\n\n\n\n\n9.30 - 9.45\nCoffee break\n\n\n9.45 - 10.30\nPublication of R Packages\n\n\n10.30 - 11.15\nExercise: publication\n\n\n11.15 - 12.00\nShiny Design and Modules\n\n\n12.00 - 13.00\nLunch break\n\n\n13.00 - 13.45\nExercise: Shiny design\n\n\n13.45 - 14.15\nShiny Tests\n\n\n14.15 - 14.45\nExercise: Shiny tests\n\n\n14.45 - 15.00\nCoffee break\n\n\n15.00 - 16.00\nUsing AI\n\n\n16.00 - 16.30\nSummary and Q&A"
+    "objectID": "slides/08_optimization.html#profiling-classic-rprof-output",
+    "href": "slides/08_optimization.html#profiling-classic-rprof-output",
+    "title": "8 Code Optimization",
+    "section": "Profiling: Classic Rprof output",
+    "text": "Profiling: Classic Rprof output\n\nRprof()\nf()\nRprof(NULL)\nsummaryRprof()"
   },
   {
-    "objectID": "slides/01_intro.html#materials",
-    "href": "slides/01_intro.html#materials",
-    "title": "1 Introduction",
-    "section": "Materials",
-    "text": "Materials\n\nCourse website at rconis.github.io/workshop-zurich-2026\n\nall slides\nsources available at github.com/rconis/workshop-zurich-2026\ncourse materials CC-BY-SA 4.0, except credited third-party content"
+    "objectID": "slides/08_optimization.html#profiling-getting-visual",
+    "href": "slides/08_optimization.html#profiling-getting-visual",
+    "title": "8 Code Optimization",
+    "section": "Profiling: Getting visual",
+    "text": "Profiling: Getting visual\nWe can use the more modern profvis R package for visualizing where R spends its time during code execution.\n\nlibrary(profvis)\nsource(\"profexample.R\") # Such that the flame graph includes code lines.\nprof &lt;- profvis({\n    f()\n})\nprint(prof)"
   },
   {
-    "objectID": "slides/01_intro.html#what-you-will-need",
-    "href": "slides/01_intro.html#what-you-will-need",
-    "title": "1 Introduction",
-    "section": "What you will need",
-    "text": "What you will need\n\nGithub.com (free) account \nLocal R development environment with\n\ngit \nRtools/R/Rstudio IDE \n\nInstall additional R packages using the installation script\nCuriosity 🦝"
+    "objectID": "slides/08_optimization.html#profiling-profvis-output",
+    "href": "slides/08_optimization.html#profiling-profvis-output",
+    "title": "8 Code Optimization",
+    "section": "Profiling: profvis output",
+    "text": "Profiling: profvis output"
   },
   {
-    "objectID": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
-    "href": "slides/01_intro.html#speed-intros-and-what-would-you-like-to-learn",
-    "title": "1 Introduction",
-    "section": "Speed intros and what would you like to learn?",
-    "text": "Speed intros and what would you like to learn?\n\nName? 🌍\nOrganization? 🏢\nMotivation for this workshop/ what would you like to learn 🧠"
+    "objectID": "slides/08_optimization.html#code-optimization-explore-alternatives",
+    "href": "slides/08_optimization.html#code-optimization-explore-alternatives",
+    "title": "8 Code Optimization",
+    "section": "Code optimization: Explore alternatives",
+    "text": "Code optimization: Explore alternatives\n\nIf the slow function is from another package, search for a faster one\nRuntime complexity (runtime as a function of data size) of different algorithms can be wildly different - some work well on small data but take forever on large data\nFew examples:\n\nFor wrangling data frames, consider duckplyr and polars as alternatives to dplyr\nTo read and write CSV data, consider vroom instead of base R\nTo read and write objects from and to disk, consider qs instead of base R readRDS, saveRDS"
   },
   {
-    "objectID": "slides/06_publication.html#setup-of-pkgdown",
-    "href": "slides/06_publication.html#setup-of-pkgdown",
-    "title": "6 Publication",
-    "section": "Setup of pkgdown",
-    "text": "Setup of pkgdown\n\npkgdown makes it quick and easy to build a website for your package\nAfter installing pkgdown, run usethis::use_pkgdown() to get started\nAlternatively, run usethis::use_pkgdown_github_pages()\n\nAdds (and writes) pkgdown.yml, docs folder, and “pkgdown” to .Rbuildignore and docs to gitignore. Also initialises empty branch gh-pages in chosen repo and activates GitHub Pages for repo\n\nMain configuration happens in _pkgdown.yml file\nMany customizations can be applied, but bulk of work during development is updating the reference section with names of .Rd files"
+    "objectID": "slides/08_optimization.html#code-optimization-dry-on-data-frames",
+    "href": "slides/08_optimization.html#code-optimization-dry-on-data-frames",
+    "title": "8 Code Optimization",
+    "section": "Code optimization: DRY on data frames",
+    "text": "Code optimization: DRY on data frames\n\nRemember: DRY (Don’t Repeat Yourself)\nData frames are expensive, i.e. take a lot of time.\nSome examples:\n\nOnly create data frames, if really necessary.\n\nBad: if(nrow(filter(x, condition)) &gt; 0)\nGood: if(any(condition))\n\nAssemble a data frame only once, not iteratively.\nWhen subsetting a data frame and working with a column, first extract the column and then subset."
   },
   {
-    "objectID": "slides/06_publication.html#example-_pkgdown.yml-file",
-    "href": "slides/06_publication.html#example-_pkgdown.yml-file",
-    "title": "6 Publication",
-    "section": "Example _pkgdown.yml File",
-    "text": "Example _pkgdown.yml File\n---\nurl: https://openpharma.github.io/mmrm\n\ntemplate:\n  bootstrap: 5\n  params:\n    ganalytics: UA-125641273-1\n  math-rendering: \"mathjax\"\n\nnavbar:\n  structure:\n    left: [intro, reference, articles, tutorials, news, reports]\n    right: [search, github]\n  components:\n    reports:\n      text: Reports\n      menu:\n        - text: Coverage report\n          href: coverage-report/\n        - text: Unit test report\n          href: unit-test-report/\n    github:\n      icon: fa-github\n      href: https://github.com/openpharma/mmrm\n\narticles:\n  - title: Introduction\n    navbar: Introduction\n    contents:\n      - introduction\n      - methodological_introduction\n      - mmrm_review_methods\n  - title: Covariance Structures\n    navbar: Covariance Structures\n    contents:\n      - covariance\n  - title: Degrees of Freedom and Testing\n    navbar: Degrees of Freedom and Testing\n    contents:\n      - hypothesis_testing\n      - between_within\n      - kenward\n      - satterthwaite\n  - title: Coefficient Covariance\n    navbar: Coefficient Covariance\n    contents:\n      - coef_vcov\n      - empirical_wls\n      - model_robust_estimator\n  - title: Algorithm Details\n    navbar: Algorithm Details\n    contents:\n      - algorithm\n      - predict\n  - title: Developers\n    navbar: Developers\n    contents:\n      - package_structure\nreference:\n  - title: Package\n    contents:\n      - mmrm-package\n  - title: Functions\n    contents:\n      - mmrm\n      - fit_mmrm\n      - mmrm_control\n      - fit_single_optimizer\n      - refit_multiple_optimizers\n      - df_1d\n      - df_md\n      - component\n  - title: Start Values\n    contents:\n      - std_start\n      - emp_start\n  - title: Methods\n    contents:\n      - mmrm_methods\n      - mmrm_tidiers\n      - mmrm_tmb_methods\n      - stats_anova\n  - title: Covariance Structures\n    contents:\n      - cov_struct\n      - as.cov_struct\n      - format.cov_struct\n      - print.cov_struct\n      - covariance_types\n  - title: Estimate Marginal Means\n    contents:\n      - emmeans_support\n  - title: Datasets\n    contents:\n      - fev_data\n      - bcva_data\n\n---\nSource: the mmrm package documentation"
+    "objectID": "slides/08_optimization.html#code-optimization-reuse-dont-copy",
+    "href": "slides/08_optimization.html#code-optimization-reuse-dont-copy",
+    "title": "8 Code Optimization",
+    "section": "Code optimization: Reuse, don’t copy",
+    "text": "Code optimization: Reuse, don’t copy\nAvoid making unintended copies of objects.\n\n# Bad:\nresult &lt;- c()\nfor (i in 1:1000) result &lt;- c(result, fun(i))\n# Good:\nresult &lt;- numeric(1000)\nfor (i in 1:1000) result[i] &lt;- fun(i)\n# Better:\nresult &lt;- sapply(seq_len(1000), fun)\n\nOther examples:\n\nCreate a data.frame once from complete column vectors, rather than rbind() it iteratively.\nSubsetting a matrix or data.frame will create a copy, so use it consciously or better work with columns."
   },
   {
-    "objectID": "slides/06_publication.html#publication-as-github-page",
-    "href": "slides/06_publication.html#publication-as-github-page",
-    "title": "6 Publication",
-    "section": "Publication as GitHub page",
-    "text": "Publication as GitHub page\n\nIt’s helpful for users to read the website online\nGitHub is very helpful here because:\n\nA separate branch, gh-pages, stores the rendered website\nGitHub actions automatically render the website when the main branch is updated\n\nTo get started, use usethis::use_pkgdown_github_pages()\n\nOr, manually deploy site with pkgdown::deploy_to_branch()"
+    "objectID": "slides/08_optimization.html#code-optimization-vectorize-where-possible",
+    "href": "slides/08_optimization.html#code-optimization-vectorize-where-possible",
+    "title": "8 Code Optimization",
+    "section": "Code optimization: Vectorize where possible",
+    "text": "Code optimization: Vectorize where possible\n\nAvoiding for loops does not help much anymore.\nHowever, using specialized vectorized functions (implemented in compiled code) helps:\n\nBase R: rowSums(), colSums(), rowMeans(), colMeans()\nmatrixStats: many! anyMissing(), colQuantiles(), rowMax(), etc.\ncollapse: fmean(), TRA(), GRP(), …"
   },
   {
-    "objectID": "slides/06_publication.html#licensing",
-    "href": "slides/06_publication.html#licensing",
-    "title": "6 Publication",
-    "section": "Licensing",
-    "text": "Licensing\n\nHigh level categorization of licenses:\n\n“Permissive”: Relaxed. Can be freely copied, modified, published (under the same license).\n“Copyleft”: Stricter. Same rights need to be preserved in derivative works.\nHelpful tool: https://choosealicense.com/\n\nR itself is licensed under GPL, but packages can choose, e.g.:\n\nusethis::use_mit_license() for permissive MIT\nusethis::use_gpl_license() for copyleft GPL\n\nInclude minimum version, e.g. GPL (&gt;= 3)"
+    "objectID": "slides/08_optimization.html#code-optimization-still-too-slow",
+    "href": "slides/08_optimization.html#code-optimization-still-too-slow",
+    "title": "8 Code Optimization",
+    "section": "Code optimization: Still too slow?",
+    "text": "Code optimization: Still too slow?\n\n“R is a language optimized for human performance, not computer performance”\n\n(Hadley Wickham, New York R Conference, 2018)"
   },
   {
-    "objectID": "slides/06_publication.html#licensing-contd",
-    "href": "slides/06_publication.html#licensing-contd",
-    "title": "6 Publication",
-    "section": "Licensing (cont’d)",
-    "text": "Licensing (cont’d)\n\nNeed to be careful here when you bundle any code from other software\n\nCare must be taken that any copyright/license statements from copied or modified code are preserved and authorship is not misrepresented\n\nAre the licenses of your package and the source compatible?\n\ne.g. cannot copy/paste code from a GPL package and publish in an MIT package\n\nLICENSE file optionally can contain further restrictions of the license"
+    "objectID": "slides/08_optimization.html#code-optimization-shift-to-c-with-rcpp",
+    "href": "slides/08_optimization.html#code-optimization-shift-to-c-with-rcpp",
+    "title": "8 Code Optimization",
+    "section": "Code optimization: Shift to C++ with Rcpp",
+    "text": "Code optimization: Shift to C++ with Rcpp\nWriting and using C++ code in your R package is not easy.\nBut it is not too difficult with Rcpp by Eddelbuettel and François (2011).\n\nStarting point: Rcpp::Rcpp.package.skeleton()\nUse RcppArmadillo for linear algebra\nHadley Wickham’s chapter Rewriting R code in C++\n\nNote: Adding C++ code to your package will in many cases increase the maintenance effort significantly."
   },
   {
-    "objectID": "slides/06_publication.html#licensing-contd-1",
-    "href": "slides/06_publication.html#licensing-contd-1",
-    "title": "6 Publication",
-    "section": "Licensing (cont’d)",
-    "text": "Licensing (cont’d)\n\nYou don’t have to include a license with your code\nBut: if no license is included, your work is under your exclusive copyright by default\n\nThis means that nobody else can copy, distribute, modify it\nOnce the work has other contributors (each being a copyright holder for their contributions), that nobody starts including you\nThe consequence is that you cannot copy, distribute, modify other people’s contributions to your project\n\nEven if unlicensed code is published in a public repository, as a user, you generally don’t have the permission from the creators of the software to use, modify, or share the software"
-  },
-  {
-    "objectID": "slides/06_publication.html#open-sourcing",
-    "href": "slides/06_publication.html#open-sourcing",
-    "title": "6 Publication",
-    "section": "Open sourcing",
-    "text": "Open sourcing\n\nThe easiest way to “open source” your R package is to make the GitHub/code repository public\nThis allows for easy open source contributions from other developers via pull requests\nPlease check with your organization first:\n\nAre they ok to publish the software?\nWhat is the appropriate copyright holder?\n\nAlso allows bugs to be filed and to have the GitHub issues page in the package description"
-  },
-  {
-    "objectID": "slides/06_publication.html#versioning",
-    "href": "slides/06_publication.html#versioning",
-    "title": "6 Publication",
-    "section": "Versioning",
-    "text": "Versioning\n\nThe Version field defines the package version\nSyntax: Three integers separated by . or -\n\nCanonical form is: x.y-z, equivalent to x.y.z\n\nUseful conventions of “semantic versioning”:\n\nx is major: Increment this for breaking changes\ny is minor: Increment this for new features\nz is patch: Increment this for bug fixes only\nx.y.z.9000 and count up during development\nusethis::use_version() can help with this\n\nKeep in mind to update the NEWS file for relevant changes"
-  },
-  {
-    "objectID": "slides/06_publication.html#cran-the-comprehensive-r-archive-network",
-    "href": "slides/06_publication.html#cran-the-comprehensive-r-archive-network",
-    "title": "6 Publication",
-    "section": "CRAN (The Comprehensive R Archive Network)",
-    "text": "CRAN (The Comprehensive R Archive Network)\n\nCRAN is the central repository for R packages\nIt has additional requirements beyond the standard package ones, which are described in the Repository Policy\nSubmitting a package indicates agreement with the policy\nIn particular: “The time of the volunteers is CRAN’s most precious resource, and they reserve the right to remove or modify packages on CRAN without notice or explanation (although notification will usually be given).”"
-  },
-  {
-    "objectID": "slides/06_publication.html#cran-contd",
-    "href": "slides/06_publication.html#cran-contd",
-    "title": "6 Publication",
-    "section": "CRAN (cont’d)",
-    "text": "CRAN (cont’d)\n\nOnly source packages can be submitted \n\nBut .rda data files are allowed\n\nNeed single designated maintainer (person, not mailing list)\n\nAdditional Contact field could be used\n\nCitations in author-year style, followed by &lt;doi:...&gt;\nReducing run time of tests, checks, examples, vignettes is important\nNeed to provide cross-platform portable code: CRAN runs checks on Windows, Mac, and several Linux distributions"
-  },
-  {
-    "objectID": "slides/06_publication.html#cran-contd-1",
-    "href": "slides/06_publication.html#cran-contd-1",
-    "title": "6 Publication",
-    "section": "CRAN (cont’d)",
-    "text": "CRAN (cont’d)\n❗ A CRAN submission can be punishing, painful, and nerve-racking:\nThe first release of the rpact package took 5 weeks and 6 submission attempts. Painful experiences:\n\nSome Linux machines may generate different random numbers than expected (despite setting a seed)\nNot only errors and warnings lead to the rejection of a submitted package, but also notes\nYour local Windows test system may be much faster than the CRAN system (e.g., 5 times)\nDon’t use “R Package for” in your package title\nThe description of the package must be provided with a DOI reference"
-  },
-  {
-    "objectID": "slides/06_publication.html#cran-contd-2",
-    "href": "slides/06_publication.html#cran-contd-2",
-    "title": "6 Publication",
-    "section": "CRAN (cont’d)",
-    "text": "CRAN (cont’d)\nExample message informing about the rejection of the last rpact submission:\n\nDear maintainer,\npackage rpact_3.3.2.tar.gz does not pass the incoming checks automatically, please see the following pre-tests:\nWindows: 00check.log Status: OK, Debian: 00check.log Status: OK\nPlease fix all problems and resubmit a fixed version via the webform.\nBest regards,\nCRAN teams’ auto-check service\nr-devel-windows-x86_64 Check: Result: NA, Maintainer: ‘Friedrich Pahlke’\nr-devel-windows-x86_64 Check: Overall checktime, Result: NOTE, Overall checktime 12 min &gt; 10 min\nr-devel-linux-x86_64-debian-gcc Check: Result: Note_to_CRAN_maintainers Maintainer: ‘Friedrich Pahlke’"
-  },
-  {
-    "objectID": "slides/06_publication.html#r-hub-to-the-rescue",
-    "href": "slides/06_publication.html#r-hub-to-the-rescue",
-    "title": "6 Publication",
-    "section": "R-Hub to the rescue",
-    "text": "R-Hub to the rescue\n\n\n\n\n\nFree R CMD check runs on different operating systems before submitting to CRAN\nSupported by the R consortium\nNew v2 API relies on GitHub actions for checks\nBlog post announcing the transition to the new API: https://blog.r-hub.io/2024/04/11/rhub2/"
-  },
-  {
-    "objectID": "slides/06_publication.html#r-hub-platforms",
-    "href": "slides/06_publication.html#r-hub-platforms",
-    "title": "6 Publication",
-    "section": "R-Hub platforms",
-    "text": "R-Hub platforms\n\nlibrary(rhub)\nrhub::rhub_platforms()"
-  },
-  {
-    "objectID": "slides/06_publication.html#github-actions",
-    "href": "slides/06_publication.html#github-actions",
-    "title": "6 Publication",
-    "section": "GitHub actions",
-    "text": "GitHub actions\n\nIt is also possible to use GitHub Actions to run R CMD check\nFree for public repositories, paid service for private repositories\nChecks will be run every time someone pushes a commit to a repository hosted on GitHub\nEasy setup from your R console: usethis::use_github_action(\"check-standard\")\n\nThis runs a standard R CMD check on three major operating systems\n\nScript and documentation are developed and maintained by the r-lib organization here"
-  },
-  {
-    "objectID": "slides/06_publication.html#tags",
-    "href": "slides/06_publication.html#tags",
-    "title": "6 Publication",
-    "section": "Tags",
-    "text": "Tags\n\nTags are a feature of Git, i.e., not specific to GitHub\nGit can tag (or “bookmark”) specific points in the code history as being important\nTypically, for each release, create a tag vx.y.z (MAJOR.Minor.patch format)\nThe value here is that users can later check out the package in the state of this release version\n\nDownload in R: remotes::install_github(\"org/package\", ref = \"vx.y.z\")\nComparison of versions are also possible, etc."
-  },
-  {
-    "objectID": "slides/06_publication.html#tags-example",
-    "href": "slides/06_publication.html#tags-example",
-    "title": "6 Publication",
-    "section": "Tags: example",
-    "text": "Tags: example"
-  },
-  {
-    "objectID": "slides/06_publication.html#releases",
-    "href": "slides/06_publication.html#releases",
-    "title": "6 Publication",
-    "section": "Releases",
-    "text": "Releases\n\nReleases are based on Git tags, and a feature of GitHub\nAre “deployable software packages to make them available for a wider audience to download and use”\nContain release notes and links to the binary package files for download\n\nHowever, for R packages these tar.gz package files are rarely used directly"
-  },
-  {
-    "objectID": "slides/06_publication.html#releases-example",
-    "href": "slides/06_publication.html#releases-example",
-    "title": "6 Publication",
-    "section": "Releases: example",
-    "text": "Releases: example"
-  },
-  {
-    "objectID": "slides/06_publication.html#a-note-on-bioconductor",
-    "href": "slides/06_publication.html#a-note-on-bioconductor",
-    "title": "6 Publication",
-    "section": "A Note on Bioconductor",
-    "text": "A Note on Bioconductor\n\nThe Bioconductor project develops, supports, and disseminates open source software for the analysis of biological assays\nLike CRAN, Bioconductor has additional package requirements: one can only submit either to CRAN or Bioconductor\nPackages are peer reviewed by community members\nNew packages and updates to existing packages are released semi-annually\nSoftware is expected to be interoperable with other Bioconductor packages through the re-use of common data structures and infrastructure"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#what-you-know-already",
-    "href": "slides/02_r_packages.html#what-you-know-already",
-    "title": "2 R packages",
-    "section": "What you know already",
-    "text": "What you know already\n\nPackages provide a mechanism for loading optional code, data, and documentation\nA library is a directory into which packages are installed\ninstall.packages() is used to install packages into the library\nlibrary() is used to load and attach packages from the library\n\n“Attach” means that the package is put in your search list — objects in the package can be used directly\n\nRemember that package \\(\\neq\\) library"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#what-we-want-to-talk-about-now",
-    "href": "slides/02_r_packages.html#what-we-want-to-talk-about-now",
-    "title": "2 R packages",
-    "section": "What we want to talk about now",
-    "text": "What we want to talk about now\n\nHow to write, build, test, and check your own package 😊\nHow to do this in a methodical and sustainable way\nGive tips and tricks based on practical experience"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#how-is-a-package-structured",
-    "href": "slides/02_r_packages.html#how-is-a-package-structured",
-    "title": "2 R packages",
-    "section": "How is a package structured?",
-    "text": "How is a package structured?\nPackage source = directory with files and subdirectories\n\n\n\nMandatory:\n\nDESCRIPTION\nNAMESPACE\nR\nman\n\n\n\n\nTypically also includes:\n\ndata\ninst\nsrc\ntests\nvignettes\nNEWS"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#how-to-get-started-quickly",
-    "href": "slides/02_r_packages.html#how-to-get-started-quickly",
-    "title": "2 R packages",
-    "section": "How to get started quickly",
-    "text": "How to get started quickly\nOnce upon a time, developers would set up this structure manually 🥱\nNowadays, it’s super fast with:\n\nusethis::create_package()\nRStudio &gt; File &gt; New Project &gt; New Directory &gt; R Package"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#description-file",
-    "href": "slides/02_r_packages.html#description-file",
-    "title": "2 R packages",
-    "section": "DESCRIPTION file",
-    "text": "DESCRIPTION file\n\nPackage: Choose the name of your package\n\nNot unimportant!\nCheck CRAN to see if your name is available\n\nTitle: Add a Title for Your Package (Title Case)\nVersion: Start with a low package version\n\nMajor.Minor.Patch syntax (Semantic Versioning)\n\nAuthors@R: Add authors and maintainer\nDescription: Like an abstract, including references"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#description-file-contd",
-    "href": "slides/02_r_packages.html#description-file-contd",
-    "title": "2 R packages",
-    "section": "DESCRIPTION file (cont’d)",
-    "text": "DESCRIPTION file (cont’d)\n\nLicense: Important for open sourcing\n\nConsider permissive licenses such as Apache and MIT\n\nDepends:\n\nWhich R version users need to have at a minimum\nIdeally don’t put any package here\nPackages will be loaded and attached upon library your package\n\nImports: Packages which you import functions, methods, classes from\nSuggests: Packages for documentation processing (roxygen2), running examples, tests (testthat), vignettes"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#r-folder",
-    "href": "slides/02_r_packages.html#r-folder",
-    "title": "2 R packages",
-    "section": "R folder",
-    "text": "R folder\n\nOnly contains R code files (recommended to use .R suffix)\n\nCan create a file with usethis::use_r(\"filename\")\n\nAssigns R objects, i.e. mostly functions, but could also be constant variables, data sets, etc.\nShould not have any side effects, i.e. avoid require(), options() etc.\nIf certain code needs to be sourced first, use on top of file (which will update the Collate field of DESCRIPTION automatically)\n\n\n#' @include dependency.R\nNULL"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#namespace-file",
-    "href": "slides/02_r_packages.html#namespace-file",
-    "title": "2 R packages",
-    "section": "NAMESPACE file",
-    "text": "NAMESPACE file\n\n# Generated by roxygen2: do not edit by hand\n\nexport(package_used_first)\nexport(package_used_second)\nexport(package_used_third)\n\n\nDefines the namespace of the package, to work with R’s namespace management system\nNamespace directives in this file allow to specify:\n\nWhich objects are exported to users and other packages\nWhich are imported from other packages"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#namespace-file-contd",
-    "href": "slides/02_r_packages.html#namespace-file-contd",
-    "title": "2 R packages",
-    "section": "NAMESPACE file (cont’d)",
-    "text": "NAMESPACE file (cont’d)\n\nControls the search strategy for variables:\n\nLocal (in the function body etc.)\nPackage namespace\nImports\nBase namespace\nNormal search() path"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#man-folder",
-    "href": "slides/02_r_packages.html#man-folder",
-    "title": "2 R packages",
-    "section": "man folder",
-    "text": "man folder\n\nContains documentation files for the objects in the package in the .Rd format\n\nThe syntax is a bit similar to LaTeX\n\nAll user level objects should be documented\nInternal objects don’t need to be documented — but I recommend it!\nOnce upon a time, developers would set up these .Rd files and the NAMESPACE manually 🥱\nFortunately, nowadays we have roxygen2! 🚀"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#roxygen2-to-the-rescue",
-    "href": "slides/02_r_packages.html#roxygen2-to-the-rescue",
-    "title": "2 R packages",
-    "section": "roxygen2 to the rescue!",
-    "text": "roxygen2 to the rescue!\n\nWe can include the documentation source directly in the R script on top of the objects we are documenting\nSyntax is composed of special comments #' and special macros preceded with @\nIn RStudio, running Build &gt; More &gt; Document will render the .Rd files and the NAMESPACE file for you\nGet started with usethis::use_roxygen_md()\nPlacing your cursor inside a function in RStudio, create a roxygen2 skeleton with Code &gt; Insert Roxygen Skeleton"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#roxygen2-tags-function-help",
-    "href": "slides/02_r_packages.html#roxygen2-tags-function-help",
-    "title": "2 R packages",
-    "section": "roxygen2 tags: function help",
-    "text": "roxygen2 tags: function help\n\n\n\n\n\n\n\nTag\nPurpose\n\n\n\n\n@title, @description\nName and short explanation (also supplied by the opening text)\n\n\n@details\nLonger explanation, assumptions, and algorithm\n\n\n@param x\nMeaning, type, and constraints of an argument\n\n\n@returns / @return\nReturn value: type, shape, and meaning\n\n\n@examples\nRunnable examples\n\n\n@seealso, @family\nRelated help topics and groups of functions\n\n\n\nOfficial roxygen2 function documentation · Cross-references"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#roxygen2-tags-reuse-and-namespace",
-    "href": "slides/02_r_packages.html#roxygen2-tags-reuse-and-namespace",
-    "title": "2 R packages",
-    "section": "roxygen2 tags: reuse and namespace",
-    "text": "roxygen2 tags: reuse and namespace\n\n\n\n\n\n\n\nTag\nPurpose\n\n\n\n\n@export\nExport a function or register its method\n\n\n@importFrom pkg fun\nImport selected functions; also list the dependency in DESCRIPTION\n\n\n@inheritParams fun\nReuse argument documentation\n\n\n@inherit fun\nReuse documentation sections\n\n\n@rdname topic, @describeIn topic\nCombine related functions on one help page\n\n\n@noRd\nKeep source documentation without generating an .Rd file\n\n\n@keywords internal\nKeep a help topic out of the normal index\n\n\n\nPrefer pkg::fun() for a few external calls. Regenerate with devtools::document(); edit the roxygen source, not generated files.\nOfficial namespace guide · Reusing documentation"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#setting-up-roxygen2-in-your-project",
-    "href": "slides/02_r_packages.html#setting-up-roxygen2-in-your-project",
-    "title": "2 R packages",
-    "section": "Setting up roxygen2 in your project",
-    "text": "Setting up roxygen2 in your project"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#roxygen2-source",
-    "href": "slides/02_r_packages.html#roxygen2-source",
-    "title": "2 R packages",
-    "section": "roxygen2 source",
-    "text": "roxygen2 source\nR/my_sum.R:\n\n#' My Summation Function\n#'\n#' This is my first function and it sums two numbers.\n#'\n#' @param x first summand.\n#' @param y second summand.\n#'\n#' @return The sum of `x` and `y`.\n#' @export\n#'\n#' @note This function is a bit boring but that is ok.\n#' @seealso [Arithmetic] for an easier way.\n#'\n#' @examples\n#' my_sum(1, 2)\nmy_sum &lt;- function(x, y) {\n    x + y\n}"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#roxygen2-output",
-    "href": "slides/02_r_packages.html#roxygen2-output",
-    "title": "2 R packages",
-    "section": "roxygen2 output",
-    "text": "roxygen2 output\nman/my_sum.Rd:\n% Generated by roxygen2: do not edit by hand\n% Please edit documentation in R/my_sum.R\n\\name{my_sum}\n\\alias{my_sum}\n\\title{My Summation Function}\n\\usage{\nmy_sum(x, y)\n}\n\\arguments{\n\\item{x}{first summand.}\n\n\\item{y}{second summand.}\n}\n\\value{\nThe sum of \\code{x} and \\code{y}.\n}\n\\description{\nThis is my first function and it sums two numbers.\n}\n\\note{\nThis function is a bit boring but that is ok.\n}\n\\examples{\nmy_sum(1, 2)\n}\n\\seealso{\n\\link{Arithmetic} for an easier way.\n}"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#roxygen2-output-contd",
-    "href": "slides/02_r_packages.html#roxygen2-output-contd",
-    "title": "2 R packages",
-    "section": "roxygen2 output (cont’d)",
-    "text": "roxygen2 output (cont’d)\nNAMESPACE:\n# Generated by roxygen2: do not edit by hand\n\nexport(my_sum)"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#tests-folder",
-    "href": "slides/02_r_packages.html#tests-folder",
-    "title": "2 R packages",
-    "section": "tests folder",
-    "text": "tests folder\n\nWhere store the unit tests covering the functionality of the package\nGet started with usethis::use_testthat() and usethis::use_test() and populate tests/testthat folder with unit tests\nRarely, tests cannot be run within testthat framework, then these can go into R scripts directly in tests directory\nWe will look at unit tests in detail later"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#data-folder",
-    "href": "slides/02_r_packages.html#data-folder",
-    "title": "2 R packages",
-    "section": "data folder",
-    "text": "data folder\n\nFor (example) data that you ship in your package to the user\n\nGet started with usethis::use_data()\nNote: Usually we use lazy data loading, therefore no data() call needed before using the data\n\nIf you generate the example data, save the R script, too\n\nPut that into data-raw folder, start with usethis::use_data_raw()"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#inst-folder",
-    "href": "slides/02_r_packages.html#inst-folder",
-    "title": "2 R packages",
-    "section": "inst folder",
-    "text": "inst folder\n\nContents will be copied recursively to installation directory\n\nBe careful not to interfere with standard folder names\n\nFor data that is used by functions in the package itself\n\nThose would typically go into inst/extdata folder\nLoad with system.file(\"path/file\", package = \"mypackage\")\n\nCITATION: For custom citation() output\n\nCreate it with usethis::use_citation()\n\ninst/doc can contain documentation files (typically pdf)"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#src-folder",
-    "href": "slides/02_r_packages.html#src-folder",
-    "title": "2 R packages",
-    "section": "src folder",
-    "text": "src folder\n\nContains sources and headers for any code that needs compilation\nShould only contain a single language here\n\nBecause R uses it, mixing C, C++ and Fortran usually works with OS native compilers\n\nMuch more complex to write and maintain than an R only package\nTypically only makes sense for\n\nWrapping existing libraries for use in R\nSpeeding up complex or long computations"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#vignettes-folder",
-    "href": "slides/02_r_packages.html#vignettes-folder",
-    "title": "2 R packages",
-    "section": "vignettes folder",
-    "text": "vignettes folder\n\nSpecial case of documentation files (pdf or html) created by compiling source files\nPackage users don’t need to recompile the vignettes - they are delivered with the package\nStart a new vignette with usethis::use_vignette()\n\nStarts an Rmd vignette, compiled with knitr\n\nImportant for the user to understand the high-level ideas\nComplements function-level documentation from our roxygen2 chunks"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#news-file",
-    "href": "slides/02_r_packages.html#news-file",
-    "title": "2 R packages",
-    "section": "NEWS file",
-    "text": "NEWS file\n\nLists user-visible changes worth mentioning\nIn each new release, add items at the top under the version they refer to\nDon’t discard old items: leave them in the file after the newer items\nStart one with usethis::use_news_md()"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#licensing-1",
-    "href": "slides/02_r_packages.html#licensing-1",
-    "title": "2 R packages",
-    "section": "Licensing",
-    "text": "Licensing\n\nWe mentioned before that licensing information is usually included in the DESCRIPTION file\nIn fact, the License field (in standardized form) is mandatory\nLicensing for a package which might be distributed is an important but potentially complex subject\nIt is very important to include licensing information, as otherwise:\n\nIt may not be possible to use it\nIt may not be possible to distribute copies of it\n\nWe are going to talk more about licensing in Chapter 5 later today"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#license-options",
-    "href": "slides/02_r_packages.html#license-options",
-    "title": "2 R packages",
-    "section": "License options",
-    "text": "License options\n\nCommon licenses for R packages: GPL-2, GPL-3, AGPL-3, MIT, …\nDetails and description of most licenses are available online:\n\nhttps://www.r-project.org/Licenses\nhttps://choosealicense.com\nhttps://cran.r-project.org/doc/manuals/R-exts.html#Licensing\n\nExamples of standardized license specifications:\n\nLicense: GPL-2\nLicense: LGPL (&gt;= 2.0, &lt; 3) | Mozilla Public License\nLicense: GPL-2 | file LICENCE\nLicense: Artistic-2.0 | AGPL-3 + file LICENSE\n\nThe optional file LICENSE/LICENCE contains a copy of the license\n\nOnly include such a file if it is referred to in the License field"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#adding-a-license-to-your-package",
-    "href": "slides/02_r_packages.html#adding-a-license-to-your-package",
-    "title": "2 R packages",
-    "section": "Adding a license to your package",
-    "text": "Adding a license to your package\n\nOnce again, functions from the usethis package simplify this process:\n\nusethis::use_mit_license()\nusethis::use_gpl_license()\nusethis::use_agpl_license()\nusethis::use_lgpl_license()\nusethis::use_apache_license()\nusethis::use_cc0_license()\nusethis::use_ccby_license()\nusethis::use_proprietary_license()"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#documenting-the-package",
-    "href": "slides/02_r_packages.html#documenting-the-package",
-    "title": "2 R packages",
-    "section": "Documenting the package",
-    "text": "Documenting the package\n\nThe first step is to produce the documentation files and NAMESPACE\nIn RStudio: Build &gt; More &gt; Document\nIn the console: devtools::document()"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#checking-the-package",
-    "href": "slides/02_r_packages.html#checking-the-package",
-    "title": "2 R packages",
-    "section": "Checking the package",
-    "text": "Checking the package\n\nR comes with pre-defined check command for packages: “the R package checker” aka R CMD check\nAbout 22 checks are run (so quite a lot), including things like:\n\nCan the package be installed?\nIs the code syntax ok?\nIs the documentation complete?\nDo tests run successfully?\nDo examples run successfully?\n\nIn RStudio: Build &gt; Check\nIn the console: devtools::check()"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#building-the-package-1",
-    "href": "slides/02_r_packages.html#building-the-package-1",
-    "title": "2 R packages",
-    "section": "Building the package",
-    "text": "Building the package\n\nThe R package folder can be compressed into a single package file\nTypically we manually only build “source” package\n\nIn RStudio: Build &gt; More &gt; Build Source Package\nIn the console: devtools::build()\n\nMakes it easy to share the package with others and submit to CRAN"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#installing-the-package",
-    "href": "slides/02_r_packages.html#installing-the-package",
-    "title": "2 R packages",
-    "section": "Installing the package",
-    "text": "Installing the package\n\nR comes with pre-defined install command for packages: R CMD INSTALL\nIn RStudio: Build &gt; Install\nIn the console: devtools::install()\nNote: During development it’s usually sufficient to use Build &gt; More &gt; Load All\n\nRuns devtools::load_all()\nRoughly simulates what happens when package would be installed and loaded\nUnexported objects and helpers under tests will also be available\nKey: much faster!"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#keyboard-shortcuts",
-    "href": "slides/02_r_packages.html#keyboard-shortcuts",
-    "title": "2 R packages",
-    "section": "Keyboard shortcuts",
-    "text": "Keyboard shortcuts\n\nLearning some of the RStudio keyboard shortcuts can speed up many of the tasks we introduced in this lecture:\n\n\n\n\n\n\nDescription\nWindows & Linux\nMac\n\n\n\n\nInstall and Restart\nCtrl+Shift+B\nShift+Command+B\n\n\nLoad All\nCtrl+Shift+L\nShift+Command+L\n\n\nTest Package\nCtrl+Shift+T\nShift+Command+T\n\n\nCheck Package\nCtrl+Shift+E\nShift+Command+E\n\n\nDocument Package\nCtrl+Shift+D\nShift+Command+D\n\n\n\n\n\n\nThere are many more – check for instance the RStudio IDE Documentation"
-  },
-  {
-    "objectID": "slides/02_r_packages.html#lets-try-this-out-now",
-    "href": "slides/02_r_packages.html#lets-try-this-out-now",
-    "title": "2 R packages",
-    "section": "Let’s try this out now 😊",
-    "text": "Let’s try this out now 😊\n\nSet up a new R package with a fancy name\nFill out the DESCRIPTION file\nInclude a few functions\nAdd roxygen2 documentation\nPick and add a license to the package\nExport the function to the namespace\nProduce the package documentation\nRun checks\nBuild the package\n\n\\(\\leadsto\\) We will be using this package throughout the workshop!"
+    "objectID": "slides/08_optimization.html#references",
+    "href": "slides/08_optimization.html#references",
+    "title": "8 Code Optimization",
+    "section": "References",
+    "text": "References\n\n\nEddelbuettel, Dirk, and Romain François. 2011. “Rcpp: Seamless R and C++ Integration.” Journal of Statistical Software 40 (8): 1–18. https://doi.org/10.18637/jss.v040.i08.\n\n\nKnuth, Donald E. 1974. “Structured Programming with Go to Statements.” ACM Computing Surveys (CSUR) 6 (4): 261–301. https://web.archive.org/web/20130731202547/http://pplab.snu.ac.kr/courses/adv_pl05/papers/p261-knuth.pdf.\n\n\nMunroe, Randall. 2007. “Xkcd.” 2007. http://xkcd.com/.\n\n\nPeng, Roger D. 2016. R Programming for Data Science. Lulu.com. https://bookdown.org/rdpeng/rprogdatascience/."
   },
   {
     "objectID": "slides/03_workflow.html#typical-work-steps",
@@ -1208,140 +1411,84 @@
     "href": "slides/03_workflow.html#example---step-3-packaging-4",
     "title": "3 An R Package Engineering Workflow",
     "section": "Example - Step 3: Packaging",
-    "text": "Example - Step 3: Packaging\nThe output is impractical, e.g., we need to scroll down:\n\nx &lt;- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7, sd1 = 3, sd2 = 4)\nx\n\n$n1\n[1] 50\n\n$n2\n[1] 50\n\n$mean1\n[1] 5\n\n$mean2\n[1] 7\n\n$sd1\n[1] 3\n\n$sd2\n[1] 4\n\n$data\n    group     values\n1       1  7.3815039\n2       1  7.7792025\n3       1  4.3469528\n4       1  6.2055975\n5       1  5.0119719\n6       1  5.0329786\n7       1  3.2346769\n8       1  3.7770380\n9       1  6.3625049\n10      1  2.9074566\n11      1  2.8184656\n12      1  3.8730556\n13      1  6.0834737\n14      1  5.2842678\n15      1  4.3965731\n16      1  4.9363026\n17      1  6.7423210\n18      1  8.8825475\n19      1  5.1850238\n20      1  5.8830736\n21      1 -0.3107996\n22      1  7.8677381\n23      1  4.4848973\n24      1  5.1750666\n25      1  5.0202679\n26      1  3.2009834\n27      1  5.9374336\n28      1  5.6192633\n29      1  4.2461348\n30      1  6.2283114\n31      1  2.8159286\n32      1  4.8554239\n33      1  6.0995909\n34      1  3.4349834\n35      1  5.1027178\n36      1  2.9589468\n37      1  4.0148028\n38      1  5.5135099\n39      1  3.2848951\n40      1  5.7386598\n41      1  2.3108279\n42      1  5.3392688\n43      1  1.8690888\n44      1  8.1113659\n45      1 -0.8632642\n46      1  2.8755765\n47      1  5.4203909\n48      1  4.4055768\n49      1  6.7922819\n50      1  9.0557984\n51      2  8.9622860\n52      2 11.1999827\n53      2  0.7951029\n54      2  6.3105731\n55      2 14.5584780\n56      2  7.0016885\n57      2  6.9866601\n58      2  8.6283833\n59      2 10.3149289\n60      2  6.3196668\n61      2  4.9761518\n62      2 10.8530139\n63      2  3.3177567\n64      2 -0.1768615\n65      2  3.7103447\n66      2  9.6780606\n67      2 10.8735816\n68      2  8.5259338\n69      2  5.2097301\n70      2  7.7247602\n71      2  5.6623367\n72      2 11.4477068\n73      2  5.4054744\n74      2  4.2979692\n75      2  8.7566404\n76      2 11.2396065\n77      2  1.5287345\n78      2  9.9086688\n79      2 12.6385778\n80      2 13.1734312\n81      2  9.2896429\n82      2  6.3409129\n83      2  4.6990168\n84      2 11.1536128\n85      2  0.9719921\n86      2  4.6617769\n87      2  8.5630256\n88      2 -2.4351224\n89      2  5.3772970\n90      2  5.5492652\n91      2  7.3332188\n92      2  5.4066525\n93      2  4.6817566\n94      2  6.9675807\n95      2 -1.3733480\n96      2  5.1143493\n97      2  5.7708515\n98      2 11.0483145\n99      2  4.9468994\n100     2  6.2516159\n\nattr(,\"class\")\n[1] \"SimulationResult\"\n\n\n\nSolution: implement generic function print"
+    "text": "Example - Step 3: Packaging\nThe output is impractical, e.g., we need to scroll down:\n\nx &lt;- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7, sd1 = 3, sd2 = 4)\nx\n\n$n1\n[1] 50\n\n$n2\n[1] 50\n\n$mean1\n[1] 5\n\n$mean2\n[1] 7\n\n$sd1\n[1] 3\n\n$sd2\n[1] 4\n\n$data\n    group     values\n1       1  7.2782570\n2       1  8.2191004\n3       1  8.2189987\n4       1  4.7603521\n5       1 -0.2741047\n6       1  0.8405452\n7       1  4.6169718\n8       1  5.5561464\n9       1  8.3453007\n10      1  2.6547147\n11      1 11.6943961\n12      1 -0.2814362\n13      1  5.2627932\n14      1  3.2736835\n15      1  5.0856263\n16      1  8.3480802\n17      1  6.0346188\n18      1  9.6216180\n19      1 10.8559177\n20      1  6.2352166\n21      1  7.9175962\n22      1  3.0712341\n23      1  8.4380584\n24      1  5.8962772\n25      1  9.4350435\n26      1  6.5910793\n27      1  2.7733870\n28      1 10.6713937\n29      1  1.4130668\n30      1  2.9420545\n31      1  6.4035535\n32      1  5.8820790\n33      1  6.6273120\n34      1  3.4649761\n35      1  6.3083259\n36      1  4.9118524\n37      1  9.5744617\n38      1  6.1529377\n39      1  5.2990603\n40      1  3.6815459\n41      1  3.6301584\n42      1  3.2491620\n43      1  3.1414297\n44      1  5.1985141\n45      1  2.4891892\n46      1  2.8009131\n47      1  0.3124343\n48      1  2.2712431\n49      1  5.0201753\n50      1  6.1846142\n51      2  1.5194013\n52      2  1.9065852\n53      2  8.2601292\n54      2  7.5199386\n55      2 -2.8264960\n56      2  1.1989134\n57      2  2.9170270\n58      2  7.6289081\n59      2  6.2134357\n60      2 12.2457892\n61      2 11.5629109\n62      2 12.3355304\n63      2  4.0508215\n64      2  8.1934956\n65      2  6.5835057\n66      2  6.8138919\n67      2  3.5182148\n68      2  7.8680886\n69      2 10.3730201\n70      2  9.9956141\n71      2 10.4031772\n72      2  6.7086837\n73      2  5.6897279\n74      2  6.1055409\n75      2  6.7292191\n76      2  3.9254545\n77      2  0.7686050\n78      2  7.8224831\n79      2  7.8597209\n80      2  7.2831903\n81      2  8.6185287\n82      2 12.9693468\n83      2  7.8724448\n84      2  2.2678084\n85      2  6.0575298\n86      2  9.3828003\n87      2  0.6526274\n88      2  8.3149372\n89      2 -1.5282780\n90      2  4.7385667\n91      2  7.0763228\n92      2 11.9138847\n93      2 13.6486505\n94      2  9.8016905\n95      2  6.3848578\n96      2  8.9617777\n97      2  6.2964250\n98      2  8.0563213\n99      2  9.0396923\n100     2  3.0930717\n\nattr(,\"class\")\n[1] \"SimulationResult\"\n\n\n\nSolution: implement generic function print"
   },
   {
     "objectID": "slides/03_workflow.html#example---step-3-packaging-5",
     "href": "slides/03_workflow.html#example---step-3-packaging-5",
     "title": "3 An R Package Engineering Workflow",
     "section": "Example - Step 3: Packaging",
-    "text": "Example - Step 3: Packaging\nGeneric function print:\n\nCodeRoxygenOutput\n\n\n\nprint.SimulationResult &lt;- function(x, ...) {\n    args &lt;- list(n1 = x$n1, n2 = x$n2, \n        mean1 = x$mean1, mean2 = x$mean2, sd1 = x$sd1, sd2 = x$sd2)\n    \n    print(list(\n        args = format(args), \n        data = dplyr::tibble(x$data)\n    ), ...)\n}\nx\n\n\n\n\n#' @title\n#' Print Simulation Result\n#'\n#' @description\n#' Generic function to print a `SimulationResult` object.\n#'\n#' @param x a \\code{SimulationResult} object to print.\n#' @param ... further arguments passed to or from other methods.\n#' \n#' @examples\n#' x &lt;- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, \n#'      mean2 = 7, sd1 = 3, sd2 = 4, seed = 123)\n#' print(x)\n#'\n#' @export\n\n\n\n\n\n$args\n   n1    n2 mean1 mean2   sd1   sd2 \n \"50\"  \"50\"   \"5\"   \"7\"   \"3\"   \"4\" \n\n$data\n# A tibble: 100 × 2\n   group values\n   &lt;dbl&gt;  &lt;dbl&gt;\n 1     1   7.38\n 2     1   7.78\n 3     1   4.35\n 4     1   6.21\n 5     1   5.01\n 6     1   5.03\n 7     1   3.23\n 8     1   3.78\n 9     1   6.36\n10     1   2.91\n# ℹ 90 more rows"
+    "text": "Example - Step 3: Packaging\nGeneric function print:\n\nCodeRoxygenOutput\n\n\n\nprint.SimulationResult &lt;- function(x, ...) {\n    args &lt;- list(n1 = x$n1, n2 = x$n2, \n        mean1 = x$mean1, mean2 = x$mean2, sd1 = x$sd1, sd2 = x$sd2)\n    \n    print(list(\n        args = format(args), \n        data = dplyr::tibble(x$data)\n    ), ...)\n}\nx\n\n\n\n\n#' @title\n#' Print Simulation Result\n#'\n#' @description\n#' Generic function to print a `SimulationResult` object.\n#'\n#' @param x a \\code{SimulationResult} object to print.\n#' @param ... further arguments passed to or from other methods.\n#' \n#' @examples\n#' x &lt;- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, \n#'      mean2 = 7, sd1 = 3, sd2 = 4, seed = 123)\n#' print(x)\n#'\n#' @export\n\n\n\n\n\n$args\n   n1    n2 mean1 mean2   sd1   sd2 \n \"50\"  \"50\"   \"5\"   \"7\"   \"3\"   \"4\" \n\n$data\n# A tibble: 100 × 2\n   group values\n   &lt;dbl&gt;  &lt;dbl&gt;\n 1     1  7.28 \n 2     1  8.22 \n 3     1  8.22 \n 4     1  4.76 \n 5     1 -0.274\n 6     1  0.841\n 7     1  4.62 \n 8     1  5.56 \n 9     1  8.35 \n10     1  2.65 \n# ℹ 90 more rows"
   },
   {
-    "objectID": "slides/03_workflow.html#preparation",
-    "href": "slides/03_workflow.html#preparation",
-    "title": "3 An R Package Engineering Workflow",
-    "section": "Preparation",
-    "text": "Preparation\n\nDownload the unfinished R package simulatr\nExtract the package zip file\nOpen the project with RStudio\nComplete the tasks below"
+    "objectID": "slides/10_conclusion.html#thank-you",
+    "href": "slides/10_conclusion.html#thank-you",
+    "title": "10 Conclusion",
+    "section": "Thank you!",
+    "text": "Thank you!\n\nTo you for your engagement and participation\nTo the Zurich R Courses team at ETH Zurich: Lukas Meier, Laura Vogt, Markus Kalisch\nTo our fellow openstatsware authors of the course materials"
   },
   {
-    "objectID": "slides/03_workflow.html#tasks",
-    "href": "slides/03_workflow.html#tasks",
-    "title": "3 An R Package Engineering Workflow",
-    "section": "Tasks",
-    "text": "Tasks\n\nTask 1Task 2Task 3Task 4Task 5Task 6Task 7\n\n\nAdd assertions to improve the usability and user experience\n\n\n\n\n\n\nTip on assertions\n\n\nUse the package checkmate to validate input arguments.\n\n\n\nExample:\n\nplayWithAssertions &lt;- function(n1) {\n  checkmate::assertInt(n1, lower = 1)\n}\nplayWithAssertions(-1)\n\nError in playWithAssertions(-1) : Assertion on ‘n1’ failed: Element 1 is not &gt;= 1.\n\n\nAdd three additional results:\n\nn total,\ncreation time, and\nallocation ratio\n\n\n\n\n\n\n\nTip on creation time\n\n\nSys.time(), format(Sys.time(), '%B %d, %Y'), Sys.Date()\n\n\n\n\n\nAdd an additional result: t.test result\n\n\nAdd an optional alternative argument and pass it through t.test:\n\n\nalternative = c(\"two.sided\", \"less\", \"greater\")\n\n\n\nImplement the generic functions print and plot.\n\n\n\n\n\n\nTip on print\n\n\nUse the plot example function from above and extend it.\n\n\n\n\n\n\n\n\n\nTip on plot\n\n\nUse R base plot or ggplot2 to create a grouped boxplot of the fake data.\n\n\n\n\n\nOptional extra tasks:\n\nImplement the generic functions summary and cat\nImplement the function kable known from the package knitr as generic. Tip: use\n\nkable &lt;- function(x) UseMethod(\"kable\")\n\nto define kable as generic\n\n\n\nOptional extra task1:\nDocument your functions with Roxygen2\n\n\nIf you are already familiar with Roxygen2"
+    "objectID": "slides/10_conclusion.html#r-package-structure",
+    "href": "slides/10_conclusion.html#r-package-structure",
+    "title": "10 Conclusion",
+    "section": "R package structure",
+    "text": "R package structure\n\nR package = folder structure with (many) conventions\nWith modern tools usethis, roxygen2 it is easy to start a new package\nPackaging a set of functions is an ideal way to share with collaborators and the public\nStart small and simple and over time you can learn additional options"
   },
   {
-    "objectID": "slides/08_using_ai.html#ai-makes-packages-easier-to-write",
-    "href": "slides/08_using_ai.html#ai-makes-packages-easier-to-write",
-    "title": "8 Using AI",
-    "section": "AI makes packages easier to write",
-    "text": "AI makes packages easier to write\n\n\n\nIllustration accompanying Pierre DeBois’s article about AI and R package quality\n\n\nMore generated code makes design, documentation, and review even more valuable.\nGraphic: Pierre DeBois, AI Made R Packages Easy to Write. But Did It Make Packages in CRAN Better?, DataDrivenInvestor, 23 September 2026\n\nUse the graphic to open a discussion: what makes a package useful and trustworthy? The article raises concerns about documentation; do not infer a causal effect of AI from the illustration. The graphic is third-party content and is excluded from the course’s CC BY-SA license."
+    "objectID": "slides/10_conclusion.html#engineering-workflow",
+    "href": "slides/10_conclusion.html#engineering-workflow",
+    "title": "10 Conclusion",
+    "section": "Engineering Workflow",
+    "text": "Engineering Workflow\n\nUse a workable workflow:\nIdea \\(\\rightarrow\\) Design docs \\(\\rightarrow\\) Programming \\(\\rightarrow\\) Quality check \\(\\rightarrow\\) Publication\n\nDon’t waste time on maintenance\nBe faster with release on CRAN\nFulfill quality requirements of yourself and stakeholders\n\nRefactor your one-off scripts that you want to use in a package"
   },
   {
-    "objectID": "slides/08_using_ai.html#vs.-2026",
-    "href": "slides/08_using_ai.html#vs.-2026",
-    "title": "8 Using AI",
-    "section": "2024 vs. 2026",
-    "text": "2024 vs. 2026\n\n\n\n\n\n\n\nDisappointment in 2024\nProductive use in 2026\n\n\n\n\nBad at translating code (e.g. R to Julia)\nTranslates code well between e.g. SAS and R\n\n\nBad at mathematics, e.g. inverse functions\nCan solve difficult math problems\n\n\nBad at writing tests\nDraft tests, run them, and investigate failures\n\n\nBad at slide generation\nCreate and revise slides with visual feedback\n\n\nMade up literature references\nCan reliably find literature references\n\n\n\n\nThis is a retrospective on my own experience, not a guarantee for every task or model. For R-to-Julia translation, check missing values, indexing, types, and numerical tolerances. For an inverse, substitute back into the original function and check the domain. For literature, open the paper and verify authors, DOI, and the claim it supports.\nAll of these are now possible with current AI tools. Tool access and iterative feedback have changed the experience substantially But success still needs checking!"
+    "objectID": "slides/10_conclusion.html#ensuring-quality",
+    "href": "slides/10_conclusion.html#ensuring-quality",
+    "title": "10 Conclusion",
+    "section": "Ensuring quality",
+    "text": "Ensuring quality\n\nQuality by Design: use a workable workflow:\nIdea \\(\\rightarrow\\) Design docs \\(\\rightarrow\\) Programming \\(\\rightarrow\\) Quality check \\(\\rightarrow\\) Publication\nApply common clean code rules:\n\nUse clear names for functions and variables\nDon’t repeat yourself!\nUse styler to optimize the code styling\n\nWrite tests for your functions\n\nUse testthat to test, test, and test\nUse covr to improve the test coverage\n\nUse assertions for all arguments \\(\\rightarrow\\) better user experience"
   },
   {
-    "objectID": "slides/08_using_ai.html#keep-the-engineering-workflow",
-    "href": "slides/08_using_ai.html#keep-the-engineering-workflow",
-    "title": "8 Using AI",
-    "section": "Keep the engineering workflow",
-    "text": "Keep the engineering workflow\nDesign → Plan → Implement in steps → Check → Review\n\nExplain the user need, interface, constraints, and acceptance criteria\nAsk the assistant to inspect the project and propose a plan\nImplement one small, reviewable change at a time\nRun examples, tests, and package checks; inspect the results\nReview the diff and update documentation before committing\n\nHadley Wickham’s Tidy design principles provide useful reading for designing APIs that humans and assistants can understand.\n\nExample prompt: “Read the design vignette and existing tests. Propose a plan for adding a missing-value option without changing existing defaults. Wait for my review of the plan before implementing.” Discuss where a human decision is needed: the API, statistical assumptions, acceptance criteria, and final review."
+    "objectID": "slides/10_conclusion.html#collaboration",
+    "href": "slides/10_conclusion.html#collaboration",
+    "title": "10 Conclusion",
+    "section": "Collaboration",
+    "text": "Collaboration\n\nVersion control is key\n\nMultiple people working on code without strong VC \\(\\leadsto\\) disaster!\nThere are different options, but git is the defacto standard for R packages\nGit needs a friend - use platforms like GitHub or GitLab\n\nAutomated CI/CD allows for much quicker iteration\n\nAutomate tests to avoid bugs slipping back in\n\nTechnology does not solve everything - foster a positive culture\n\nKeep internal and external contributors engaged\nInvest in documentation to make it easier to contribute"
   },
   {
-    "objectID": "slides/08_using_ai.html#choose-an-ide-that-fits-your-work",
-    "href": "slides/08_using_ai.html#choose-an-ide-that-fits-your-work",
-    "title": "8 Using AI",
-    "section": "Choose an IDE that fits your work",
-    "text": "Choose an IDE that fits your work\n\n\n\nIDE\nUseful AI integration\n\n\n\n\nVS Code\nGitHub Copilot for inline/tab completion and chat; extensions for Claude Code and Codex\n\n\nPositron\nPosit’s AI integration, Posit Assistant, with context from your R session, objects, plots, and console history\n\n\n\n\nTab completion helps with a local edit; an agent can work across files and run checks\nStart with a small task and inspect the changes and tool output\nChoose approved providers and share only data and code you are allowed to send\n\n\nPosit Assistant is the current name in the Positron documentation (October 2026). Participants can continue using RStudio for the package exercises; switching IDE is optional. Accounts, available models, and costs depend on the chosen provider and setup."
+    "objectID": "slides/10_conclusion.html#publication",
+    "href": "slides/10_conclusion.html#publication",
+    "title": "10 Conclusion",
+    "section": "Publication",
+    "text": "Publication\n\npkgdown can help you easily create a nice website for your package\nVersions and licenses along with NEWS updates are important\nGitHub helps with tagging of release versions\nR-Hub helps with checking before CRAN submission"
   },
   {
-    "objectID": "slides/08_using_ai.html#instructions-for-your-project",
-    "href": "slides/08_using_ai.html#instructions-for-your-project",
-    "title": "8 Using AI",
-    "section": "Instructions for your project",
-    "text": "Instructions for your project\nAGENTS.md gives compatible coding agents shared project context. Put it at the repository root; use scoped instructions where needed.\nKeep instructions short, accurate, and version controlled. Check how your assistant discovers them.\nExample:\n# Working on this R package\n\n- Read DESCRIPTION, the design vignette, and CONTRIBUTING.md first.\n- Keep public function signatures and defaults stable unless requested.\n- Edit roxygen source; regenerate Rd and NAMESPACE with devtools::document().\n- Add tests for changed behavior; run devtools::test() and devtools::check().\n- Update vignettes and NEWS.md for user-visible changes.\n- Explain mathematical changes and benchmark performance claims.\n- Report the changed files, check results, and unresolved questions.\n\nAGENTS.md gives project-wide conventions; a skill gives task-specific guidance; a prompt gives the immediate task. Additional examples: tests/AGENTS.md can describe reference data and tolerances; src/AGENTS.md can explain compiled-code conventions. Support and discovery rules vary across assistants. Instructions do not replace permissions or sandbox controls."
+    "objectID": "slides/10_conclusion.html#shiny",
+    "href": "slides/10_conclusion.html#shiny",
+    "title": "10 Conclusion",
+    "section": "Shiny",
+    "text": "Shiny\n\nBest practices are not just important for R packages, also for Shiny!\nDesign UI and package structure first, minimize actual Shiny code\nShiny modules help to make the reactivity manageable\nUse normal tests for static code, server tests and shinytest2 for Shiny code"
   },
   {
-    "objectID": "slides/08_using_ai.html#give-the-assistant-skills",
-    "href": "slides/08_using_ai.html#give-the-assistant-skills",
-    "title": "8 Using AI",
-    "section": "Give the assistant skills",
-    "text": "Give the assistant skills\n\nA SKILL.md packages instructions for a particular kind of task\nExplore posit-dev/skills\n\nUse r-package-development for R package conventions and development guidance\nUse critical-code-reviewer to request a critical review with concrete findings\n\nInstall using your assistant’s supported mechanism, then check that the relevant skill is loaded\n\nSkills supply reusable guidance; project documentation supplies the facts about your package.\n\nRead a skill before installing it. Check its assumptions and commands against your project. Ask: “Use the R package development skill for this change, then use the critical code reviewer skill to review the diff. Report each finding with its location and a suggested fix.” Loading and activation differ between tools; linking a file in a prompt does not necessarily install a skill."
+    "objectID": "slides/10_conclusion.html#optimization",
+    "href": "slides/10_conclusion.html#optimization",
+    "title": "10 Conclusion",
+    "section": "Optimization",
+    "text": "Optimization\n\nOptimization is an advanced task, which should usually only come last\nMake sure to invest your development time where it matters by profiling the code first\nKeep in mind: explore fast alternative packages, don’t repeat or copy, vectorize where possible.\nIf necessary, consider using some C++, but keep in mind maintenance burden"
   },
   {
-    "objectID": "slides/08_using_ai.html#keep-documentation-and-code-in-sync",
-    "href": "slides/08_using_ai.html#keep-documentation-and-code-in-sync",
-    "title": "8 Using AI",
-    "section": "Keep documentation and code in sync",
-    "text": "Keep documentation and code in sync\nExample from our mmrm work: use the mathematical description to identify a faster algorithm, then implement it in code.\n\nStart with the current mathematical documentation, assumptions, and notation\nAsk for an optimization proposal and review the derivation\nImplement in steps; compare with the existing implementation and benchmark\nUpdate the math description, code, tests, and relevant release notes together\n\n\nThis is the instructor’s experience supplied for the course, not a claim that the linked vignette documents a particular AI-assisted change or measured speedup. For a numerical algorithm, compare estimates, covariance matrices, likelihoods, convergence, and edge cases as appropriate. Report both correctness evidence and benchmark conditions. Do not treat the optimized implementation as the sole source of expected test values."
+    "objectID": "slides/10_conclusion.html#using-ai",
+    "href": "slides/10_conclusion.html#using-ai",
+    "title": "10 Conclusion",
+    "section": "Using AI",
+    "text": "Using AI\n\nBetter tools amplify what we can do, but engineering judgment and responsibility still matters\nGive agents project instructions, skills, and current documentation\nReview mathematics, test outcomes, and references independently\nKeep code, documentation, and tests together in each change\nYou can also give agents access to an MCP server to use your R package, and vice versa you can use R to interact with other MCP servers"
   },
   {
-    "objectID": "slides/08_using_ai.html#model-context-protocol",
-    "href": "slides/08_using_ai.html#model-context-protocol",
-    "title": "8 Using AI",
-    "section": "Model Context Protocol",
-    "text": "Model Context Protocol\nModel Context Protocol (MCP) is an open protocol that gives AI applications a standard way to connect with external systems.\n\nAn MCP server advertises capabilities to an AI application’s MCP client\nThose capabilities can include tools (actions), resources (context or data), and reusable prompts\nThe model can request a capability; the client executes it and returns the result to the conversation\nServers may be local or remote, so access controls and the data exposed still matter\n\n\nMCP standardizes the connection, not the model’s judgement. The client controls which servers are available and should show or enforce appropriate permissions before a tool has side effects. The next slide applies this pattern to an R session and package documentation."
-  },
-  {
-    "objectID": "slides/08_using_ai.html#r-as-an-mcp-server",
-    "href": "slides/08_using_ai.html#r-as-an-mcp-server",
-    "title": "8 Using AI",
-    "section": "R as an MCP server",
-    "text": "R as an MCP server\n\nFrom https://posit-dev.github.io/mcptools/"
-  },
-  {
-    "objectID": "slides/08_using_ai.html#let-ai-use-your-r-package-through-mcp",
-    "href": "slides/08_using_ai.html#let-ai-use-your-r-package-through-mcp",
-    "title": "8 Using AI",
-    "section": "Let AI use your R package through MCP",
-    "text": "Let AI use your R package through MCP\n\nmcptools lets an MCP client interact with R\nbtw supplies standard tools for documentation and session context.\n\n# In a disposable R session with example data:\ninstall.packages(c(\"mcptools\", \"btw\"))\nlibrary(yourpackage) # replace with your installed package\nmcptools::mcp_session()\nConfigure the client’s local MCP server to run:\nRscript -e 'mcptools::mcp_server()'\nAsk it to read your function’s help, run a small example, and explain the result. Verify the actual tool calls and output.\n\nThe package name is a placeholder. The mcptools documentation shows client-specific configuration; follow it for the assistant you use. Registering a session does not automatically turn each exported function into a dedicated MCP tool: the assistant can use R execution and documentation tools, or you can configure specific functions. Use synthetic data. R execution can read files and alter session state; keep tool permissions and the working directory appropriate to the demo."
-  },
-  {
-    "objectID": "slides/08_using_ai.html#example-an-mcp-server-in-an-r-package",
-    "href": "slides/08_using_ai.html#example-an-mcp-server-in-an-r-package",
-    "title": "8 Using AI",
-    "section": "Example: an MCP server in an R package",
-    "text": "Example: an MCP server in an R package\nThis autoslider.core MCP server defines R functions, registers them as MCP tools, then starts the server. Scroll through the source below.\n#!/usr/bin/env Rscript\n# Autoslider MCP Server\n#\n# Exposes the autoslider.core pipeline as MCP tools so any MCP-compatible\n# client (Claude Desktop, Claude Code, Cursor, Open WebUI, etc.) can\n# orchestrate slide generation conversationally.\n#\n# Usage:\n#   Rscript inst/mcp/autoslider_mcp_server.R\n#\n# Register in your MCP client — see inst/mcp/claude_desktop_config_snippet.json\n#\n# Requirements:\n#   install.packages(\"mcptools\")        # on CRAN\n#   # ellmer and autoslider.core already in your renv/library\n\nsuppressPackageStartupMessages({\n  library(mcptools)\n  library(ellmer)\n  library(autoslider.core)\n  library(filters)\n  library(dplyr)\n})\n\n# ---- session state ----------------------------------------------------------\n# Holds spec and outputs across tool calls within one Claude session.\n.state &lt;- new.env(parent = emptyenv())\n.state$spec    &lt;- NULL\n.state$outputs &lt;- NULL\n\n# ---- helpers ----------------------------------------------------------------\nstop_if &lt;- function(cond, msg) if (cond) stop(msg, call. = FALSE)\nrequire_spec    &lt;- function() stop_if(is.null(.state$spec),    \"No spec loaded. Call load_spec first.\")\nrequire_outputs &lt;- function() stop_if(is.null(.state$outputs), \"No outputs generated. Call run_pipeline first.\")\n\n# ---- tool functions ---------------------------------------------------------\n\nfn_list_programs &lt;- function() {\n  spec_file &lt;- system.file(\"spec.yml\", package = \"autoslider.core\")\n  spec      &lt;- read_spec(spec_file)\n  programs  &lt;- sort(unique(vapply(spec, `[[`, character(1), \"program\")))\n  paste(programs, collapse = \"\\n\")\n}\n\nfn_load_spec &lt;- function(spec_path, filters_path, program_filter, suffix_filter) {\n  if (spec_path == \"default\") {\n    spec_path &lt;- system.file(\"spec.yml\", package = \"autoslider.core\")\n  }\n  if (filters_path == \"default\") {\n    filters_path &lt;- system.file(\"filters.yml\", package = \"autoslider.core\")\n  }\n\n  filters::load_filters(yaml_file = filters_path, overwrite = TRUE)\n  spec &lt;- read_spec(spec_path)\n\n  if (nzchar(program_filter)) {\n    progs &lt;- trimws(strsplit(program_filter, \",\")[[1]])\n    spec  &lt;- filter_spec(spec, program %in% progs, verbose = FALSE)\n  }\n\n  if (nzchar(suffix_filter)) {\n    suffs &lt;- trimws(strsplit(suffix_filter, \",\")[[1]])\n    spec  &lt;- filter_spec(spec, suffix %in% suffs, verbose = FALSE)\n  }\n\n  .state$spec    &lt;- spec\n  .state$outputs &lt;- NULL\n\n  sprintf(\n    \"Spec loaded: %d output(s).\\n%s\",\n    length(spec),\n    paste(names(spec), collapse = \"\\n\")\n  )\n}\n\n      \"Must call load_spec first.\",\n      \"Pass dataset_paths as comma-separated name=path pairs, e.g.\",\n      '\"adsl=/data/adsl.rds,adae=/data/adae.rds\".',\n      'Use \"example\" to use the built-in example CDISC datasets.'\n    ),\n    arguments = list(\n      dataset_paths = type_string(\n        'Comma-separated name=path.rds pairs, or \"example\" for built-in data.'\n      )\n    )\n  ),\n\n  tool(\n    fun = fn_add_ai_notes,\n    name = \"add_ai_notes\",\n    description = paste(\n      \"Generate AI speaker notes for each slide output using any supported LLM.\",\n      \"Reads prompts from prompt.yml and calls the chosen provider.\",\n      \"Must call run_pipeline first.\",\n      \"Supported providers: anthropic, ollama, openai, deepseek.\"\n    ),\n    arguments = list(\n      provider = type_string(\n        'LLM provider: \"anthropic\", \"ollama\", \"openai\", or \"deepseek\".'\n      ),\n      model = type_string(\n        'Model name for the provider, e.g. \"claude-haiku-4-5\", \"llama3.2\", \"gpt-4o-mini\", \"deepseek-chat\".'\n      ),\n      api_key = type_string(\n        paste(\n          'API key. Leave empty (\"\") to read from the provider\\'s env var',\n          \"(ANTHROPIC_API_KEY, OPENAI_API_KEY, DEEPSEEK_API_KEY). Not required for ollama.\"\n        )\n      ),\n      prompt_path = type_string(\n        'Path to prompt.yml. Use \"default\" for the built-in package prompts.'\n      ),\n      base_url = type_string(\n        paste(\n          'Optional custom base URL. Useful for local Ollama (\"http://localhost:11434\")',\n          'or self-hosted endpoints. Leave empty (\"\") for provider defaults.'\n        )\n      )\n    )\n  ),\n\n  tool(\n    fun = fn_add_ai_story,\n    name = \"add_ai_story\",\n    description = paste(\n      \"Post-process a generated deck: read the .pptx, ask an LLM to tell the story\",\n      \"of the tables, and insert REAL content slides (title + bullets) -- a summary\",\n      \"section at the front and a conclusions section at the end. Unlike add_ai_notes\",\n      \"(which hides text in speaker notes), these slides show in presentation mode.\",\n      \"Must call run_pipeline and generate_slides first.\",\n      \"Supported providers: anthropic, ollama, openai, deepseek.\"\n    ),\n    arguments = list(\n      provider = type_string(\n        'LLM provider: \"anthropic\", \"ollama\", \"openai\", or \"deepseek\".'\n      ),\n      model = type_string(\n        'Model name for the provider, e.g. \"claude-haiku-4-5\", \"llama3.2\", \"gpt-4o-mini\", \"deepseek-chat\".'\n      ),\n      api_key = type_string(\n        paste(\n          'API key. Leave empty (\"\") to read from the provider\\'s env var',\n          \"(ANTHROPIC_API_KEY, OPENAI_API_KEY, DEEPSEEK_API_KEY). Not required for ollama.\"\n        )\n      ),\n      base_url = type_string(\n        paste(\n          'Optional custom base URL. Useful for local Ollama (\"http://localhost:11434\")',\n          'or self-hosted endpoints. Leave empty (\"\") for provider defaults.'\n        )\n      ),\n      infile = type_string(\n        \"Path to the generated .pptx to read (the deck produced by generate_slides).\"\n      ),\n      outfile = type_string(\n        'Path to write the augmented deck to. Leave empty (\"\") to overwrite infile in place.'\n      ),\n      max_slides = type_string(\n        \"Maximum slides per section (summary and conclusions). Empty string defaults to 4.\"\n      )\n    )\n  ),\n\n  tool(\n    fun = fn_generate_slides,\n    name = \"generate_slides\",\n    description = paste(\n      \"Assemble the generated outputs into a PowerPoint (.pptx) file.\",\n      \"Must call run_pipeline first.\",\n      \"Returns the absolute path to the written file.\"\n    ),\n    arguments = list(\n      outfile = type_string(\n        'Output file path for the .pptx, e.g. \"/tmp/study_slides.pptx\".'\n      ),\n      template = type_string(\n        'Path to a .pptx template file. Use \"default\" for the built-in basic.pptx theme.'\n      )\n    )\n  ),\n\n  tool(\n    fun = fn_reset,\n    name = \"reset\",\n    description = \"Clear the session state (loaded spec and generated outputs). Useful to start a fresh run.\",\n    arguments = list()\n  )\n\n)\n\n# ---- start server -----------------------------------------------------------\n\nmcp_server(tools = tools)\n\nUse this as a concrete example of an MCP server implemented in an R package. Notice the session state, the tool functions, their descriptions and arguments, and the call to mcp_server() at the end. The panel loads the current source from the autoslider.core repository; use the link above if embedded remote content is blocked."
-  },
-  {
-    "objectID": "slides/08_using_ai.html#r-as-an-mcp-client",
-    "href": "slides/08_using_ai.html#r-as-an-mcp-client",
-    "title": "8 Using AI",
-    "section": "R as an MCP client",
-    "text": "R as an MCP client\n\nFrom https://posit-dev.github.io/mcptools/"
-  },
-  {
-    "objectID": "slides/08_using_ai.html#very-important",
-    "href": "slides/08_using_ai.html#very-important",
-    "title": "8 Using AI",
-    "section": "Very Important",
-    "text": "Very Important\n\nFrom https://tidydesign.substack.com/p/y-code-when-ai by Hadley Wickham"
-  },
-  {
-    "objectID": "slides/08_using_ai.html#important-review-the-result-including-tests",
-    "href": "slides/08_using_ai.html#important-review-the-result-including-tests",
-    "title": "8 Using AI",
-    "section": "Important: Review the result, including tests",
-    "text": "Important: Review the result, including tests\n\nDoes the implementation meet the design and preserve the public API?\nDo tests check independent expected results, boundaries, and failure cases?\nAre examples runnable and documentation consistent with the code?\nAre dependencies and external references real and necessary?\nHave you read the diff and the actual check output?\n\nUse a fresh review pass; fix the findings and rerun affected checks. AI review can be very helpful for larger diffs (but ideally you want small diffs).\n\nAn assistant can write code and tests that agree with the same misunderstanding. Use a hand-calculated example or a separately trusted implementation where possible. Ask the reviewer to identify risks and missing evidence, rather than simply asking “Is this good?”. A second AI review complements human review."
-  },
-  {
-    "objectID": "slides/08_using_ai.html#exercise-one-small-package-change",
-    "href": "slides/08_using_ai.html#exercise-one-small-package-change",
-    "title": "8 Using AI",
-    "section": "Exercise: one small package change",
-    "text": "Exercise: one small package change\nWork on a branch of your workshop package (or follow the instructor’s demo).\n\nDescribe one small improvement and its acceptance criteria\nDraft an AGENTS.md with conventions and check commands\nAsk an assistant to plan the change using the R package skill\nImplement it with documentation and tests; inspect the diff\nRequest a critical review, run checks, and discuss one finding\n\nDiscuss: What helped? What did you need to correct? What evidence made you trust the result?\n\nSuggested timing for the hour: 30 minutes for the slides/demo, 20 minutes guided practice, 10 minutes discussion. Possible task: document and test an existing argument, or add an input assertion with a useful error message. No paid tool is required: participants without access can pair up or write and review the plan and instructions without running an agent. Optional demonstration: connect the example package session through mcptools and ask the assistant to execute a documented example."
-  },
-  {
-    "objectID": "slides/08_using_ai.html#credits-and-license",
-    "href": "slides/08_using_ai.html#credits-and-license",
-    "title": "8 Using AI",
-    "section": "Credits and license",
-    "text": "Credits and license\n\nChapter author: Daniel Sabanés Bové, Zurich 2026\nGraphic: Pierre DeBois, DataDrivenInvestor, 23 September 2026. Supplied for this course; third-party content excluded from the course’s CC BY-SA license. No additional reuse license is asserted.\nTechnical sources are linked on the relevant slides; further reading: Tidy design principles\nUnless separately credited, this work is licensed under CC BY-SA 4.0.\nZurich 2026 sources adapt Zurich 2024 and Munich 2026, following Seoul 2026. Author credits are retained above.\nZurich adaptations by Daniel Sabanés Bové: course details, program, roxygen2 tags, SSH setup, and AI chapter. Full attribution and exceptions.\nReuse requires creator attribution, source and license links, and an indication of changes.\n\n\n\nGood Software Engineering Practice for R Packages - Home | Slides | License"
+    "objectID": "slides/10_conclusion.html#possible-next-steps",
+    "href": "slides/10_conclusion.html#possible-next-steps",
+    "title": "10 Conclusion",
+    "section": "Possible next steps",
+    "text": "Possible next steps\n\nBookmark the openstatsguide as a quick reference for good practices for R package development\nBring the information back to your colleagues in your organization\nStart building your first own package and share internally first\nLater publish it open source on GitHub and submit it to CRAN\nLearn about more tips and tricks how to extend R\n\n\nPhoto by Pixabay on pexels.com"
   },
   {
     "objectID": "index.html",
@@ -1362,7 +1509,7 @@
     "href": "index.html#workshop-program",
     "title": "Good Software Engineering Practice for R Packages",
     "section": "Workshop Program",
-    "text": "Workshop Program\n\nDay 1: 8 October 2026\n\n\n\n\n\n9.00 - 9.30\nIntroduction and outline\n\n\n9.30 - 9.45\nCoffee break\n\n\n9.45 - 10.30\nR Package Syntax\n\n\n10.30 - 11.15\nExercise: R packages\n\n\n11.15 - 12.00\nSoftware Engineering Workflow\n\n\n12.00 - 13.00\nLunch break\n\n\n13.00 - 14.00\nPackage Quality\n\n\n14.00 - 14.45\nExercise: package quality\n\n\n14.45 - 15.00\nCoffee break\n\n\n15.00 - 15.45\nCollaboration via GitHub\n\n\n15.45 - 16.30\nExercise: collaboration via GitHub\n\n\n\n\n\n\n\nDay 2: 9 October 2026\n\n\n\n\n\n9.30 - 9.45\nCoffee break\n\n\n9.45 - 10.30\nPublication of R Packages\n\n\n10.30 - 11.15\nExercise: publication\n\n\n11.15 - 12.00\nShiny Design and Modules\n\n\n12.00 - 13.00\nLunch break\n\n\n13.00 - 13.45\nExercise: Shiny design\n\n\n13.45 - 14.15\nShiny Tests\n\n\n14.15 - 14.45\nExercise: Shiny tests\n\n\n14.45 - 15.00\nCoffee break\n\n\n15.00 - 16.00\nUsing AI\n\n\n16.00 - 16.30\nSummary and Q&A"
+    "text": "Workshop Program\n\nDay 1: 8 October 2026\n\n\n\n\n\n9.00 - 9.30\nIntroduction and outline\n\n\n9.30 - 9.45\nCoffee break\n\n\n9.45 - 10.30\nR Package Syntax\n\n\n10.30 - 11.15\nExercise: R packages\n\n\n11.15 - 12.00\nSoftware Engineering Workflow\n\n\n12.00 - 13.00\nLunch break\n\n\n13.00 - 14.00\nPackage Quality\n\n\n14.00 - 14.45\nExercise: package quality\n\n\n14.45 - 15.00\nCoffee break\n\n\n15.00 - 15.45\nCollaboration via GitHub\n\n\n15.45 - 16.30\nExercise: collaboration via GitHub\n\n\n\n\n\n\n\nDay 2: 9 October 2026\n\n\n\n\n\n9.00 - 9.30\nPublication of R Packages\n\n\n9.30 - 9.45\nCoffee break\n\n\n9.45 - 10.15\nExercise: publication\n\n\n10.15 - 11.00\nShiny Design and Modules\n\n\n11.00 - 11.30\nExercise: Shiny design\n\n\n11.30 - 12.00\nShiny Tests\n\n\n12.00 - 13.00\nLunch break\n\n\n13.00 - 13.30\nExercise: Shiny Tests\n\n\n13.30 - 14.15\nCode Optimization\n\n\n14.15 - 14.30\nCoffee break\n\n\n14.30 - 15.00\nExercise: Code Optimization\n\n\n15.00 - 16.00\nUsing AI\n\n\n16.00 - 16.30\nSummary and Q&A"
   },
   {
     "objectID": "index.html#prerequisites-technical-setup",

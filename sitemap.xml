@@ -2,54 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://RCONIS.github.io/workshop-zurich-2026/listing.html</loc>
-    <lastmod>2026-10-08T11:14:09.008Z</lastmod>
+    <lastmod>2026-10-08T20:15:37.078Z</lastmod>
   </url>
   <url>
     <loc>https://RCONIS.github.io/workshop-zurich-2026/LICENSE.html</loc>
-    <lastmod>2026-10-08T11:14:08.039Z</lastmod>
+    <lastmod>2026-10-08T20:15:35.991Z</lastmod>
   </url>
   <url>
     <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/05_collaboration.html</loc>
-    <lastmod>2026-10-08T11:14:05.531Z</lastmod>
+    <lastmod>2026-10-08T20:15:33.530Z</lastmod>
   </url>
   <url>
     <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/07_shiny.html</loc>
-    <lastmod>2026-10-08T11:14:03.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/09_conclusion.html</loc>
-    <lastmod>2026-10-08T11:13:58.930Z</lastmod>
-  </url>
-  <url>
-    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/04_quality.html</loc>
-    <lastmod>2026-10-08T11:13:56.188Z</lastmod>
-  </url>
-  <url>
-    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/01_intro.html</loc>
-    <lastmod>2026-10-08T11:13:52.033Z</lastmod>
-  </url>
-  <url>
-    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/06_publication.html</loc>
-    <lastmod>2026-10-08T11:13:54.069Z</lastmod>
+    <lastmod>2026-10-08T20:15:31.141Z</lastmod>
   </url>
   <url>
     <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/02_r_packages.html</loc>
-    <lastmod>2026-10-08T11:13:58.071Z</lastmod>
+    <lastmod>2026-10-08T20:15:26.399Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/09_using_ai.html</loc>
+    <lastmod>2026-10-08T20:15:22.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/06_publication.html</loc>
+    <lastmod>2026-10-08T20:15:19.795Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/01_intro.html</loc>
+    <lastmod>2026-10-08T20:15:17.697Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/04_quality.html</loc>
+    <lastmod>2026-10-08T20:15:22.119Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/08_optimization.html</loc>
+    <lastmod>2026-10-08T20:15:24.398Z</lastmod>
   </url>
   <url>
     <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/03_workflow.html</loc>
-    <lastmod>2026-10-08T11:14:01.961Z</lastmod>
+    <lastmod>2026-10-08T20:15:29.547Z</lastmod>
   </url>
   <url>
-    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/08_using_ai.html</loc>
-    <lastmod>2026-10-08T11:14:04.174Z</lastmod>
+    <loc>https://RCONIS.github.io/workshop-zurich-2026/slides/10_conclusion.html</loc>
+    <lastmod>2026-10-08T20:15:32.081Z</lastmod>
   </url>
   <url>
     <loc>https://RCONIS.github.io/workshop-zurich-2026/index.html</loc>
-    <lastmod>2026-10-08T11:14:07.486Z</lastmod>
+    <lastmod>2026-10-08T20:15:35.385Z</lastmod>
   </url>
   <url>
     <loc>https://RCONIS.github.io/workshop-zurich-2026/ATTRIBUTION.html</loc>
-    <lastmod>2026-10-08T11:14:08.302Z</lastmod>
+    <lastmod>2026-10-08T20:15:36.265Z</lastmod>
   </url>
 </urlset>

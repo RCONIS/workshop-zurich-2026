@@ -12,7 +12,7 @@
 
   <meta name="author" content="Daniel Sabanés Bové">
   <meta name="dcterms.date" content="2026-10-08">
-  <title>GSWEP4R Workshop - 8 Using AI</title>
+  <title>GSWEP4R Workshop - 9 Using AI</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -391,7 +391,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">8 Using AI</h1>
+  <h1 class="title">9 Using AI</h1>
   <p class="subtitle"><code>openstatsware</code> Workshop: Good Software Engineering Practice for R Packages</p>
 
 <div class="quarto-title-authors">
@@ -620,6 +620,34 @@ Daniel Sabanés Bové
           display:block!important;
       }</style></aside>
 </section>
+<section id="very-important" class="slide level2">
+<h2>Very Important</h2>
+
+<img data-src="resources/still-your-work.webp" class="r-stretch quarto-figure-center"><p class="caption">From https://tidydesign.substack.com/p/y-code-when-ai by Hadley Wickham</p></section>
+<section id="important-review-the-result-including-tests" class="slide level2">
+<h2>Important: Review the result, including tests</h2>
+<ul>
+<li>Does the implementation meet the design and preserve the public API?</li>
+<li>Do tests check independent expected results, boundaries, and failure cases?</li>
+<li>Are examples runnable and documentation consistent with the code?</li>
+<li>Are dependencies and external references real and necessary?</li>
+<li>Have you read the diff and the actual check output?</li>
+</ul>
+<p>Use a fresh review pass; fix the findings and rerun affected checks. AI review can be very helpful for larger diffs (but ideally you want small diffs).</p>
+<aside class="notes">
+<p>An assistant can write code and tests that agree with the same misunderstanding. Use a hand-calculated example or a separately trusted implementation where possible. Ask the reviewer to identify risks and missing evidence, rather than simply asking “Is this good?”. A second AI review complements human review.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="model-context-protocol" class="slide level2">
 <h2>Model Context Protocol</h2>
 <p><a href="https://modelcontextprotocol.io/">Model Context Protocol (MCP)</a> is an open protocol that gives AI applications a standard way to connect with external systems.</p>
@@ -649,33 +677,46 @@ Daniel Sabanés Bové
 <img data-src="resources/r_as_a_server.png" class="r-stretch quarto-figure-center"><p class="caption">From https://posit-dev.github.io/mcptools/</p></section>
 <section id="let-ai-use-your-r-package-through-mcp" class="slide level2">
 <h2>Let AI use your R package through MCP</h2>
+<p>Useful packages:</p>
 <ul>
 <li><a href="https://posit-dev.github.io/mcptools/">mcptools</a> lets an MCP client interact with R</li>
 <li><a href="https://posit-dev.github.io/btw/">btw</a> supplies standard tools for documentation and session context.</li>
+<li><a href="https://github.com/devOpifex/mcpr/">mcpr</a> provides an alternative MCP server framework, with roxygen2 tag based tool registration.</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># In a disposable R session with example data:</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"mcptools"</span>, <span class="st">"btw"</span>))</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">library</span>(yourpackage) <span class="co"># replace with your installed package</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>mcptools<span class="sc">::</span><span class="fu">mcp_session</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Configure the client’s local MCP server to run:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">'mcptools::mcp_server()'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ask it to read your function’s help, run a small example, and explain the result. Verify the actual tool calls and output.</p>
-<aside class="notes">
-<p>The package name is a placeholder. The mcptools documentation shows client-specific configuration; follow it for the assistant you use. Registering a session does not automatically turn each exported function into a dedicated MCP tool: the assistant can use R execution and documentation tools, or you can configure specific functions. Use synthetic data. R execution can read files and alter session state; keep tool permissions and the working directory appropriate to the demo.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="example-an-mcp-server-in-an-r-package" class="slide level2">
-<h2>Example: an MCP server in an R package</h2>
+<section id="defining-the-tools-for-the-mcp-server" class="slide level2">
+<h2>Defining the tools for the MCP server</h2>
+<p>First, you define the tools in a script file, together with the MCP server start up call. This file can go inside your package in the <code>inst</code> folder.</p>
+<p>Example <code>tools.R</code> file:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(zurich2026)</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>my_tools <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="at">tool_hello =</span> ellmer<span class="sc">::</span><span class="fu">tool</span>(</span>
+<span id="cb2-5"><a href="#cb2-5"></a>        <span class="at">fun =</span> hello, <span class="co"># function from the zurich2026 package</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>        <span class="at">description =</span> <span class="st">"Say hello to the user."</span>,</span>
+<span id="cb2-7"><a href="#cb2-7"></a>        <span class="at">arguments =</span> <span class="fu">list</span>(</span>
+<span id="cb2-8"><a href="#cb2-8"></a>            <span class="at">my_name =</span> ellmer<span class="sc">::</span><span class="fu">type_string</span>(<span class="st">"The name of the person to greet."</span>)</span>
+<span id="cb2-9"><a href="#cb2-9"></a>        )</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    )</span>
+<span id="cb2-11"><a href="#cb2-11"></a>)</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a>mcptools<span class="sc">::</span><span class="fu">mcp_server</span>(<span class="at">tools =</span> my_tools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="registering-the-mcp-server-in-your-agent" class="slide level2">
+<h2>Registering the MCP server in your Agent</h2>
+<p>For example in Codex you then define the MCP server, e.g.&nbsp;in the <code>~/.codex/config.toml</code> file:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">[</span><span class="dt">mcp_servers</span><span class="kw">.</span><span class="dt">my_r_mcp_server</span><span class="kw">]</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="dt">enabled</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="dt">command</span> <span class="op">=</span> <span class="st">"Rscript"</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="dt">args</span> <span class="op">=</span> <span class="op">[</span><span class="st">"-e"</span><span class="op">,</span> <span class="st">'</span><span class="vs">source(system.file("tools.R", package = "zurich2026"))</span><span class="st">'</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>So this is telling Codex how to start up R and in there just source the <code>tools.R</code> file from the <code>zurich2026</code> package.</p>
+</section>
+<section id="afterwards-you-can-use-it-in-your-agent" class="slide level2">
+<h2>Afterwards you can use it in your Agent!</h2>
+
+<img data-src="resources/mcp-codex.png" class="r-stretch quarto-figure-center"><p class="caption">Screenshot from the Codex session showing the MCP server in action</p></section>
+<section id="real-example-an-mcp-server-in-an-r-package" class="slide level2">
+<h2>Real example: an MCP server in an R package</h2>
 <p>This <a href="https://github.com/pharmaverse/autoslider.core/blob/main/inst/mcp/autoslider_mcp_server.R">autoslider.core MCP server</a> defines R functions, registers them as MCP tools, then starts the server. Scroll through the source below.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">#!/usr/bin/env Rscript</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="co"># Autoslider MCP Server</span></span>
@@ -886,39 +927,12 @@ Daniel Sabanés Bové
 </section>
 <section id="r-as-an-mcp-client" class="slide level2">
 <h2>R as an MCP client</h2>
+<p>Vice versa, it is also possible to use R as an MCP client to interact with other MCP servers, e.g.&nbsp;from GitHub, Confluence or Google Drive, using <code>mcptools</code>:</p>
 
-<img data-src="resources/r_as_a_client.png" class="r-stretch quarto-figure-center"><p class="caption">From https://posit-dev.github.io/mcptools/</p></section>
-<section id="very-important" class="slide level2">
-<h2>Very Important</h2>
-
-<img data-src="resources/still-your-work.webp" class="r-stretch quarto-figure-center"><p class="caption">From https://tidydesign.substack.com/p/y-code-when-ai by Hadley Wickham</p></section>
-<section id="important-review-the-result-including-tests" class="slide level2">
-<h2>Important: Review the result, including tests</h2>
-<ul>
-<li>Does the implementation meet the design and preserve the public API?</li>
-<li>Do tests check independent expected results, boundaries, and failure cases?</li>
-<li>Are examples runnable and documentation consistent with the code?</li>
-<li>Are dependencies and external references real and necessary?</li>
-<li>Have you read the diff and the actual check output?</li>
-</ul>
-<p>Use a fresh review pass; fix the findings and rerun affected checks. AI review can be very helpful for larger diffs (but ideally you want small diffs).</p>
-<aside class="notes">
-<p>An assistant can write code and tests that agree with the same misunderstanding. Use a hand-calculated example or a separately trusted implementation where possible. Ask the reviewer to identify risks and missing evidence, rather than simply asking “Is this good?”. A second AI review complements human review.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<img data-src="resources/r_as_a_client.png" class="r-stretch quarto-figure-center"><p class="caption">From https://posit-dev.github.io/mcptools/</p><p>This needs a corresponding configuration of the MCP servers in <code>~/.config/mcptools/config.json</code>. Different MCP servers need dedicated configuration entries there.</p>
 </section>
 <section id="exercise-one-small-package-change" class="slide level2">
 <h2>Exercise: one small package change</h2>
-<p>Work on a branch of your workshop package (or follow the instructor’s demo).</p>
 <ol type="1">
 <li>Describe one small improvement and its acceptance criteria</li>
 <li>Draft an <code>AGENTS.md</code> with conventions and check commands</li>
@@ -949,7 +963,7 @@ Daniel Sabanés Bové
 <li><p>Technical sources are linked on the relevant slides; further reading: <a href="https://tidydesign.substack.com/">Tidy design principles</a></p></li>
 <li><p>Unless separately credited, this work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p></li>
 <li><p><a href="https://github.com/RCONIS/workshop-zurich-2026">Zurich 2026 sources</a> adapt <a href="https://github.com/RCONIS/workshop-r-swe-zrh">Zurich 2024</a> and <a href="https://github.com/openstatsware/shortcourse-munich2026">Munich 2026</a>, following <a href="https://github.com/openstatsware/shortcourse-seoul2026">Seoul 2026</a>. Author credits are retained above.</p></li>
-<li><p>Zurich adaptations by Daniel Sabanés Bové: course details, program, roxygen2 tags, SSH setup, and AI chapter. <a href="../ATTRIBUTION.html">Full attribution and exceptions</a>.</p></li>
+<li><p>Zurich adaptations by Daniel Sabanés Bové: course details, program, workflow, roxygen2 tags, SSH setup, optimization and AI chapters. <a href="../ATTRIBUTION.html">Full attribution and exceptions</a>.</p></li>
 <li><p>Reuse requires creator attribution, source and license links, and an indication of changes.</p></li>
 </ul>
 

@@ -12,7 +12,7 @@
 
   <meta name="author" content="Daniel Sabanés Bové">
   <meta name="dcterms.date" content="2026-10-08">
-  <title>GSWEP4R Workshop - 9 Conclusion</title>
+  <title>GSWEP4R Workshop - 10 Conclusion</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -326,7 +326,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">9 Conclusion</h1>
+  <h1 class="title">10 Conclusion</h1>
   <p class="subtitle"><code>openstatsware</code> Workshop: Good Software Engineering Practice for R Packages</p>
 
 <div class="quarto-title-authors">
@@ -343,7 +343,7 @@ Daniel Sabanés Bové
 <h2>Thank you!</h2>
 <ul>
 <li>To you for your engagement and participation</li>
-<li>To the Zurich R Courses team at ETH Zurich and UZH</li>
+<li>To the Zurich R Courses team at ETH Zurich: Lukas Meier, Laura Vogt, Markus Kalisch</li>
 <li>To our fellow <code>openstatsware</code> authors of the course materials</li>
 </ul>
 </section>
@@ -359,6 +359,19 @@ Daniel Sabanés Bové
 <li>With modern tools <code>usethis</code>, <code>roxygen2</code> it is easy to start a new package</li>
 <li>Packaging a set of functions is an ideal way to share with collaborators and the public</li>
 <li>Start small and simple and over time you can learn additional options</li>
+</ul>
+</section>
+<section id="engineering-workflow" class="slide level2">
+<h2>Engineering Workflow</h2>
+<ul>
+<li>Use a workable workflow:<br>
+Idea <span class="math inline">\(\rightarrow\)</span> Design docs <span class="math inline">\(\rightarrow\)</span> Programming <span class="math inline">\(\rightarrow\)</span> Quality check <span class="math inline">\(\rightarrow\)</span> Publication
+<ul>
+<li>Don’t waste time on maintenance</li>
+<li>Be faster with release on CRAN</li>
+<li>Fulfill quality requirements of yourself and stakeholders</li>
+</ul></li>
+<li>Refactor your one-off scripts that you want to use in a package</li>
 </ul>
 </section>
 <section id="ensuring-quality" class="slide level2">
@@ -377,6 +390,7 @@ Idea <span class="math inline">\(\rightarrow\)</span> Design docs <span class="m
 <li>Use <a href="https://cran.r-project.org/package=testthat">testthat</a> to test, test, and test</li>
 <li>Use <a href="https://cran.r-project.org/package=covr">covr</a> to improve the test coverage</li>
 </ul></li>
+<li>Use assertions for all arguments <span class="math inline">\(\rightarrow\)</span> better user experience</li>
 </ul>
 </section>
 <section id="collaboration" class="slide level2">
@@ -408,29 +422,32 @@ Idea <span class="math inline">\(\rightarrow\)</span> Design docs <span class="m
 <li>R-Hub helps with checking before CRAN submission</li>
 </ul>
 </section>
-<section id="engineering-workflow" class="slide level2">
-<h2>Engineering workflow</h2>
-<ul>
-<li>Keep design, implementation, documentation, and tests aligned</li>
-<li>Use assertions and clear interfaces; develop in small steps</li>
-<li>Review changes and run checks before publishing</li>
-</ul>
-</section>
 <section id="shiny" class="slide level2">
 <h2>Shiny</h2>
 <ul>
-<li>Design the UI and package structure first</li>
-<li>Use modules to make reactivity manageable</li>
-<li>Test static code, servers, and the app with <code>shinytest2</code></li>
+<li>Best practices are not just important for R packages, also for Shiny!</li>
+<li>Design UI and package structure first, minimize actual Shiny code</li>
+<li>Shiny modules help to make the reactivity manageable</li>
+<li>Use normal tests for static code, server tests and <code>shinytest2</code> for Shiny code</li>
+</ul>
+</section>
+<section id="optimization" class="slide level2">
+<h2>Optimization</h2>
+<ul>
+<li>Optimization is an advanced task, which should usually only come last</li>
+<li>Make sure to invest your development time where it matters by profiling the code first</li>
+<li>Keep in mind: explore fast alternative packages, don’t repeat or copy, vectorize where possible.</li>
+<li>If necessary, consider using some C++, but keep in mind maintenance burden</li>
 </ul>
 </section>
 <section id="using-ai" class="slide level2">
 <h2>Using AI</h2>
 <ul>
-<li>Better tools expand what we can do; engineering judgment still matters</li>
+<li>Better tools amplify what we can do, but engineering judgment and responsibility still matters</li>
 <li>Give agents project instructions, skills, and current documentation</li>
-<li>Verify mathematics, test outcomes, and references independently</li>
+<li>Review mathematics, test outcomes, and references independently</li>
 <li>Keep code, documentation, and tests together in each change</li>
+<li>You can also give agents access to an MCP server to use your R package, and vice versa you can use R to interact with other MCP servers</li>
 </ul>
 </section>
 <section id="possible-next-steps" class="slide level2">
@@ -450,7 +467,7 @@ Idea <span class="math inline">\(\rightarrow\)</span> Design docs <span class="m
 <li><p>Creators (initial authors): Daniel Sabanés Bové <a href="https://github.com/danielinteractive/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>, Alessandro Gasparini <a href="https://www.linkedin.com/in/ellessenne"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a> <a href="https://www.github.com/ellessenne"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.ellessenne.xyz/"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"></path></svg></a></p></li>
 <li><p>Unless separately credited, this work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p></li>
 <li><p><a href="https://github.com/RCONIS/workshop-zurich-2026">Zurich 2026 sources</a> adapt <a href="https://github.com/RCONIS/workshop-r-swe-zrh">Zurich 2024</a> and <a href="https://github.com/openstatsware/shortcourse-munich2026">Munich 2026</a>, following <a href="https://github.com/openstatsware/shortcourse-seoul2026">Seoul 2026</a>. Author credits are retained above.</p></li>
-<li><p>Zurich adaptations by Daniel Sabanés Bové: course details, program, roxygen2 tags, SSH setup, and AI chapter. <a href="../ATTRIBUTION.html">Full attribution and exceptions</a>.</p></li>
+<li><p>Zurich adaptations by Daniel Sabanés Bové: course details, program, workflow, roxygen2 tags, SSH setup, optimization and AI chapters. <a href="../ATTRIBUTION.html">Full attribution and exceptions</a>.</p></li>
 <li><p>Reuse requires creator attribution, source and license links, and an indication of changes.</p></li>
 </ul>
 

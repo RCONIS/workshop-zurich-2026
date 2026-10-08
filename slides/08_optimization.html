@@ -12,7 +12,7 @@
 
   <meta name="author" content="Daniel Sabanés Bové">
   <meta name="dcterms.date" content="2026-10-08">
-  <title>GSWEP4R Workshop - 7 Shiny Development</title>
+  <title>GSWEP4R Workshop - 8 Code Optimization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -95,7 +95,26 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -391,7 +410,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">7 Shiny Development</h1>
+  <h1 class="title">8 Code Optimization</h1>
   <p class="subtitle"><code>openstatsware</code> Workshop: Good Software Engineering Practice for R Packages</p>
 
 <div class="quarto-title-authors">
@@ -404,512 +423,240 @@ Daniel Sabanés Bové
 
   <p class="date">October 8, 2026</p>
 </section>
-<section id="why-are-best-practices-important-for-shiny" class="slide level2">
-<h2>Why are best practices important for Shiny?</h2>
-<ul>
-<li>Shiny is in itself more complex than usual R code</li>
-<li>Small apps can quickly evolve into giant apps</li>
-<li>It seems first possible to test everything by hand, clicking around</li>
-<li>For one-off, throw-away, one-screen Shiny apps that is ok</li>
-<li>Here we talk about best practices for more-than-once used Shiny apps</li>
-</ul>
+<section id="acknowledgments" class="slide level2">
+<h2>Acknowledgments</h2>
+<p>This section is adapted from slides by Lukas A. Widmer and Michael Mayer, which they prepared and released under the CC BY 4.0 license, see their course <a href="https://luwidmer.github.io/fastR-website/materials.html">Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters</a>.</p>
+<p>Thanks a lot Lukas and Michael!</p>
 </section>
 <section>
-<section id="design" class="title-slide slide level1 center">
-<h1>Design</h1>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
 
 </section>
-<section id="design-collaborate-with-your-customer" class="slide level2">
-<h2>Design: Collaborate with your customer</h2>
-<ul>
-<li>Involve your customer from the first ideation</li>
-<li>Identify the roles and responsibilities</li>
-<li>Make reasonable assumptions about user skills and knowledge</li>
-<li>Show early wireframes, prototypes, beta versions and get feedback</li>
-</ul>
-</section>
-<section id="ui-design-wireframing" class="slide level2">
-<h2>UI Design: Wireframing</h2>
-<ul>
-<li>Wireframing is powerful for aligning in customer discussions</li>
-<li>Focus on the vision and functionality</li>
-<li>Keep the UI as simple as possible</li>
-<li>Know your target as developer during coding and review process</li>
-<li>Wireframing software:
-<ul>
-<li><a href="https://draw.io">draw.io</a></li>
-<li><a href="https://balsamiq.com/">Balsamiq</a></li>
-<li><a href="https://www.mockplus.cn/">Mockplus</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="ui-design-example-wireframe" class="slide level2">
-<h2>UI Design: Example wireframe</h2>
+<section id="a-word-of-wisdom" class="slide level2">
+<h2>A Word of Wisdom</h2>
 
-<img data-src="resources/wireframe.png" class="r-stretch quarto-figure-center"></section>
-<section id="shiny-specific-tool-shinyuieditor" class="slide level2" data-background-iframe="https://rstudio.github.io/shinyuieditor/">
-<h2>Shiny specific tool: <code>ShinyUiEditor</code></h2>
-</section></section>
-<section>
-<section id="architecture" class="title-slide slide level1 center">
-<h1>Architecture</h1>
-
+<img data-src="screenshots/2024-03-17-22-24-36.png" class="r-stretch"><p><span class="citation" data-cites="knuth1974structured">(<a href="#/references" role="doc-biblioref" onclick="">Knuth 1974, 268</a>)</span></p>
 </section>
-<section id="architecture-minimize-code-in-shiny" class="slide level2">
-<h2>Architecture: Minimize code in Shiny</h2>
-<ul>
-<li>Minimize the code inside the Shiny UI/server</li>
-<li>Because it will always be easier to test things that live outside of Shiny</li>
-<li>Let’s look at an example from the <a href="https://mastering-shiny.org/scaling-functions.html#function-upload">Mastering Shiny</a> book</li>
-</ul>
-</section>
-<section id="minimize-shiny-example-before" class="slide level2">
-<h2>Minimize Shiny Example: Before</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" style="font-size:0.7em!important;">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="6-11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  data <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="fu">req</span>(input<span class="sc">$</span>file)</span>
-<span id="cb1-4"><a href="#cb1-4"></a>    name <span class="ot">&lt;-</span> input<span class="sc">$</span>file<span class="sc">$</span>name</span>
-<span id="cb1-5"><a href="#cb1-5"></a>    path <span class="ot">&lt;-</span> input<span class="sc">$</span>file<span class="sc">$</span>datapath</span>
-<span id="cb1-6"><a href="#cb1-6"></a>    ext <span class="ot">&lt;-</span> tools<span class="sc">::</span><span class="fu">file_ext</span>(name)</span>
-<span id="cb1-7"><a href="#cb1-7"></a>    <span class="cf">switch</span>(ext,</span>
-<span id="cb1-8"><a href="#cb1-8"></a>      <span class="at">csv =</span> vroom<span class="sc">::</span><span class="fu">vroom</span>(path, <span class="st">","</span>),</span>
-<span id="cb1-9"><a href="#cb1-9"></a>      <span class="at">tsv =</span> vroom<span class="sc">::</span><span class="fu">vroom</span>(path, <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>),</span>
-<span id="cb1-10"><a href="#cb1-10"></a>      <span class="fu">validate</span>(<span class="st">"Invalid file"</span>)</span>
-<span id="cb1-11"><a href="#cb1-11"></a>    )</span>
-<span id="cb1-12"><a href="#cb1-12"></a>  })</span>
-<span id="cb1-13"><a href="#cb1-13"></a>  </span>
-<span id="cb1-14"><a href="#cb1-14"></a>  output<span class="sc">$</span>head <span class="ot">&lt;-</span> <span class="fu">renderTable</span>({</span>
-<span id="cb1-15"><a href="#cb1-15"></a>    <span class="fu">head</span>(<span class="fu">data</span>(), input<span class="sc">$</span>n)</span>
-<span id="cb1-16"><a href="#cb1-16"></a>  })</span>
-<span id="cb1-17"><a href="#cb1-17"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<p>The <code>ext</code> and <code>switch()</code> part validates the file extension and then loads the file.</p>
-<p>Independent of Shiny reactive!</p>
-</div>
-</div>
-</section>
-<section id="minimize-shiny-example-after" class="slide level2">
-<h2>Minimize Shiny Example: After</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" style="font-size:0.7em!important;">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="1-8,13-16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>load_file <span class="ot">&lt;-</span> <span class="cf">function</span>(name, path) {</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  ext <span class="ot">&lt;-</span> tools<span class="sc">::</span><span class="fu">file_ext</span>(name)</span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="cf">switch</span>(ext,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="at">csv =</span> vroom<span class="sc">::</span><span class="fu">vroom</span>(path, <span class="st">","</span>),</span>
-<span id="cb2-5"><a href="#cb2-5"></a>    <span class="at">tsv =</span> vroom<span class="sc">::</span><span class="fu">vroom</span>(path, <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>),</span>
-<span id="cb2-6"><a href="#cb2-6"></a>    <span class="fu">validate</span>(<span class="st">"Invalid file"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7"></a>  )</span>
-<span id="cb2-8"><a href="#cb2-8"></a>}</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb2-11"><a href="#cb2-11"></a>  data <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb2-12"><a href="#cb2-12"></a>    <span class="fu">req</span>(input<span class="sc">$</span>file)</span>
-<span id="cb2-13"><a href="#cb2-13"></a>    <span class="fu">load_file</span>(</span>
-<span id="cb2-14"><a href="#cb2-14"></a>      input<span class="sc">$</span>file<span class="sc">$</span>name, </span>
-<span id="cb2-15"><a href="#cb2-15"></a>      input<span class="sc">$</span>file<span class="sc">$</span>datapath</span>
-<span id="cb2-16"><a href="#cb2-16"></a>    )</span>
-<span id="cb2-17"><a href="#cb2-17"></a>  })</span>
-<span id="cb2-18"><a href="#cb2-18"></a>  </span>
-<span id="cb2-19"><a href="#cb2-19"></a>  output<span class="sc">$</span>head <span class="ot">&lt;-</span> <span class="fu">renderTable</span>({</span>
-<span id="cb2-20"><a href="#cb2-20"></a>    <span class="fu">head</span>(<span class="fu">data</span>(), input<span class="sc">$</span>n)</span>
-<span id="cb2-21"><a href="#cb2-21"></a>  })</span>
-<span id="cb2-22"><a href="#cb2-22"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
+<section id="setting-the-right-priorities" class="slide level2">
+<h2>Setting the right priorities</h2>
 <ol type="1">
-<li><p>normal function, <code>validate()</code> will give a simple error outside of Shiny</p></li>
-<li><p>server is much easier to read now and only half the size</p></li>
-<li><p>can test <code>load_file()</code> interactively in console</p></li>
-<li><p>can unit tests <code>load_file()</code> separately (business as usual)</p></li>
+<li>The code needs to be correct, i.e.&nbsp;calculate correct results as expected. → <strong>Tests</strong>, <strong>Debugging</strong></li>
+<li>If it is correct, but too slow, then find out which calculations and why they are too slow. → <strong>Profiling</strong></li>
+<li>Once you identified the slow parts, optimize those. → <strong>Code optimization</strong></li>
+<li>If executing the code on your laptop is still too slow → consider running it instead on a high performance cluster (<strong>HPC</strong>), see slides from Lukas and Michael</li>
 </ol>
-</div>
-</div>
 </section>
-<section id="minimize-shiny-separate-packages" class="slide level2">
-<h2>Minimize Shiny: Separate packages</h2>
-<ul>
-<li>On the macro level, this also applies to packages</li>
-<li>Larger Shiny apps will need to live as an R package</li>
-<li>The business logic best lives in another R package</li>
-<li>That package can then also be used without the Shiny interface</li>
-<li>You can use <a href="https://openpharma.github.io/staged.dependencies/main/"><code>{staged.dependencies}</code></a> to allow “joint” pull requests</li>
-<li>Example from the <code>NEST</code> package ecosystem:
-<ul>
-<li><code>{teal.modules.clinical}</code> as the Shiny package</li>
-<li><code>{tern}</code> as a business logic package</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="modules" class="title-slide slide level1 center">
-<h1>Modules</h1>
+<section id="tests-see-previous-section" class="slide level2">
+<h2>Tests: see previous <a href="04_quality.qmd">section</a></h2>
 
+<img data-src="resources/testing.png" class="r-stretch"><p>(modified from <span class="citation" data-cites="xkcd">Munroe (<a href="#/references" role="doc-biblioref" onclick="">2007</a>)</span>, <a href="https://xkcd.com/303/">No.&nbsp;303</a>)</p>
 </section>
-<section id="modules-building-blocks-of-the-shiny-app" class="slide level2">
-<h2>Modules: Building blocks of the Shiny app</h2>
-<ul>
-<li>Shiny modules generalize functions</li>
-<li>Allows to coordinate UI and server code</li>
-<li>Breaks the app code into reusable and testable units</li>
-<li>Let’s look at an example from the <a href="https://mastering-shiny.org/scaling-modules.html#module-motivation">Mastering Shiny</a> book</li>
-</ul>
-</section>
-<section id="modules-example-before" class="slide level2">
-<h2>Modules Example: Before</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="resources/without-modules.png"></p>
-</figure>
-</div>
-</div><div class="column" style="width:40%;">
-<ul>
-<li>Difficult to understand what is going on</li>
-<li>Need longer names / parentheses to differentiate tables / plots / variables in different places</li>
-<li>Hard to test</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="modules-example-after" class="slide level2">
-<h2>Modules Example: After</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="resources/with-modules.png"></p>
-</figure>
-</div>
-</div><div class="column" style="width:40%;">
-<ul>
-<li>Can easily see the 4 different parts of the app</li>
-<li>Naming becomes simpler for vars / tables / plots</li>
-<li>Can reuse the modules separately in other apps</li>
-<li>Can test the modules separately</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="modules-considerations-similar-to-functions" class="slide level2">
-<h2>Modules: Considerations similar to Functions</h2>
-<ul>
-<li>What should be configurable?
-<ul>
-<li>Think about reuse needs for module</li>
-</ul></li>
-<li>How to organize arguments?
-<ul>
-<li>Use consistent naming conventions</li>
-<li>Keep the right order of the arguments</li>
-</ul></li>
-<li>Avoid dependencies between arguments
-<ul>
-<li>Use instead parameter object pattern</li>
-</ul></li>
-<li>How to write good and maintainable code?
-<ul>
-<li>Follow all the clean code rules from the previous chapter!</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="reactivity" class="title-slide slide level1 center">
-<h1>Reactivity</h1>
-
-</section>
-<section id="reactivity-1" class="slide level2">
-<h2>Reactivity</h2>
-<p>When building production shiny apps you won’t get around learning reactivity.</p>
-<p>Some guidance:</p>
-<ul>
-<li>Keep user interface simple → often keeps reactivity simple → often less confusing to user</li>
-<li>Resolve reactive inputs early on &amp; validate generously</li>
-<li>Design towards “stringy” reactivity graphs</li>
-<li>Don’t interrupt reactivity</li>
-<li>Preferably use
-<ul>
-<li><code>reactive</code> over <code>reactiveValues</code></li>
-<li><code>observeEvent</code> over <code>observe</code></li>
-</ul></li>
-</ul>
-</section>
-<section id="reactivity-resolve-early-validate" class="slide level2">
-<h2>Reactivity: Resolve early &amp; validate</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="3-6,8-13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  output<span class="sc">$</span>plot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="co"># Resolve reactive values.</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>    xvar <span class="ot">&lt;-</span> input<span class="sc">$</span>xvar</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    yvar <span class="ot">&lt;-</span> input<span class="sc">$</span>yvar</span>
-<span id="cb3-6"><a href="#cb3-6"></a>    <span class="fu">req</span>(xvar, yvar)</span>
-<span id="cb3-7"><a href="#cb3-7"></a>    </span>
-<span id="cb3-8"><a href="#cb3-8"></a>    <span class="co"># Validate – is it likely that the plot will be meaningful?</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a>    <span class="fu">validate</span>(</span>
-<span id="cb3-10"><a href="#cb3-10"></a>      <span class="fu">need</span>(xvar <span class="sc">%in%</span> <span class="fu">names</span>(df), <span class="fu">glue</span>(<span class="st">"xvar </span><span class="sc">\"</span><span class="st">{xvar}</span><span class="sc">\"</span><span class="st"> does not exist"</span>)),</span>
-<span id="cb3-11"><a href="#cb3-11"></a>      <span class="fu">need</span>(yvar <span class="sc">%in%</span> <span class="fu">names</span>(df), <span class="fu">glue</span>(<span class="st">"yvar </span><span class="sc">\"</span><span class="st">{yvar}</span><span class="sc">\"</span><span class="st"> does not exist"</span>)),</span>
-<span id="cb3-12"><a href="#cb3-12"></a>      <span class="fu">need</span>(<span class="fu">nrow</span>(df) <span class="sc">&gt;</span> <span class="dv">3</span>, <span class="st">"too few data points for meaningful plot"</span>)</span>
-<span id="cb3-13"><a href="#cb3-13"></a>    )</span>
-<span id="cb3-14"><a href="#cb3-14"></a>    </span>
-<span id="cb3-15"><a href="#cb3-15"></a>    <span class="fu">my_special_plot</span>(df[[xvar]], df[[yvar]])</span>
-<span id="cb3-16"><a href="#cb3-16"></a>  })</span>
-<span id="cb3-17"><a href="#cb3-17"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="reactivity-debugging-techniques" class="slide level2">
-<h2>Reactivity: Debugging techniques</h2>
-<ul>
-<li>Put <code>browser()</code> into the functions</li>
-<li>Jump into browser mode upon error with <code>options(shiny.error = browser)</code></li>
-<li>Just put <code>print()</code> inside the reactives</li>
-<li>Save variables to global environment via <code>.GlobalEnv$var &lt;- var</code> and then check</li>
-<li>Simplify things until it works and then go back</li>
-</ul>
-</section>
-<section id="reactivity-graph-visualization" class="slide level2">
-<h2>Reactivity: Graph visualization</h2>
-<p>To understand the order of execution we can visualize the reactive graph, which describes how sources and endpoints are connected via conductors.</p>
-
-<img data-src="resources/legend.png" class="r-stretch quarto-figure-center"><div class="columns">
-<div class="column" style="width:33%;">
-<p>e.g.&nbsp;<code>input</code></p>
-</div><div class="column" style="width:34%;">
-<p>e.g.&nbsp;<code>reactive</code></p>
-</div><div class="column" style="width:33%;">
-<p>e.g.&nbsp;<code>output</code></p>
-</div>
-</div>
-</section>
-<section id="reactivity-stringy-reactivity-graph" class="slide level2">
-<h2>Reactivity: “Stringy” reactivity graph</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Bad <img data-src="resources/connected.png" data-fig-align="center"> Many edges, difficult to anticipate reactivity behaviour</p>
-</div><div class="column" style="width:50%;">
-<p>Good <img data-src="resources/stringy.png" data-fig-align="center"> This “stringy” reactivity graph is easier to understand and debug</p>
-</div>
-</div>
-</section></section>
-<section id="exercise-wireframing" class="title-slide slide level1 center">
-<h1>Exercise: Wireframing</h1>
-<ul>
-<li>Visit <a href="https://rstudio.github.io/shinyuieditor">ShinyUiEditor</a> to get an overview</li>
-<li>Try to build a simple app and see how the code looks like</li>
-<li>Do you have an idea what could be simplified with modules?</li>
-</ul>
-</section>
-
-<section>
-<section id="testing" class="title-slide slide level1 center">
-<h1>Testing</h1>
-
-</section>
-<section id="testing-from-icecream-to-pyramid" class="slide level2">
-<h2>Testing: From Icecream to Pyramid</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Bad</p>
-<p><img data-src="resources/icecream.png" height="400"></p>
-<ul>
-<li>cannot always test manually</li>
-<li>can easily introduce bugs</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p>Good</p>
-<p><img data-src="resources/pyramid.png" height="400"></p>
-<ul>
-<li>manual testing is reduced</li>
-<li>only for “playing around”</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="testing-snapshot-tests-for-ui" class="slide level2">
-<h2>Testing: Snapshot tests for UI</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="5-9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">test_that</span>(<span class="st">"myInput UI works"</span>, {</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  input <span class="ot">&lt;-</span> <span class="st">"foo"</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  datasets <span class="ot">&lt;-</span> <span class="fu">mock_datasets</span>()</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">expect_snapshot</span>(<span class="fu">myInput</span>(</span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="st">"my_test"</span>,</span>
-<span id="cb4-7"><a href="#cb4-7"></a>    <span class="at">datasets =</span> datasets,</span>
-<span id="cb4-8"><a href="#cb4-8"></a>    <span class="at">input =</span> input</span>
-<span id="cb4-9"><a href="#cb4-9"></a>  ))</span>
-<span id="cb4-10"><a href="#cb4-10"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Shiny UI functions return <code>shiny.tag</code> objects which print as HTML code</li>
-<li>Can use snapshot tests to avoid accidental changes</li>
-<li>Value is limited</li>
-<li>Can create issues sometimes (non-reproducible hashes)</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="testing-shiny-server-tests" class="slide level2">
-<h2>Testing: Shiny server tests</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">test_that</span>(<span class="st">"server works"</span>, {</span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">testServer</span>(server, {</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    session<span class="sc">$</span><span class="fu">setInputs</span>(...)</span>
-<span id="cb5-4"><a href="#cb5-4"></a></span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="fu">print</span>(<span class="fu">reactive1</span>())</span>
-<span id="cb5-6"><a href="#cb5-6"></a>    <span class="fu">print</span>(output<span class="sc">$</span>output1)</span>
-<span id="cb5-7"><a href="#cb5-7"></a>    <span class="co"># etc</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a>    <span class="co"># To interactively play:</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>    <span class="co"># browser()</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>  </span>
-<span id="cb5-12"><a href="#cb5-12"></a>    <span class="fu">expect_equal</span>(...)</span>
-<span id="cb5-13"><a href="#cb5-13"></a>    <span class="co"># etc.</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a>  })</span>
-<span id="cb5-15"><a href="#cb5-15"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Code is run inside the server function</li>
-<li>Can access reactives, outputs, etc.</li>
-<li>Session object simulates user actions and time</li>
-<li>Note: need to insert <code>browser()</code></li>
-<li>Also works for module server functions</li>
-<li>Limitation: No UI, no JavaScript</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="testing-shiny-app-tests" class="slide level2">
-<h2>Testing: Shiny app tests</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(shinytest2)</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">test_that</span>(<span class="st">"my app works"</span>, {</span>
-<span id="cb6-3"><a href="#cb6-3"></a>  app <span class="ot">&lt;-</span> AppDriver<span class="sc">$</span><span class="fu">new</span>(</span>
-<span id="cb6-4"><a href="#cb6-4"></a>    <span class="at">app_dir =</span> <span class="st">"myAppDir"</span>,</span>
-<span id="cb6-5"><a href="#cb6-5"></a>    <span class="at">load_timeout =</span> <span class="fl">1e5</span>,</span>
-<span id="cb6-6"><a href="#cb6-6"></a>    <span class="at">variant =</span> <span class="fu">platform_variant</span>()</span>
-<span id="cb6-7"><a href="#cb6-7"></a>  ) <span class="co"># app$get_logs()</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>  app<span class="sc">$</span><span class="fu">wait_for_idle</span>(<span class="at">timeout =</span> <span class="fl">1e5</span>)</span>
-<span id="cb6-9"><a href="#cb6-9"></a>  app<span class="sc">$</span><span class="fu">get_screenshot</span>()</span>
-<span id="cb6-10"><a href="#cb6-10"></a>  app<span class="sc">$</span><span class="fu">set_inputs</span>(<span class="at">name =</span> <span class="st">"Hadley"</span>)</span>
-<span id="cb6-11"><a href="#cb6-11"></a>  app<span class="sc">$</span><span class="fu">get_value</span>(<span class="st">"greeting"</span>)</span>
-<span id="cb6-12"><a href="#cb6-12"></a>  app<span class="sc">$</span><span class="fu">click</span>(<span class="st">"reset"</span>)</span>
-<span id="cb6-13"><a href="#cb6-13"></a>  app<span class="sc">$</span><span class="fu">get_value</span>(<span class="st">"greeting"</span>)</span>
-<span id="cb6-14"><a href="#cb6-14"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Usually the app is defined in <code>myAppDir/app.R</code></li>
-<li>New app instance <code>app</code> from <code>AppDriver$new()</code></li>
-<li>Full Shiny app in a headless <code>chromote</code> browser</li>
-<li>Can look into it via <code>app$get_screenshot()</code></li>
-<li>We can set inputs, get values of inputs/outputs, click buttons etc.</li>
-</ul>
-</div>
-</div>
-</section></section>
-<section>
-<section id="additional-topics" class="title-slide slide level1 center">
-<h1>Additional Topics</h1>
-
-</section>
-<section id="security" class="slide level2">
-<h2>Security</h2>
-<ul>
-<li>Never include passwords in your source code! Instead:
-<ul>
-<li>Use environment variables</li>
-<li>Or use the <code>{config}</code> package</li>
-<li>Any files containing passwords must be added to <code>.gitignore</code></li>
-</ul></li>
-<li>For user authentication, start with existing solutions that are IT approved
-<ul>
-<li>See some best practices <a href="https://solutions.posit.co/secure-access/auth/kerberos/">here</a> and <a href="https://db.rstudio.com/best-practices/deployment/">here</a>.</li>
-</ul></li>
-<li>Code run in <code>server()</code> is isolated and cannot be seen by other users
-<ul>
-<li>But global environment, e.g.&nbsp;options, are shared across sessions</li>
-</ul></li>
-<li>Check all user input via assertions or validations to avoid JavaScript hacking</li>
-</ul>
-</section>
-<section id="packaging" class="slide level2">
-<h2>Packaging</h2>
-<p>The app should live in an R package. Why? Because we need:</p>
-<ul>
-<li>Metadata and dependencies: from <code>DESCRIPTION</code> + <code>NAMESPACE</code> files</li>
-<li>Code split into functions and modules: in files in the the <code>R</code> directory</li>
-<li>Documentation via vignettes, <code>README</code>, and function and modules documentation</li>
-<li>Automated tests: using <code>testthat</code> and the native <code>R CMD check</code></li>
-<li>Able to share the package as tarball or via repositories for installation</li>
-</ul>
-</section>
-<section id="deployment-options" class="slide level2">
-<h2>Deployment Options</h2>
-<ul>
-<li><a href="https://www.shinyapps.io/">https://www.shinyapps.io/</a>
-<ul>
-<li>Allows for quick sharing of Shiny apps on the cloud</li>
-<li>Free version is good for quick tests or experiments</li>
-<li>Serious use needs subscription</li>
-</ul></li>
-<li>Internal Posit Connect is internal alternative
-<ul>
-<li>More features than above cloud service</li>
-<li>One detail example: can use environment variables</li>
-<li>See <a href="https://posit.co/products/open-source/shinyserver/">https://posit.co/products/open-source/shinyserver/</a> for the differences</li>
-</ul></li>
-</ul>
-</section>
-<section id="deployment-process" class="slide level2">
-<h2>Deployment Process</h2>
-<p>You’ll need few extra steps:</p>
+<section id="debugging-a-few-pointers" class="slide level2">
+<h2>Debugging: A few pointers</h2>
 <ol type="1">
-<li><p>Instruct the server how to run the app in the package. Simplest is <code>app.R</code> in package root folder containing:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>pkgload<span class="sc">::</span><span class="fu">load_all</span>(<span class="st">"."</span>)</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">myApp</span>() <span class="co"># = function in your package calling shinyApp()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></li>
-<li><p>Ignore the <code>app.R</code> for package build</p></li>
-<li><p>Include <code>shiny</code> and <code>pkgload</code> to the <code>Imports</code> in the <code>DESCRIPTION</code> file</p></li>
-<li><p>Run <code>rsconnect::deployApp()</code> to share the updated app version!</p></li>
+<li>Post-hoc <code>traceback()</code> after code fails, to show the call stack and see how the error came about.</li>
+<li>Setting <code>debug(myfun)</code> for the problematic function <code>myfun</code> and then run the code to step through its execution.</li>
+<li>Inject <code>browser()</code> calls into problematic code to add “breakpoints” for interactive execution and inspection.</li>
+<li>Setting <code>options(error = recover)</code> and then running the problematic code allows you to jump into the call stack and inspect. (Undo with <code>options(error = NULL)</code>)</li>
 </ol>
-</section></section>
-<section id="exercise-testing" class="title-slide slide level1 center">
-<h1>Exercise: Testing</h1>
-<p>Let’s look at the following examples.</p>
+</section>
+<section id="debugging-some-rstudio-specifics" class="slide level2">
+<h2>Debugging: Some RStudio specifics</h2>
+<p>Let’s have a look at RStudio IDE specific details.</p>
 <ul>
-<li>Read and execute <a href="examples/shiny/testServer.R"><code>testServer.R</code></a>. Play around with setting different UI inputs and adding additional server tests.</li>
-<li>Read and execute <a href="examples/shiny/AppDriver.R"><code>AppDriver.R</code></a>. Add a small additional feature to the app and test it.</li>
-<li>Have a look at <a href="examples/shiny/testModule.R"><code>testModule.R</code></a>. What is different here? Record some additional tests and integrate them into the code.</li>
+<li>The “Debug” menu can be useful to explore the options.</li>
+<li>Editor breakpoints: Can add with click to the left of line number and gives “red dot”.</li>
+<li>Click on “Source” to run the script and enter debug mode.</li>
+<li>“Debug” &gt; “On Error” &gt; “Break in Code” again lets you jump into the code on error.</li>
+<li>Debugging in Rmarkdown documents can be tricky, either proceed chunk by chunk, or try <code>sink()</code></li>
+</ul>
+<p>See <a href="https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE">Posit website</a> for details.</p>
+</section></section>
+<section>
+<section id="profiling" class="title-slide slide level1 center">
+<h1>Profiling</h1>
+
+</section>
+<section id="profiling-definition" class="slide level2">
+<h2>Profiling: Definition</h2>
+<blockquote>
+<p>In software engineering, profiling (“program profiling”, “software profiling”) is a form of dynamic program analysis that measures, for example, the space (memory) or time complexity of a program, the usage of particular instructions, or the frequency and duration of function calls. Most commonly, profiling information serves to aid program optimization, and more specifically, performance engineering.</p>
+</blockquote>
+<p>(<a href="https://en.wikipedia.org/wiki/Profiling_(computer_programming)">Wikipedia</a>)</p>
+</section>
+<section id="profiling-example-code" class="slide level2">
+<h2>Profiling: Example code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>    profvis<span class="sc">::</span><span class="fu">pause</span>(<span class="fl">0.1</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="dv">3</span>)) {</span>
+<span id="cb1-4"><a href="#cb1-4"></a>        <span class="fu">g</span>()</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    }</span>
+<span id="cb1-6"><a href="#cb1-6"></a>}</span>
+<span id="cb1-7"><a href="#cb1-7"></a>g <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    profvis<span class="sc">::</span><span class="fu">pause</span>(<span class="fl">0.1</span>)</span>
+<span id="cb1-9"><a href="#cb1-9"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="profiling-lets-identify-the-bottlenecks" class="slide level2">
+<h2>Profiling: Let’s identify the bottlenecks!</h2>
+<p>In R there are a couple of basic functions for profiling:</p>
+<ul>
+<li><code>system.time()</code></li>
+<li><code>Rprof</code>:
+<ol type="1">
+<li>start with <code>Rprof()</code></li>
+<li>execute the code</li>
+<li>stop with <code>Rprof(NULL)</code></li>
+<li>summarize with <code>summaryRprof()</code></li>
+</ol></li>
+</ul>
+<p>See e.g. <span class="citation" data-cites="peng2016">Peng (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, chapter 19, for details.</p>
+</section>
+<section id="profiling-classic-rprof-output" class="slide level2">
+<h2>Profiling: Classic <code>Rprof</code> output</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">Rprof</span>()</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">f</span>()</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">Rprof</span>(<span class="cn">NULL</span>)</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">summaryRprof</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="profiling-getting-visual" class="slide level2">
+<h2>Profiling: Getting visual</h2>
+<p>We can use the more modern <a href="https://rstudio.github.io/profvis"><code>profvis</code></a> R package for visualizing where R spends its time during code execution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(profvis)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">source</span>(<span class="st">"profexample.R"</span>) <span class="co"># Such that the flame graph includes code lines.</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>prof <span class="ot">&lt;-</span> <span class="fu">profvis</span>({</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="fu">f</span>()</span>
+<span id="cb3-5"><a href="#cb3-5"></a>})</span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="fu">print</span>(prof)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="profiling-profvis-output" class="slide level2">
+<h2>Profiling: <code>profvis</code> output</h2>
+
+<img data-src="screenshots/2024-03-24-21-51-38.png" class="r-stretch"></section></section>
+<section>
+<section id="code-optimization" class="title-slide slide level1 center">
+<h1>Code optimization</h1>
+
+</section>
+<section id="code-optimization-explore-alternatives" class="slide level2">
+<h2>Code optimization: Explore alternatives</h2>
+<ul>
+<li>If the slow function is from another package, search for a faster one</li>
+<li>Runtime complexity (runtime as a function of data size) of different algorithms can be wildly different - some work well on small data but take forever on large data</li>
+<li>Few examples:
+<ul>
+<li>For wrangling data frames, consider <a href="https://duckdblabs.github.io/duckplyr/"><code>duckplyr</code></a> and <a href="https://rpolars.github.io/"><code>polars</code></a> as alternatives to <a href="https://dplyr.tidyverse.org/"><code>dplyr</code></a></li>
+<li>To read and write CSV data, consider <a href="https://vroom.r-lib.org/"><code>vroom</code></a> instead of base R</li>
+<li>To read and write objects from and to disk, consider <a href="https://cran.r-project.org/package=qs"><code>qs</code></a> instead of base R <code>readRDS</code>, <code>saveRDS</code></li>
+</ul></li>
 </ul>
 </section>
-
-<section id="references" class="title-slide slide level1 center">
-<h1>References</h1>
+<section id="code-optimization-dry-on-data-frames" class="slide level2">
+<h2>Code optimization: DRY on data frames</h2>
 <ul>
-<li>Adrian Waddell, Pawel Rucki, Daniel Sabanes Bove (2022). Lessons for designing scalable and maintainable Shiny apps Tutorial at useR 2022. [<a href="https://www.youtube.com/watch?v=7o9qjsw4aDU">Youtube recording</a>]</li>
-<li>Hadley Wickham (2020). Mastering Shiny. <a href="https://mastering-shiny.org/">https://mastering-shiny.org/</a></li>
-<li>Colin Fay, Sébastien Rochette, Vincent Guyader and Cervan Girard (2022). Engineering Production-Grade Shiny Apps. <a href="https://engineering-shiny.org/">https://engineering-shiny.org/</a></li>
-<li>Colin Gillespie (2019). R and Security Talk at useR 2019. [<a href="https://www.youtube.com/watch?v=5odJxZj9LE4">Youtube recording</a>]</li>
+<li>Remember: DRY (Don’t Repeat Yourself)</li>
+<li>Data frames are expensive, i.e.&nbsp;take a lot of time.</li>
+<li>Some examples:
+<ul>
+<li>Only create data frames, if really necessary.
+<ul>
+<li>Bad: <code>if(nrow(filter(x, condition)) &gt; 0)</code></li>
+<li>Good: <code>if(any(condition))</code></li>
+</ul></li>
+<li>Assemble a data frame only once, not iteratively.</li>
+<li>When subsetting a data frame and working with a column, first extract the column and then subset.</li>
+</ul></li>
+</ul>
+</section>
+<section id="code-optimization-reuse-dont-copy" class="slide level2">
+<h2>Code optimization: Reuse, don’t copy</h2>
+<p>Avoid making unintended copies of objects.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Bad:</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>result <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) result <span class="ot">&lt;-</span> <span class="fu">c</span>(result, <span class="fu">fun</span>(i))</span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Good:</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>result <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">1000</span>)</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) result[i] <span class="ot">&lt;-</span> <span class="fu">fun</span>(i)</span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co"># Better:</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>result <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">seq_len</span>(<span class="dv">1000</span>), fun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Other examples:</p>
+<ul>
+<li>Create a <code>data.frame</code> once from complete column vectors, rather than <code>rbind()</code> it iteratively.</li>
+<li>Subsetting a matrix or <code>data.frame</code> will create a copy, so use it consciously or better work with columns.</li>
+</ul>
+</section>
+<section id="code-optimization-vectorize-where-possible" class="slide level2">
+<h2>Code optimization: Vectorize where possible</h2>
+<ul>
+<li>Avoiding for loops does not help much anymore.</li>
+<li>However, using specialized vectorized functions (implemented in compiled code) helps:
+<ul>
+<li>Base R: <code>rowSums()</code>, <code>colSums()</code>, <code>rowMeans()</code>, <code>colMeans()</code></li>
+<li><a href="https://github.com/HenrikBengtsson/matrixStats"><code>matrixStats</code></a>: many! <code>anyMissing()</code>, <code>colQuantiles()</code>, <code>rowMax()</code>, etc.</li>
+<li><a href="https://sebkrantz.github.io/collapse/"><code>collapse</code></a>: <code>fmean()</code>, <code>TRA()</code>, <code>GRP()</code>, …</li>
+</ul></li>
+</ul>
+</section>
+<section id="code-optimization-still-too-slow" class="slide level2">
+<h2>Code optimization: Still too slow?</h2>
+<blockquote>
+<p>“R is a language optimized for human performance, not computer performance”</p>
+</blockquote>
+<p>(Hadley Wickham, New York R Conference, 2018)</p>
+</section>
+<section id="code-optimization-shift-to-c-with-rcpp" class="slide level2">
+<h2>Code optimization: Shift to C++ with <code>Rcpp</code></h2>
+<p>Writing and using C++ code in your R package is not easy.</p>
+<p>But it is not too difficult with <a href="https://dirk.eddelbuettel.com/code/rcpp.html"><code>Rcpp</code></a> by <span class="citation" data-cites="Eddelbuettel2011">Eddelbuettel and François (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span>.</p>
+<ul>
+<li>Starting point: <code>Rcpp::Rcpp.package.skeleton()</code></li>
+<li>Use <a href="https://dirk.eddelbuettel.com/code/rcpp.armadillo.html"><code>RcppArmadillo</code></a> for linear algebra</li>
+<li>Hadley Wickham’s chapter <a href="https://adv-r.hadley.nz/rcpp.html">Rewriting R code in C++</a></li>
+</ul>
+<p>Note: Adding C++ code to your package will in many cases increase the maintenance effort significantly.</p>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Eddelbuettel2011" class="csl-entry" role="listitem">
+Eddelbuettel, Dirk, and Romain François. 2011. <span>“<span>Rcpp</span>: Seamless <span>R</span> and <span>C++</span> Integration.”</span> <em>Journal of Statistical Software</em> 40 (8): 1–18. <a href="https://doi.org/10.18637/jss.v040.i08">https://doi.org/10.18637/jss.v040.i08</a>.
+</div>
+<div id="ref-knuth1974structured" class="csl-entry" role="listitem">
+Knuth, Donald E. 1974. <span>“Structured Programming with Go to Statements.”</span> <em>ACM Computing Surveys (CSUR)</em> 6 (4): 261–301. <a href="https://web.archive.org/web/20130731202547/http://pplab.snu.ac.kr/courses/adv_pl05/papers/p261-knuth.pdf">https://web.archive.org/web/20130731202547/http://pplab.snu.ac.kr/courses/adv_pl05/papers/p261-knuth.pdf</a>.
+</div>
+<div id="ref-xkcd" class="csl-entry" role="listitem">
+Munroe, Randall. 2007. <span>“Xkcd.”</span> 2007. <a href="http://xkcd.com/">http://xkcd.com/</a>.
+</div>
+<div id="ref-peng2016" class="csl-entry" role="listitem">
+Peng, Roger D. 2016. <em>R Programming for Data Science</em>. Lulu.com. <a href="https://bookdown.org/rdpeng/rprogdatascience/">https://bookdown.org/rdpeng/rprogdatascience/</a>.
+</div>
+</div>
+</section></section>
+<section id="exercise" class="title-slide slide level1 center">
+<h1>Exercise</h1>
+<ul>
+<li>Read <a href="examples/optimization/bootstrap.R"><code>bootstrap.R</code></a> and understand what is going on.</li>
+<li>Run <a href="examples/optimization/profbootstrap.R"><code>profbootstrap.R</code></a> to see where most of the time is spent - where?</li>
+<li>In a second version of the function, <code>impl_2</code>, only update vectors inside the loop and then create a <code>tibble</code> once at the end.</li>
+<li>In a third version <code>impl_3</code> only subset the column instead of the whole <code>data.frame</code>. How much faster does it get?</li>
+<li>In a fourth version <code>impl_4</code> use the <a href="https://cran.r-project.org/package=boot"><code>boot</code></a> package.</li>
+<li>Homework: Try to come up with a fifth version <code>impl_5</code> that uses <code>Rcpp</code>. Was it worth the effort?</li>
 </ul>
 </section>
 
 <section id="license-information" class="title-slide slide level1 center">
-<h1>License information</h1>
+<h1>License Information</h1>
 <ul>
-<li>Creators (initial authors): Daniel Sabanes Bove <a href="https://github.com/danielinteractive/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>, Joe Zhu <a href="https://github.com/shajoezhu"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="http://www.linkedin.com/in/joe-zhu-464b5818"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
+<li>Creators (initial authors): Lukas A. Widmer and Michael Mayer, see their course <a href="https://luwidmer.github.io/fastR-website/materials.html">Go fastR – how to make R code fast(er) and run it on high performance compute (HPC) clusters</a></li>
+<li>In the current version, changes were done by (later author): Daniel Sabanes Bove <a href="https://github.com/danielinteractive/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
 <li>Unless separately credited, this work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
 <li><a href="https://github.com/RCONIS/workshop-zurich-2026">Zurich 2026 sources</a> adapt <a href="https://github.com/RCONIS/workshop-r-swe-zrh">Zurich 2024</a> and <a href="https://github.com/openstatsware/shortcourse-munich2026">Munich 2026</a>, following <a href="https://github.com/openstatsware/shortcourse-seoul2026">Seoul 2026</a>. Author credits are retained above.</li>
 <li>Zurich adaptations by Daniel Sabanés Bové: course details, program, workflow, roxygen2 tags, SSH setup, optimization and AI chapters. <a href="../ATTRIBUTION.html">Full attribution and exceptions</a>.</li>

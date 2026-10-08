@@ -3,14 +3,15 @@
     "listing": "/listing.html",
     "items": [
       "/slides/01_intro.html",
+      "/slides/10_conclusion.html",
       "/slides/02_r_packages.html",
       "/slides/03_workflow.html",
       "/slides/04_quality.html",
       "/slides/05_collaboration.html",
       "/slides/06_publication.html",
       "/slides/07_shiny.html",
-      "/slides/08_using_ai.html",
-      "/slides/09_conclusion.html"
+      "/slides/08_optimization.html",
+      "/slides/09_using_ai.html"
     ]
   }
 ]
