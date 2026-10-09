@@ -521,18 +521,104 @@ Daniel Sabanés Bové
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">f</span>()</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="fu">Rprof</span>(<span class="cn">NULL</span>)</span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="fu">summaryRprof</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$by.self
+                 self.time self.pct total.time total.pct
+"profvis::pause"      0.40       80       0.40        80
+"doTryCatch"          0.02        4       0.06        12
+"%in%"                0.02        4       0.02         4
+"parent.frame"        0.02        4       0.02         4
+"stopifnot"           0.02        4       0.02         4
+"structure"           0.02        4       0.02         4
+
+$by.total
+                          total.time total.pct self.time self.pct
+".main"                         0.50       100      0.00        0
+"block_exec"                    0.50       100      0.00        0
+"call_block"                    0.50       100      0.00        0
+"eng_r"                         0.50       100      0.00        0
+"eval_with_user_handlers"       0.50       100      0.00        0
+"eval"                          0.50       100      0.00        0
+"evaluate_call"                 0.50       100      0.00        0
+"evaluate::evaluate"            0.50       100      0.00        0
+"evaluate"                      0.50       100      0.00        0
+"execute"                       0.50       100      0.00        0
+"f"                             0.50       100      0.00        0
+"handle"                        0.50       100      0.00        0
+"in_dir"                        0.50       100      0.00        0
+"in_input_dir"                  0.50       100      0.00        0
+"knitr::knit"                   0.50       100      0.00        0
+"process_file"                  0.50       100      0.00        0
+"process_group.block"           0.50       100      0.00        0
+"process_group"                 0.50       100      0.00        0
+"rmarkdown::render"             0.50       100      0.00        0
+"timing_fn"                     0.50       100      0.00        0
+"withCallingHandlers"           0.50       100      0.00        0
+"withVisible"                   0.50       100      0.00        0
+"profvis::pause"                0.40        80      0.40       80
+"g"                             0.30        60      0.00        0
+"loadNamespace"                 0.10        20      0.00        0
+"namespaceImport"               0.08        16      0.00        0
+"doTryCatch"                    0.06        12      0.02        4
+"asNamespace"                   0.06        12      0.00        0
+"namespaceImportFrom"           0.06        12      0.00        0
+"tryCatch"                      0.06        12      0.00        0
+"tryCatchList"                  0.06        12      0.00        0
+"tryCatchOne"                   0.06        12      0.00        0
+".registerS3method"             0.04         8      0.00        0
+"registerS3methods"             0.04         8      0.00        0
+"%in%"                          0.02         4      0.02        4
+"parent.frame"                  0.02         4      0.02        4
+"stopifnot"                     0.02         4      0.02        4
+"structure"                     0.02         4      0.02        4
+".checkGroupSigLength"          0.02         4      0.00        0
+".recMembers"                   0.02         4      0.00        0
+".updateMethodsInTable"         0.02         4      0.00        0
+"assignWrapped"                 0.02         4      0.00        0
+"callback"                      0.02         4      0.00        0
+"compiler::cmpfun"              0.02         4      0.00        0
+"delayedAssign"                 0.02         4      0.00        0
+"dynGet"                        0.02         4      0.00        0
+"eval_bare"                     0.02         4      0.00        0
+"eval.parent"                   0.02         4      0.00        0
+"findLocals1"                   0.02         4      0.00        0
+"findLocalsList"                0.02         4      0.00        0
+"findLocalsList1"               0.02         4      0.00        0
+"fun"                           0.02         4      0.00        0
+"FUN"                           0.02         4      0.00        0
+"funEnv"                        0.02         4      0.00        0
+"getGeneric"                    0.02         4      0.00        0
+"getGroupMembers"               0.02         4      0.00        0
+"is"                            0.02         4      0.00        0
+"lapply"                        0.02         4      0.00        0
+"loadingNamespaceInfo"          0.02         4      0.00        0
+"local"                         0.02         4      0.00        0
+"make.functionContext"          0.02         4      0.00        0
+"methods::cacheMetaData"        0.02         4      0.00        0
+"Recall"                        0.02         4      0.00        0
+"run_on_load"                   0.02         4      0.00        0
+"runHook"                       0.02         4      0.00        0
+"sys.source"                    0.02         4      0.00        0
+"try"                           0.02         4      0.00        0
+
+$sample.interval
+[1] 0.02
+
+$sampling.time
+[1] 0.5</code></pre>
+</div>
 </div>
 </section>
 <section id="profiling-getting-visual" class="slide level2">
 <h2>Profiling: Getting visual</h2>
 <p>We can use the more modern <a href="https://rstudio.github.io/profvis"><code>profvis</code></a> R package for visualizing where R spends its time during code execution.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(profvis)</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">source</span>(<span class="st">"profexample.R"</span>) <span class="co"># Such that the flame graph includes code lines.</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>prof <span class="ot">&lt;-</span> <span class="fu">profvis</span>({</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    <span class="fu">f</span>()</span>
-<span id="cb3-5"><a href="#cb3-5"></a>})</span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="fu">print</span>(prof)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(profvis)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">source</span>(<span class="st">"examples/optimization/profexample.R"</span>) <span class="co"># Such that the flame graph includes code lines.</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>prof <span class="ot">&lt;-</span> <span class="fu">profvis</span>({</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="fu">f</span>()</span>
+<span id="cb4-5"><a href="#cb4-5"></a>})</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="fu">print</span>(prof)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="profiling-profvis-output" class="slide level2">
@@ -578,14 +664,14 @@ Daniel Sabanés Bové
 <h2>Code optimization: Reuse, don’t copy</h2>
 <p>Avoid making unintended copies of objects.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Bad:</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>result <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) result <span class="ot">&lt;-</span> <span class="fu">c</span>(result, <span class="fu">fun</span>(i))</span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Good:</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>result <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">1000</span>)</span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) result[i] <span class="ot">&lt;-</span> <span class="fu">fun</span>(i)</span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co"># Better:</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a>result <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">seq_len</span>(<span class="dv">1000</span>), fun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Bad:</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>result <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) result <span class="ot">&lt;-</span> <span class="fu">c</span>(result, <span class="fu">fun</span>(i))</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># Good:</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>result <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">1000</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) result[i] <span class="ot">&lt;-</span> <span class="fu">fun</span>(i)</span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># Better:</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>result <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">seq_len</span>(<span class="dv">1000</span>), fun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Other examples:</p>
 <ul>
